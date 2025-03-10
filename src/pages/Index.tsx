@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -11,9 +10,8 @@ import ScrollReveal from '@/components/ScrollReveal';
 
 const Index = () => {
   useEffect(() => {
-    document.title = 'Geoff Schwarten | Software Engineer & Product Designer';
+    document.title = 'GEOFF SCHWARTEN | Marketing and Growth Leader';
     
-    // Add grid pattern to CSS
     const style = document.createElement('style');
     style.textContent = `
       .bg-grid-pattern {
