@@ -17,8 +17,8 @@ const Footer: React.FC = () => {
           
           <nav className="flex gap-8 mb-4 md:mb-0">
             <a href="#about" className="text-sm text-gray-600 hover:text-black transition-colors">About</a>
-            <a href="#skills" className="text-sm text-gray-600 hover:text-black transition-colors">Skills</a>
             <a href="#work" className="text-sm text-gray-600 hover:text-black transition-colors">Work</a>
+            <a href="#skills" className="text-sm text-gray-600 hover:text-black transition-colors">Skills</a>
             <a href="#contact" className="text-sm text-gray-600 hover:text-black transition-colors">Contact</a>
           </nav>
           
