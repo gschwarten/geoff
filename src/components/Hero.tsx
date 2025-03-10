@@ -5,7 +5,7 @@ import { ArrowDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-gray-50 to-gray-100">
+    <section className="min-h-screen flex items-center justify-center relative">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="container mx-auto px-6 py-16 md:py-32 text-center">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight reveal">

@@ -15,6 +15,10 @@ const Index = () => {
     
     const style = document.createElement('style');
     style.textContent = `
+      body {
+        background-color: #accae5;
+      }
+      
       .bg-grid-pattern {
         background-image: 
           linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
@@ -30,7 +34,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <Navbar />
       <Hero />
       <ScrollReveal>
