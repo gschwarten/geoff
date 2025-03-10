@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
     <section className="min-h-screen pt-20 relative"> {/* Keep the pt-20 to push content below navbar */}
       {/* Background container with fixed height of 396px */}
       <div className="absolute top-20 left-0 right-0 h-[396px] bg-cover bg-center"
-        style={{ backgroundImage: 'url("public/lovable-uploads/7ff946f4-9fd2-4114-b9ab-521c39f3dac8.png")' }}
+        style={{ backgroundImage: 'url("public/lovable-uploads/58735039-2522-4afc-a0df-752465e93dab.png")' }}
       >
         <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
       </div>
