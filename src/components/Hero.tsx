@@ -1,38 +1,18 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
-  // Use the newly uploaded image
-  const imagePath = '/lovable-uploads/bb4b7a74-5c3d-4f44-b5e2-545e262d2b8a.png';
-
-  useEffect(() => {
-    // Preload the image to ensure it's available
-    const img = new Image();
-    img.src = imagePath;
-    img.onload = () => setImageLoaded(true);
-    img.onerror = (e) => {
-      console.error("Error loading image:", e);
-      // Fall back to the placeholder if the uploaded image fails to load
-      setImageLoaded(true);
-    };
-  }, []);
-
+  const [imageLoaded, setImageLoaded] = useState(true);
+  
+  // We'll use a direct background color instead of trying to load an external image
   return (
-    <section className="min-h-screen pt-20 relative"> {/* Added pt-20 to push content below navbar */}
-      {/* Image Background */}
-      <div 
-        className={`absolute inset-0 bg-cover bg-center transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`} 
-        style={{ backgroundImage: `url(${imagePath})` }}
-      >
-        <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px]"></div>
+    <section className="min-h-screen pt-20 relative"> {/* Keep the pt-20 to push content below navbar */}
+      {/* Solid color background with gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-400 to-blue-600">
+        <div className="absolute inset-0 bg-black/10"></div>
       </div>
-      
-      {/* Display a color backup while the image loads */}
-      <div className={`absolute inset-0 bg-accae5 ${imageLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-500`}></div>
       
       <div className="container mx-auto px-6 py-16 md:py-32 text-center relative z-10">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight reveal text-white drop-shadow-md">
