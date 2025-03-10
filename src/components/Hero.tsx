@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
   useEffect(() => {
     // Preload the image to ensure it's available
     const img = new Image();
-    img.src = '/lovable-uploads/40d8b972-c8ee-44e0-a710-4d716b09ccbe.png';
+    img.src = 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=2000&q=80';
     img.onload = () => setImageLoaded(true);
   }, []);
 
@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
     <section className="min-h-screen relative">
       <div 
         className={`absolute inset-0 bg-cover bg-center transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`} 
-        style={{ backgroundImage: "url('/lovable-uploads/40d8b972-c8ee-44e0-a710-4d716b09ccbe.png')" }}
+        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=2000&q=80')" }}
       >
         <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px]"></div>
       </div>
