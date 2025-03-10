@@ -42,8 +42,8 @@ const About: React.FC = () => {
           
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <h3 className="text-lg font-semibold mb-2">Location</h3>
-              <p className="text-gray-600">San Francisco, CA</p>
+              <h3 className="text-lg font-semibold mb-2">Personality Type</h3>
+              <p className="text-gray-600">INTP</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-2">Experience</h3>
