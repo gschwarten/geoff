@@ -9,8 +9,8 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="container mx-auto px-6 py-16 md:py-32 text-center">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight reveal">
-          Geoff <span className="relative inline-block">
-            Schwarten
+          <span className="relative inline-block">
+            GEOFF SCHWARTEN
             <span className="absolute bottom-2 left-0 w-full h-1 bg-black rounded-full transform -rotate-1"></span>
           </span>
         </h1>

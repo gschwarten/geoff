@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <a href="#" className="text-xl font-bold">Geoff Schwarten</a>
+            <a href="#" className="text-xl font-bold">GEOFF SCHWARTEN</a>
           </div>
           
           <nav className="flex gap-8 mb-4 md:mb-0">
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
           </nav>
           
           <div className="text-sm text-gray-600">
-            © {currentYear} Geoff Schwarten. All rights reserved.
+            © {currentYear} GEOFF SCHWARTEN. All rights reserved.
           </div>
         </div>
       </div>
