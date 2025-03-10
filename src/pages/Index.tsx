@@ -1,12 +1,52 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useEffect } from 'react';
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Skills from '@/components/Skills';
+import Work from '@/components/Work';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const Index = () => {
+  useEffect(() => {
+    document.title = 'Geoff Schwarten | Software Engineer & Product Designer';
+    
+    // Add grid pattern to CSS
+    const style = document.createElement('style');
+    style.textContent = `
+      .bg-grid-pattern {
+        background-image: 
+          linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+    `;
+    document.head.appendChild(style);
+    
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      <Hero />
+      <ScrollReveal>
+        <About />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Skills />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Work />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Contact />
+      </ScrollReveal>
+      <Footer />
     </div>
   );
 };
