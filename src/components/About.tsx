@@ -20,13 +20,22 @@ const About: React.FC = () => {
         <div className="reveal">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
           <p className="text-lg text-gray-600 mb-6">
-            I'm Geoff Schwarten, a passionate software engineer and product designer with over 8 years of experience creating elegant solutions to complex problems.
+            I help impact-oriented businesses "find the formula."
           </p>
           <p className="text-lg text-gray-600 mb-6">
-            My approach combines technical expertise with user-centered design, ensuring that the products I build are not only functional but also intuitive and enjoyable to use.
+            What does it mean to find the formula? It means to find a repeatable, scalable approach to growth.
           </p>
-          <p className="text-lg text-gray-600">
-            When I'm not coding, you'll find me hiking in the mountains, experimenting with new recipes, or contributing to open-source projects.
+          <p className="text-lg text-gray-600 mb-6">
+            I bring a methodical, creative approach to experimenting and identifying channels, then scale them up and build teams around the ones that work. My expertise spans performance marketing, lifecycle marketing, SEO, content strategy, branding, and conversion optimization.
+          </p>
+          <p className="text-lg text-gray-600 mb-6">
+            While I'm a generalist, I have deep experience in key channels, along with the leadership skills to know which tool is right for the job. I have a data-driven approach, blending creativity with insights to not just grow businesses, but to build sustainable, long-term success.
+          </p>
+          <p className="text-lg text-gray-600 mb-6">
+            You're either a brand or a commodity. I help build brands to learn and master the medium and the message, ensuring they resonate, inspire, convert, and drive key metrics like LTV, CPA, and ROAS.
+          </p>
+          <p className="text-lg text-gray-600 mb-6">
+            When I'm not on this joyful quest, I'm guiding and modeling the right behaviors for my two energetic young boys, and embracing a love for the ocean as a aspiring waterman.
           </p>
           
           <Separator className="my-8" />
