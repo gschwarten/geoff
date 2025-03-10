@@ -6,8 +6,8 @@ import { ArrowDown } from 'lucide-react';
 const Hero: React.FC = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
-  // Define the image path
-  const imagePath = '/lovable-uploads/40d8b972-c8ee-44e0-a710-4d716b09ccbe.png';
+  // Use the newly uploaded image
+  const imagePath = '/lovable-uploads/bb4b7a74-5c3d-4f44-b5e2-545e262d2b8a.png';
 
   useEffect(() => {
     // Preload the image to ensure it's available
@@ -22,7 +22,8 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="min-h-screen relative">
+    <section className="min-h-screen pt-20 relative"> {/* Added pt-20 to push content below navbar */}
+      {/* Image Background */}
       <div 
         className={`absolute inset-0 bg-cover bg-center transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`} 
         style={{ backgroundImage: `url(${imagePath})` }}
