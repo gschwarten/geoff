@@ -18,7 +18,7 @@ const About: React.FC = () => {
         </div>
         
         <div className="reveal">
-          <h2 className="section-heading">About Me</h2>
+          <h2 className="section-heading">Hello 👋 from Geoff.</h2>
           <p className="text-lg text-gray-600 mb-6">
             I'm Geoff Schwarten, a passionate software engineer and product designer with over 8 years of experience creating elegant solutions to complex problems.
           </p>
