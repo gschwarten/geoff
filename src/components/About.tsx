@@ -5,7 +5,7 @@ import { Separator } from '@/components/ui/separator';
 const About: React.FC = () => {
   return (
     <section id="about" className="section-container">
-      <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="grid md:grid-cols-2 gap-12 items-start">
         <div className="reveal">
           <div className="relative">
             <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
