@@ -42,7 +42,7 @@ const About: React.FC = () => {
           
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <h3 className="text-lg font-semibold mb-2">Personality Type</h3>
+              <h3 className="text-lg font-semibold mb-2">Myers-Briggs®</h3>
               <p className="text-gray-600">INTP</p>
             </div>
             <div>
