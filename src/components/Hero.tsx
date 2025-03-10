@@ -14,15 +14,15 @@ const Hero: React.FC = () => {
             <span className="absolute bottom-2 left-0 w-full h-1 bg-black rounded-full transform -rotate-1"></span>
           </span>
         </h1>
-        <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-12 reveal">
-          Software Engineer & Product Designer
+        <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-12 reveal uppercase">
+          SOFTWARE ENGINEER & PRODUCT DESIGNER
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center reveal">
-          <Button className="px-8 py-6 text-lg" onClick={() => window.location.href = '#work'}>
-            View My Work
+          <Button className="px-8 py-6 text-lg uppercase" onClick={() => window.location.href = '#work'}>
+            VIEW MY WORK
           </Button>
-          <Button variant="outline" className="px-8 py-6 text-lg" onClick={() => window.location.href = '#contact'}>
-            Get in Touch
+          <Button variant="outline" className="px-8 py-6 text-lg uppercase" onClick={() => window.location.href = '#contact'}>
+            GET IN TOUCH
           </Button>
         </div>
       </div>
