@@ -1,17 +1,17 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
-  const [imageLoaded, setImageLoaded] = useState(true);
-  
-  // We'll use a direct background color instead of trying to load an external image
   return (
     <section className="min-h-screen pt-20 relative"> {/* Keep the pt-20 to push content below navbar */}
-      {/* Solid color background with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-400 to-blue-600">
-        <div className="absolute inset-0 bg-black/10"></div>
+      {/* Use an image that will definitely be available */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=2000&auto=format&fit=crop&q=80")' }}
+      >
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
       </div>
       
       <div className="container mx-auto px-6 py-16 md:py-32 text-center relative z-10">
