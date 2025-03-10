@@ -1,14 +1,29 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    // Preload the image to ensure it's available
+    const img = new Image();
+    img.src = '/lovable-uploads/40d8b972-c8ee-44e0-a710-4d716b09ccbe.png';
+    img.onload = () => setImageLoaded(true);
+  }, []);
+
   return (
     <section className="min-h-screen relative">
-      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/lovable-uploads/40d8b972-c8ee-44e0-a710-4d716b09ccbe.png')" }}>
+      <div 
+        className={`absolute inset-0 bg-cover bg-center transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`} 
+        style={{ backgroundImage: "url('/lovable-uploads/40d8b972-c8ee-44e0-a710-4d716b09ccbe.png')" }}
+      >
         <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px]"></div>
       </div>
+      
+      {/* Display a color backup while the image loads */}
+      <div className={`absolute inset-0 bg-accae5 ${imageLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-500`}></div>
       
       <div className="container mx-auto px-6 py-16 md:py-32 text-center relative z-10">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight reveal text-white drop-shadow-md">

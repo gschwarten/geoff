@@ -25,6 +25,10 @@ const Index = () => {
           linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
         background-size: 20px 20px;
       }
+      
+      .bg-accae5 {
+        background-color: #accae5;
+      }
     `;
     document.head.appendChild(style);
     
