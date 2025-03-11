@@ -4,8 +4,6 @@ import { Separator } from '@/components/ui/separator';
 import { Linkedin } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-  
   return (
     <footer className="bg-white py-12">
       <div className="container mx-auto px-6">
@@ -23,10 +21,6 @@ const Footer: React.FC = () => {
               <Linkedin size={18} />
             </a>
           </nav>
-          
-          <div className="text-sm text-gray-600">
-            © {currentYear} GEOFF SCHWARTEN. All rights reserved.
-          </div>
         </div>
       </div>
     </footer>
