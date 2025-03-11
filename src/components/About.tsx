@@ -9,9 +9,11 @@ const About: React.FC = () => {
         <div className="reveal">
           <div className="relative">
             <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
-              <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                <span className="text-gray-400 text-lg">Profile Image</span>
-              </div>
+              <img 
+                src="/lovable-uploads/Formula-Gif2.gif" 
+                alt="Formula GIF" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-black rounded-full"></div>
           </div>
