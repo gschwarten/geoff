@@ -10,6 +10,7 @@ interface Project {
   tags: string[];
   imageUrl?: string;
   link: string;
+  isGif?: boolean;
 }
 
 const Work: React.FC = () => {
@@ -55,9 +56,27 @@ const Work: React.FC = () => {
           {projects.map((project, index) => (
             <Card key={index} className="overflow-hidden transition-all hover:shadow-lg">
               <div className="aspect-video bg-gray-100 relative">
-                <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                  <span className="text-gray-400 text-lg">Project Image</span>
-                </div>
+                {project.imageUrl ? (
+                  <div className="w-full h-full">
+                    {project.isGif ? (
+                      <img 
+                        src={project.imageUrl} 
+                        alt={project.title} 
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <img 
+                        src={project.imageUrl} 
+                        alt={project.title} 
+                        className="w-full h-full object-cover"
+                      />
+                    )}
+                  </div>
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                    <span className="text-gray-400 text-lg">Project Image</span>
+                  </div>
+                )}
                 <a 
                   href={project.link} 
                   className="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-colors"
