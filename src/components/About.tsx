@@ -8,7 +8,7 @@ const About: React.FC = () => {
     <section id="about" className="section-container">
       <div className="grid md:grid-cols-2 gap-12 items-start">
         <div className="reveal flex justify-start items-start">
-          <div className="relative">
+          <div className="relative w-3/4">
             <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
               <img 
                 src="/lovable-uploads/Formula-Gif2.gif" 
