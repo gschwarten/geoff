@@ -45,6 +45,14 @@ const Work: React.FC = () => {
     <section id="work" className="bg-[#e8f3ff] py-8 md:py-12">
       <div className="section-container">
         <div className="text-center mb-12 reveal">
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/lovable-uploads/0d5a25a5-621d-4195-af4b-7fa09af2f7a8.png" 
+              alt="Swiss Army Knife" 
+              className="w-16 h-16"
+              style={{ filter: 'invert(6%) sepia(81%) saturate(6356%) hue-rotate(238deg) brightness(92%) contrast(144%)' }}
+            />
+          </div>
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Work Examples</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">
             Here are some of the projects I've worked on. Each represents a unique challenge
