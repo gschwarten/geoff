@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
+import { Linkedin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -15,10 +16,12 @@ const Footer: React.FC = () => {
             <a href="#" className="text-xl font-bold">GEOFF SCHWARTEN</a>
           </div>
           
-          <nav className="flex gap-8 mb-4 md:mb-0">
+          <nav className="flex gap-8 mb-4 md:mb-0 items-center">
             <a href="#about" className="text-sm text-gray-600 hover:text-black transition-colors">About</a>
             <a href="#work" className="text-sm text-gray-600 hover:text-black transition-colors">Work</a>
-            <a href="#contact" className="text-sm text-gray-600 hover:text-black transition-colors">Contact</a>
+            <a href="https://www.linkedin.com/in/geoffschwarten" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-600 hover:text-black transition-colors">
+              <Linkedin size={18} />
+            </a>
           </nav>
           
           <div className="text-sm text-gray-600">

@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import { Linkedin } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,10 +41,12 @@ const Navbar: React.FC = () => {
         </button>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-8">
+        <nav className="hidden md:flex gap-8 items-center">
           <a href="#about" className="hover:text-gray-600 transition-colors">About</a>
           <a href="#work" className="hover:text-gray-600 transition-colors">Work</a>
-          <a href="#contact" className="hover:text-gray-600 transition-colors">Contact</a>
+          <a href="https://www.linkedin.com/in/geoffschwarten" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 transition-colors flex items-center">
+            <Linkedin size={20} />
+          </a>
         </nav>
       </div>
       
@@ -52,7 +55,9 @@ const Navbar: React.FC = () => {
         <div className="container mx-auto px-6 py-4 flex flex-col gap-4">
           <a href="#about" className="py-2 hover:text-gray-600 transition-colors" onClick={() => setMobileMenuOpen(false)}>About</a>
           <a href="#work" className="py-2 hover:text-gray-600 transition-colors" onClick={() => setMobileMenuOpen(false)}>Work</a>
-          <a href="#contact" className="py-2 hover:text-gray-600 transition-colors" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+          <a href="https://www.linkedin.com/in/geoffschwarten" target="_blank" rel="noopener noreferrer" className="py-2 hover:text-gray-600 transition-colors flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
+            <Linkedin size={20} /> LinkedIn
+          </a>
         </div>
       </div>
     </header>
