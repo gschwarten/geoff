@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import { TrendingUp } from 'lucide-react';
@@ -12,7 +13,7 @@ const About: React.FC = () => {
               <img 
                 src="/lovable-uploads/Formula-Gif2.gif" 
                 alt="Formula GIF" 
-                className="w-1/4 h-1/4 object-contain" 
+                className="w-1/2 h-1/2 object-contain" 
               />
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-black rounded-full flex items-center justify-center">
