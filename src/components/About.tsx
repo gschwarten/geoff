@@ -7,22 +7,7 @@ const About: React.FC = () => {
   return (
     <section id="about" className="section-container">
       <div className="grid md:grid-cols-2 gap-12 items-start">
-        <div className="reveal">
-          <div className="relative">
-            <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
-              <img 
-                src="/lovable-uploads/Formula-Gif2.gif" 
-                alt="Formula GIF" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-black rounded-full flex items-center justify-center">
-              <TrendingUp size={36} color="white" strokeWidth={2} />
-            </div>
-          </div>
-        </div>
-        
-        <div className="reveal">
+        <div className="order-2 md:order-1 reveal">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
           <p className="text-lg text-gray-600 mb-6">
             I help impact-oriented businesses "find the formula."
@@ -61,6 +46,21 @@ const About: React.FC = () => {
             <div>
               <h3 className="text-lg font-semibold mb-2">Availability</h3>
               <p className="text-gray-600">Open to opportunities</p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="order-1 md:order-2 reveal">
+          <div className="relative flex justify-end">
+            <div className="w-1/2 h-1/2 bg-gray-100 rounded-lg overflow-hidden">
+              <img 
+                src="/lovable-uploads/Formula-Gif2.gif" 
+                alt="Formula GIF" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-black rounded-full flex items-center justify-center">
+              <TrendingUp size={36} color="white" strokeWidth={2} />
             </div>
           </div>
         </div>
