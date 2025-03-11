@@ -50,8 +50,8 @@ const About: React.FC = () => {
               <p className="text-gray-600">Ingenuity, Experimentation</p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-2">Email</h3>
-              <p className="text-gray-600">hello@geoffschwarten.com</p>
+              <h3 className="text-lg font-semibold mb-2">Values</h3>
+              <p className="text-gray-600">Health, Ownership, Resourcefulness</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-2">Availability</h3>
