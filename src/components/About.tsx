@@ -46,8 +46,8 @@ const About: React.FC = () => {
               <p className="text-gray-600">INTP</p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-2">Experience</h3>
-              <p className="text-gray-600">8+ Years</p>
+              <h3 className="text-lg font-semibold mb-2">Superpowers</h3>
+              <p className="text-gray-600">Ingenuity, Experimentation</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-2">Email</h3>
