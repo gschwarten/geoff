@@ -9,11 +9,11 @@ const About: React.FC = () => {
       <div className="grid md:grid-cols-2 gap-12 items-start">
         <div className="reveal">
           <div className="relative">
-            <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
+            <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
               <img 
                 src="/lovable-uploads/Formula-Gif2.gif" 
                 alt="Formula GIF" 
-                className="w-1/2 h-1/2 object-contain" 
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-black rounded-full flex items-center justify-center">
