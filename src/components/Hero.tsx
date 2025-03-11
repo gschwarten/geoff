@@ -9,7 +9,9 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ 
           backgroundImage: 'url("/lovable-uploads/58735039-2522-4afc-a0df-752465e93dab.png")',
-          height: '100vh'
+          height: '100vh',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
         }}
       >
         <div className="absolute inset-0 bg-black/30 backdrop-blur-[0.5px]"></div>
