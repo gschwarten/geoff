@@ -5,14 +5,17 @@ import { ArrowDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="min-h-screen pt-20 relative">
-      <div className="absolute top-0 left-0 right-0 bottom-0 bg-cover bg-center"
-        style={{ backgroundImage: 'url("/lovable-uploads/58735039-2522-4afc-a0df-752465e93dab.png")' }}
+    <section className="h-screen relative">
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ 
+          backgroundImage: 'url("/lovable-uploads/58735039-2522-4afc-a0df-752465e93dab.png")',
+          height: '100vh'
+        }}
       >
         <div className="absolute inset-0 bg-black/30 backdrop-blur-[0.5px]"></div>
       </div>
       
-      <div className="container mx-auto px-6 py-16 md:py-32 text-center relative z-10">
+      <div className="container mx-auto px-6 h-full flex flex-col justify-center items-center relative z-10">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight reveal text-white drop-shadow-md">
           <span className="relative inline-block">
             GEOFF SCHWARTEN
