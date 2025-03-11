@@ -7,7 +7,7 @@ const CroppedGif: React.FC = () => {
       <img 
         src="/lovable-uploads/Formula-Gif2.gif" 
         alt="Formula GIF" 
-        className="absolute w-full h-[300%] object-cover object-center"
+        className="absolute w-full h-[300%] object-cover"
         style={{ top: '-100%' }} // This crops out the top 1/3 and bottom 1/3
       />
     </div>
