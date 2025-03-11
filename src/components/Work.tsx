@@ -44,7 +44,46 @@ const Work: React.FC = () => {
   return (
     <section id="work" className="bg-[#e8f3ff] py-8 md:py-12">
       <div className="section-container">
-        <div className="text-center mb-12 reveal">
+        <div className="flex flex-col items-center justify-center mb-12 reveal">
+          {/* Swiss Army Knife Icon */}
+          <div className="mb-4">
+            <svg 
+              width="64" 
+              height="64" 
+              viewBox="0 0 64 64" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+              className="text-[#0a2f91]"
+            >
+              {/* Base handle */}
+              <rect x="12" y="22" width="40" height="20" rx="4" fill="currentColor" />
+              
+              {/* Knife blade (open) */}
+              <path d="M52 25L62 15L58 32L52 25Z" fill="currentColor" stroke="white" strokeWidth="1" />
+              
+              {/* Scissors (open) */}
+              <path d="M9 30C7 28 4 25 7 22C10 19 12 23 12 25" stroke="white" strokeWidth="2" fill="currentColor" />
+              <path d="M9 34C7 36 4 39 7 42C10 45 12 41 12 39" stroke="white" strokeWidth="2" fill="currentColor" />
+              <rect x="8" y="31" width="6" height="2" fill="white" />
+              
+              {/* Corkscrew (open) */}
+              <path d="M14 10C14 10 16 10 16 12C16 14 14 14 14 16C14 18 16 18 16 20C16 22 14 22 14 22" stroke="white" strokeWidth="2" fill="none" />
+              
+              {/* Screwdriver (open) */}
+              <rect x="40" y="12" width="3" height="10" fill="currentColor" />
+              <rect x="38" y="10" width="7" height="3" fill="currentColor" />
+              
+              {/* Can opener (open) */}
+              <path d="M30 15L28 10L26 15L30 15Z" fill="currentColor" stroke="white" strokeWidth="1" />
+              <rect x="27" y="15" width="2" height="7" fill="currentColor" />
+              
+              {/* Rivets on handle */}
+              <circle cx="17" cy="32" r="1.5" fill="white" />
+              <circle cx="32" cy="32" r="1.5" fill="white" />
+              <circle cx="47" cy="32" r="1.5" fill="white" />
+            </svg>
+          </div>
+          
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Work Examples</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">
             Here are some of the projects I've worked on. Each represents a unique challenge
