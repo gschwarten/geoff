@@ -1,7 +1,5 @@
-
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
-import { TrendingUp } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
@@ -15,9 +13,6 @@ const About: React.FC = () => {
                 alt="Formula GIF" 
                 className="w-full h-full object-contain"
               />
-            </div>
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-black rounded-full flex items-center justify-center">
-              <TrendingUp size={36} color="white" strokeWidth={2} />
             </div>
           </div>
         </div>
