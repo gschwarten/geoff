@@ -43,9 +43,9 @@ const Work: React.FC = () => {
   return (
     <section id="work" className="bg-[#e8f3ff] py-16 md:py-24">
       <div className="section-container">
-        <div className="text-center mb-16 reveal">
-          <h2 className="section-heading">My Work</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+        <div className="text-left mb-12 reveal">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Work Examples</h2>
+          <p className="text-lg text-gray-600 max-w-3xl mt-4">
             Here are some of the projects I've worked on. Each represents a unique challenge
             and demonstrates different aspects of my skillset.
           </p>
