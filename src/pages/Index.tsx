@@ -3,9 +3,7 @@ import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
-import Skills from '@/components/Skills';
 import Work from '@/components/Work';
-import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
 
@@ -46,12 +44,6 @@ const Index = () => {
       </ScrollReveal>
       <ScrollReveal>
         <Work />
-      </ScrollReveal>
-      <ScrollReveal>
-        <Skills />
-      </ScrollReveal>
-      <ScrollReveal>
-        <Contact />
       </ScrollReveal>
       <Footer />
     </div>
