@@ -43,7 +43,6 @@ const Navbar: React.FC = () => {
         <nav className="hidden md:flex gap-8">
           <a href="#about" className="hover:text-gray-600 transition-colors">About</a>
           <a href="#work" className="hover:text-gray-600 transition-colors">Work</a>
-          <a href="#skills" className="hover:text-gray-600 transition-colors">Skills</a>
           <a href="#contact" className="hover:text-gray-600 transition-colors">Contact</a>
         </nav>
       </div>
@@ -53,7 +52,6 @@ const Navbar: React.FC = () => {
         <div className="container mx-auto px-6 py-4 flex flex-col gap-4">
           <a href="#about" className="py-2 hover:text-gray-600 transition-colors" onClick={() => setMobileMenuOpen(false)}>About</a>
           <a href="#work" className="py-2 hover:text-gray-600 transition-colors" onClick={() => setMobileMenuOpen(false)}>Work</a>
-          <a href="#skills" className="py-2 hover:text-gray-600 transition-colors" onClick={() => setMobileMenuOpen(false)}>Skills</a>
           <a href="#contact" className="py-2 hover:text-gray-600 transition-colors" onClick={() => setMobileMenuOpen(false)}>Contact</a>
         </div>
       </div>
