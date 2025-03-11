@@ -51,7 +51,7 @@ const About: React.FC = () => {
         </div>
         
         <div className="order-1 md:order-2 reveal">
-          <div className="relative flex justify-end">
+          <div className="relative flex justify-start">
             <div className="w-1/2 h-1/2 bg-gray-100 rounded-lg overflow-hidden">
               <img 
                 src="/lovable-uploads/Formula-Gif2.gif" 
