@@ -13,7 +13,7 @@ const About: React.FC = () => {
               <img 
                 src="/lovable-uploads/Formula-Gif2.gif" 
                 alt="Formula GIF" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-black rounded-full flex items-center justify-center">
