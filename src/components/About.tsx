@@ -9,7 +9,7 @@ const About: React.FC = () => {
       <div className="grid md:grid-cols-2 gap-12 items-start">
         <div className="reveal">
           <div className="relative">
-            <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden" style={{ width: '500px', maxWidth: '100%' }}>
+            <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
               <img 
                 src="/lovable-uploads/Formula-Gif2.gif" 
                 alt="Formula GIF" 
