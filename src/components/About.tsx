@@ -1,5 +1,6 @@
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
+import CroppedGif from './CroppedGif';
 
 const About: React.FC = () => {
   return (
@@ -8,11 +9,7 @@ const About: React.FC = () => {
         <div className="reveal">
           <div className="relative">
             <div className="aspect-square bg-[#ACCAE5] rounded-lg overflow-hidden">
-              <img 
-                src="/lovable-uploads/Formula-Gif2.gif" 
-                alt="Formula GIF" 
-                className="w-full h-full object-contain"
-              />
+              <CroppedGif />
             </div>
           </div>
         </div>
