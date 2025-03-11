@@ -35,7 +35,7 @@ const About: React.FC = () => {
             You're either a brand or a commodity. I help build brands to learn and master the medium and the message, ensuring they resonate, inspire, convert, and drive key metrics like LTV, CPA, and ROAS.
           </p>
           <p className="text-lg text-gray-600 mb-6">
-            When I'm not on this joyful quest, I'm guiding and modeling the right behaviors for my two energetic young boys, and embracing a love for the ocean as a aspiring waterman.
+            When I'm not on this joyful quest, I'm guiding and modeling the right behaviors for my two energetic young boys, and embracing a love for the ocean as an aspiring waterman.
           </p>
           
           <Separator className="my-8" />
