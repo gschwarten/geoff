@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -29,7 +28,7 @@ const Work: React.FC = () => {
     },
     {
       title: 'Ecommerce: Reinvented a Social Enterprise',
-      description: 'Interactive dashboard for visualizing financial data with real-time analytics and reporting.',
+      description: 'First marketing hire for fast growing for-profit social enterprise built a team and led marketing initiatives including a corporate re-branding, e-commerce web site launch, email lifecycle marketing, paid search, SEO, social media, content marketing, partnerships and PR. Grew business unit customer base 10x to over 200k customers in two years, attracting Series A investment.',
       tags: ['TypeScript', 'D3.js', 'Express', 'PostgreSQL'],
       link: 'https://www.betterworldbooks.com',
     },
