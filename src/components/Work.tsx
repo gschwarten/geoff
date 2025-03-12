@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -41,7 +40,7 @@ const Work: React.FC = () => {
     imageUrl: '/lovable-uploads/Creative-Confidence-Podcast.jpg',
     link: 'https://www.ideou.com/pages/creative-confidence-podcast'
   }, {
-    title: 'Product-Led Growth for SaaS Analytics Platform',
+    title: 'Removing Barriers to Healthy Meal Access for Seniors',
     description: 'I worked with Healthrageous to identify and eliminate conversion friction in the sign-up process for healthy meal programs targeting seniors. By analyzing drop-off points in the user journey, I uncovered key insights that led to improved messaging, streamlined onboarding, and a smoother experience for older adults, ultimately increasing engagement and access.',
     tags: ['Product-Led Growth', 'SaaS', 'B2B Marketing', 'Growth Marketing', 'User Onboarding', 'Freemium Strategy', 'Analytics'],
     imageUrl: '/lovable-uploads/Formula-Gif3.gif',
