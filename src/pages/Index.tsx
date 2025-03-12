@@ -37,7 +37,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <div className="pt-24 pb-8"> {/* Added padding to top to accommodate navbar */}
+      <div className="pt-28 pb-8"> {/* Increased padding-top from pt-24 to pt-28 */}
         <ScrollReveal>
           <About />
         </ScrollReveal>
