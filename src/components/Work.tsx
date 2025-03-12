@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -21,7 +22,7 @@ interface Project {
 const Work: React.FC = () => {
   const projects: Project[] = [
     {
-      title: 'E-commerce Platform',
+      title: 'Scaling an Online Learning Platform',
       description: 'A full-stack e-commerce solution with integrated payment processing and inventory management.',
       tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       link: '#',
