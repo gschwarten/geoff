@@ -120,24 +120,24 @@ const Work: React.FC = () => {
           <Collapsible
             open={isOpen}
             onOpenChange={setIsOpen}
-            className="reveal space-y-2 max-w-xl w-full"
+            className="reveal space-y-2 max-w-lg w-full"
           >
             <div className="flex items-center justify-between">
               <CollapsibleTrigger className="flex items-center hover:text-blue-600">
-                <Filter className="h-5 w-5 mr-2" />
-                <span className="text-lg font-medium">Filter by skills & expertise</span>
+                <Filter className="h-3 w-3 mr-1" />
+                <span className="text-sm font-medium">Filter by skills & expertise</span>
                 {isOpen ? (
-                  <ChevronUp className="h-4 w-4 ml-2" />
+                  <ChevronUp className="h-3 w-3 ml-1" />
                 ) : (
-                  <ChevronDown className="h-4 w-4 ml-2" />
+                  <ChevronDown className="h-3 w-3 ml-1" />
                 )}
               </CollapsibleTrigger>
               {selectedTags.length > 0 && (
                 <button 
                   onClick={clearFilters}
-                  className="text-sm text-blue-600 hover:text-blue-800 flex items-center"
+                  className="text-xs text-blue-600 hover:text-blue-800 flex items-center"
                 >
-                  <X className="h-4 w-4 mr-1" /> Clear filters
+                  <X className="h-3 w-3 mr-1" /> Clear
                 </button>
               )}
             </div>
@@ -148,7 +148,7 @@ const Work: React.FC = () => {
                   <Badge 
                     key={tag}
                     variant={selectedTags.includes(tag) ? "default" : "secondary"}
-                    className="cursor-pointer hover:opacity-80 transition-opacity"
+                    className="cursor-pointer hover:opacity-80 transition-opacity text-xs"
                     onClick={() => handleTagClick(tag)}
                   >
                     {tag}
@@ -158,7 +158,7 @@ const Work: React.FC = () => {
               {allTags.length > 8 && (
                 <button
                   onClick={() => setShowAllTags(!showAllTags)}
-                  className="text-sm text-blue-600 hover:text-blue-800"
+                  className="text-xs text-blue-600 hover:text-blue-800"
                 >
                   {showAllTags ? 'Show less' : `Show ${allTags.length - 8} more tags`}
                 </button>
