@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import CroppedGif from './CroppedGif';
@@ -20,7 +21,7 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false }) => {
         
         <div className="reveal">
           {showWonderSchoolLogo && (
-            <div className="mb-8">
+            <div className="mb-12">
               <img 
                 src="/lovable-uploads/wonderschool.png" 
                 alt="WonderSchool Logo" 
