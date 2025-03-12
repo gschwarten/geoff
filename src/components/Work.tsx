@@ -45,7 +45,7 @@ const Work: React.FC = () => {
     {
       title: 'Building a Brand, Content, and Lead Gen Engine',
       description: 'Launched and scaled a content marketing and lead generation engine, driving a peak of 75K qualified leads and 1M podcast downloads annually. The webcast and podcast program "leads with learning" helping grow an appetite for personal growth and learning. In addition to lead generation, the program drives seven figure revenue and acts as a engine for SEO, lifecycle, and social media content.',
-      tags: ['Vue.js', 'GraphQL', 'AWS', 'Socket.io'],
+      tags: ['Content Strategy', 'Podcast Marketing', 'Webinars', 'Growth Marketing', 'Audience Expansion'],
       imageUrl: '/lovable-uploads/Creative-Confidence-Podcast.jpg',
       link: '#',
     },
