@@ -43,7 +43,7 @@ const Work: React.FC = () => {
   }, {
     title: 'Removing Barriers to Healthy Meal Access for Seniors',
     description: 'I worked with Healthrageous to identify and eliminate conversion friction in the sign-up process for healthy meal programs targeting seniors. By analyzing drop-off points in the user journey, I uncovered key insights that led to improved messaging, streamlined onboarding, and a smoother experience for older adults, ultimately increasing engagement and access.',
-    tags: ['Conversion Rate Optimization', 'UX', 'Analytics', 'Growth Strategy', 'Data Analysis', 'Health', 'Health Tech'],
+    tags: ['Conversion Rate Optimization', 'UX', 'Analytics', 'Growth Strategy', 'Data Analysis', 'Health', 'Health Tech', 'Healthplan Member Marketing', 'Direct Mail'],
     imageUrl: '/lovable-uploads/healthrageous.png',
     link: '#',
     isGif: false
