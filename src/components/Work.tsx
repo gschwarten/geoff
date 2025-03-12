@@ -4,7 +4,6 @@ import { Badge } from '@/components/ui/badge';
 import { ExternalLink, X, Filter, ChevronDown, ChevronUp } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import ScrollReveal from './ScrollReveal';
 
 interface Project {
   title: string;
@@ -96,81 +95,50 @@ const Work: React.FC = () => {
     return allTags.slice(0, 8);
   };
 
-  return (
-    <ScrollReveal>
-      <section id="work" className="bg-[#e8f3ff] py-8 md:py-12">
-        <div className="section-container">
-          <div className="text-center mb-6 reveal">
-            <div className="flex justify-center mb-3">
-              <img src="/lovable-uploads/0d5a25a5-621d-4195-af4b-7fa09af2f7a8.png" alt="Swiss Army Knife" className="w-24 h-24" style={{
-                filter: 'invert(6%) sepia(81%) saturate(6356%) hue-rotate(238deg) brightness(92%) contrast(144%)'
-              }} />
-            </div>
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Work Examples</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">A selection of projects that showcase unique challenges and highlight different aspects of my skill set.</p>
+  return <section id="work" className="bg-[#e8f3ff] py-8 md:py-12">
+      <div className="section-container">
+        <div className="text-center mb-6 reveal">
+          <div className="flex justify-center mb-3">
+            <img src="/lovable-uploads/0d5a25a5-621d-4195-af4b-7fa09af2f7a8.png" alt="Swiss Army Knife" className="w-24 h-24" style={{
+            filter: 'invert(6%) sepia(81%) saturate(6356%) hue-rotate(238deg) brightness(92%) contrast(144%)'
+          }} />
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Work Examples</h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">A selection of projects that showcase unique challenges and highlight different aspects of my skill set.</p>
+        </div>
+
+        <Collapsible open={isOpen} onOpenChange={setIsOpen} className="mb-8 reveal space-y-2">
+          <div className="flex items-center justify-between">
+            <CollapsibleTrigger className="flex items-center hover:text-blue-600">
+              <Filter className="h-5 w-5 mr-2" />
+              <span className="text-lg font-medium">Filter by skills & expertise</span>
+              {isOpen ? <ChevronUp className="h-4 w-4 ml-2" /> : <ChevronDown className="h-4 w-4 ml-2" />}
+            </CollapsibleTrigger>
+            {selectedTags.length > 0 && <button onClick={clearFilters} className="text-sm text-blue-600 hover:text-blue-800 flex items-center">
+                <X className="h-4 w-4 mr-1" /> Clear filters
+              </button>}
           </div>
 
-          <Collapsible open={isOpen} onOpenChange={setIsOpen} className="mb-8 reveal space-y-2">
-            <div className="flex items-center justify-between">
-              <CollapsibleTrigger className="flex items-center hover:text-blue-600">
-                <Filter className="h-5 w-5 mr-2" />
-                <span className="text-lg font-medium">Filter by skills & expertise</span>
-                {isOpen ? <ChevronUp className="h-4 w-4 ml-2" /> : <ChevronDown className="h-4 w-4 ml-2" />}
-              </CollapsibleTrigger>
-              {selectedTags.length > 0 && <button onClick={clearFilters} className="text-sm text-blue-600 hover:text-blue-800 flex items-center">
-                  <X className="h-4 w-4 mr-1" /> Clear filters
-                </button>}
+          <CollapsibleContent className="space-y-2">
+            <div className="flex flex-wrap gap-2">
+              {getDisplayedTags().map(tag => <Badge key={tag} variant={selectedTags.includes(tag) ? "default" : "secondary"} className="cursor-pointer hover:opacity-80 transition-opacity" onClick={() => handleTagClick(tag)}>
+                  {tag}
+                </Badge>)}
             </div>
+            {allTags.length > 8 && <button onClick={() => setShowAllTags(!showAllTags)} className="text-sm text-blue-600 hover:text-blue-800">
+                {showAllTags ? 'Show less' : `Show ${allTags.length - 8} more tags`}
+              </button>}
+          </CollapsibleContent>
+        </Collapsible>
 
-            <CollapsibleContent className="space-y-2">
-              <div className="flex flex-wrap gap-2">
-                {getDisplayedTags().map(tag => <Badge key={tag} variant={selectedTags.includes(tag) ? "default" : "secondary"} className="cursor-pointer hover:opacity-80 transition-opacity" onClick={() => handleTagClick(tag)}>
-                    {tag}
-                  </Badge>)}
-              </div>
-              {allTags.length > 8 && <button onClick={() => setShowAllTags(!showAllTags)} className="text-sm text-blue-600 hover:text-blue-800">
-                  {showAllTags ? 'Show less' : `Show ${allTags.length - 8} more tags`}
-                </button>}
-            </CollapsibleContent>
-          </Collapsible>
-
-          <div className="grid md:grid-cols-2 gap-8 reveal">
-            {filteredProjects.length > 0 ? filteredProjects.map((project, index) => (
-              <Card key={index} className="overflow-hidden transition-all hover:shadow-lg">
+        <div className="grid md:grid-cols-2 gap-8 reveal">
+          {filteredProjects.length > 0 ? filteredProjects.map((project, index) => <Card key={index} className="overflow-hidden transition-all hover:shadow-lg">
                 <div className="aspect-video bg-gray-100 relative">
-                  {project.imageUrl ? (
-                    <div className={`w-full h-full ${project.title.includes('Healthrageous') ? 
-                      'flex items-center justify-center bg-gradient-to-b from-gray-100 to-gray-200' : 
-                      ''}`}>
-                      {project.isGif ? (
-                        <img 
-                          src={project.imageUrl} 
-                          alt={project.title} 
-                          className="w-full h-full object-cover" 
-                        />
-                      ) : (
-                        project.title.includes('Healthrageous') ? (
-                          <div className="bg-white rounded-lg border-2 border-gray-300 shadow-md p-6 w-4/5 h-4/5 flex items-center justify-center">
-                            <img 
-                              src={project.imageUrl} 
-                              alt={project.title} 
-                              className="max-w-full max-h-full object-contain" 
-                            />
-                          </div>
-                        ) : (
-                          <img 
-                            src={project.imageUrl} 
-                            alt={project.title} 
-                            className="w-full h-full object-cover" 
-                          />
-                        )
-                      )}
-                    </div>
-                  ) : (
-                    <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                  {project.imageUrl ? <div className="w-full h-full">
+                      {project.isGif ? <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover" /> : <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover" />}
+                    </div> : <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                       <span className="text-gray-400 text-lg">Project Image</span>
-                    </div>
-                  )}
+                    </div>}
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger asChild>
@@ -188,32 +156,20 @@ const Work: React.FC = () => {
                   <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                   <p className="text-gray-600 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, tagIndex) => (
-                      <Badge 
-                        key={tagIndex} 
-                        variant={selectedTags.includes(tag) ? "default" : "secondary"} 
-                        className={selectedTags.includes(tag) ? "cursor-pointer" : "cursor-pointer"} 
-                        onClick={() => handleTagClick(tag)}
-                      >
+                    {project.tags.map((tag, tagIndex) => <Badge key={tagIndex} variant={selectedTags.includes(tag) ? "default" : "secondary"} className={selectedTags.includes(tag) ? "cursor-pointer" : "cursor-pointer"} onClick={() => handleTagClick(tag)}>
                         {tag}
-                      </Badge>
-                    ))}
+                      </Badge>)}
                   </div>
                 </CardContent>
-              </Card>
-            )) : (
-              <div className="col-span-2 text-center py-12">
-                <p className="text-gray-500">No projects match your selected filters.</p>
-                <button onClick={clearFilters} className="mt-2 text-blue-600 hover:text-blue-800">
-                  Clear filters
-                </button>
-              </div>
-            )}
-          </div>
+              </Card>) : <div className="col-span-2 text-center py-12">
+              <p className="text-gray-500">No projects match your selected filters.</p>
+              <button onClick={clearFilters} className="mt-2 text-blue-600 hover:text-blue-800">
+                Clear filters
+              </button>
+            </div>}
         </div>
-      </section>
-    </ScrollReveal>
-  );
+      </div>
+    </section>;
 };
 
 export default Work;
