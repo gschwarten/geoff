@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -42,7 +43,7 @@ const Work: React.FC = () => {
       link: 'http://www.betterworldbooks.com',
     },
     {
-      title: 'Social Network',
+      title: 'Building a Brand, Content, and Lead Gen Engine',
       description: 'Community platform with content sharing, messaging, and user engagement features.',
       tags: ['Vue.js', 'GraphQL', 'AWS', 'Socket.io'],
       imageUrl: '/lovable-uploads/Creative-Confidence-Podcast.jpg',
