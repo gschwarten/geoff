@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -105,7 +106,7 @@ const Work: React.FC = () => {
             <img 
               src="/lovable-uploads/0d5a25a5-621d-4195-af4b-7fa09af2f7a8.png" 
               alt="Swiss Army Knife" 
-              className="w-16 h-16"
+              className="w-24 h-24" 
               style={{ filter: 'invert(6%) sepia(81%) saturate(6356%) hue-rotate(238deg) brightness(92%) contrast(144%)' }}
             />
           </div>
