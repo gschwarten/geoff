@@ -109,7 +109,7 @@ const Work: React.FC = () => {
         </div>
 
         <Collapsible open={isOpen} onOpenChange={setIsOpen} className="mb-8 reveal space-y-2">
-          <div className="flex items-center justify-between p-3 bg-[#f3f3f3] rounded-lg">
+          <div className="flex items-center justify-between">
             <CollapsibleTrigger className="flex items-center hover:text-blue-600">
               <Filter className="h-5 w-5 mr-2" />
               <span className="text-lg font-medium">Filter by skills & expertise</span>
@@ -120,7 +120,7 @@ const Work: React.FC = () => {
               </button>}
           </div>
 
-          <CollapsibleContent className="space-y-2 p-4 bg-[#f3f3f3] rounded-lg mt-1">
+          <CollapsibleContent className="space-y-2">
             <div className="flex flex-wrap gap-2">
               {getDisplayedTags().map(tag => <Badge key={tag} variant={selectedTags.includes(tag) ? "default" : "secondary"} className="cursor-pointer hover:opacity-80 transition-opacity" onClick={() => handleTagClick(tag)}>
                   {tag}
