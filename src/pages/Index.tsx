@@ -1,7 +1,6 @@
 
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Work from '@/components/Work';
 import Footer from '@/components/Footer';
@@ -38,10 +37,11 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <Hero />
-      <ScrollReveal>
-        <About />
-      </ScrollReveal>
+      <div className="pt-24 pb-8"> {/* Added padding to top to accommodate navbar */}
+        <ScrollReveal>
+          <About />
+        </ScrollReveal>
+      </div>
       <ScrollReveal>
         <Work />
       </ScrollReveal>
