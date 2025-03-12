@@ -37,7 +37,7 @@ const Work: React.FC = () => {
       title: 'Ecommerce: Reinvented a Social Enterprise',
       description: 'First marketing hire for fast growing for-profit social enterprise built a team and led marketing initiatives including a corporate re-branding, e-commerce web site launch, email lifecycle marketing, paid search, SEO, social media, content marketing, partnerships and PR. Grew business unit customer base 10x to over 200k customers in two years, attracting Series A investment.',
       tags: ['TypeScript', 'D3.js', 'Express', 'PostgreSQL'],
-      imageUrl: '/lovable-uploads/BWB-Screenshot.png',
+      imageUrl: '/lovable-uploads/better-world-books-screeshot2.jpg',
       link: 'https://www.betterworldbooks.com',
     },
     {
