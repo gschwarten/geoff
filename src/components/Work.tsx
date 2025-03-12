@@ -30,7 +30,7 @@ const Work: React.FC = () => {
     },
     {
       title: 'Customer Acquisition for In-Person + Mobile Personal Training',
-      description: 'Mobile application for tracking workouts, nutrition, and health metrics with personalized recommendations.',
+      description: 'Led customer acquisition and growth efforts for a two-sided marketplace that made personal training more affordable and accessible by combining in-person sessions with app-assigned workouts. Helped 5x the customer base through new channel expansion, paid search, event marketing, and strategic partnerships.',
       tags: ['React Native', 'Firebase', 'Machine Learning'],
       imageUrl: '/lovable-uploads/gain-trainer.jpg',
       link: '#',
