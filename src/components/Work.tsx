@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -50,7 +49,7 @@ const Work: React.FC = () => {
   }, {
     title: 'Building a Leading Summit for Mental Health Innovation',
     description: 'Led digital transformation initiative for an enterprise learning & development organization, transitioning from in-person workshops to blended digital experiences. Developed go-to-market strategy, digital content approach, and measurement framework. Established an agile marketing process that increased program enrollment by 65% while reducing acquisition costs.',
-    tags: ['Event Marketing', 'Content Marketing', 'Social Media', 'Partnerships'],
+    tags: ['Event Marketing', 'Content Marketing', 'Social Media', 'Partnerships', 'Health Tech', 'Mental Health'],
     imageUrl: '/lovable-uploads/RAMHT.png',
     link: 'https://www.rapidmentalhealth.com/',
     isGif: false
