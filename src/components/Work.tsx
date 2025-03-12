@@ -1,9 +1,9 @@
+
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, X, Filter, ChevronDown, ChevronUp } from 'lucide-react';
-import AnimatedKnife from './AnimatedKnife';
-import {
+import { 
   Tooltip,
   TooltipContent,
   TooltipProvider,
@@ -103,7 +103,12 @@ const Work: React.FC = () => {
       <div className="section-container">
         <div className="text-center mb-6 reveal">
           <div className="flex justify-center mb-3">
-            <AnimatedKnife />
+            <img 
+              src="/lovable-uploads/0d5a25a5-621d-4195-af4b-7fa09af2f7a8.png" 
+              alt="Swiss Army Knife" 
+              className="w-24 h-24" 
+              style={{ filter: 'invert(6%) sepia(81%) saturate(6356%) hue-rotate(238deg) brightness(92%) contrast(144%)' }}
+            />
           </div>
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Work Examples</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">
