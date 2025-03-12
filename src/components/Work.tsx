@@ -31,7 +31,7 @@ const Work: React.FC = () => {
     {
       title: 'Customer Acquisition for In-Person + Mobile Personal Training',
       description: 'Led customer acquisition and growth efforts for a two-sided marketplace that made personal training more affordable and accessible by combining in-person sessions with app-assigned workouts. Helped 5x the customer base through new channel expansion, paid search, event marketing, and strategic partnerships.',
-      tags: ['React Native', 'Firebase', 'Machine Learning'],
+      tags: ['Customer Acquisition', 'Growth Marketing', 'Two-Sided Marketplace', 'Paid Search', 'Event Marketing', 'Partnerships', 'Health', 'Fitness Tech'],
       imageUrl: '/lovable-uploads/gain-trainer.jpg',
       link: '#',
     },
