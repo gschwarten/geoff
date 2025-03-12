@@ -1,14 +1,18 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink, X, Filter } from 'lucide-react';
+import { ExternalLink, X, Filter, ChevronDown, ChevronUp } from 'lucide-react';
 import { 
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 
 interface Project {
   title: string;
@@ -51,13 +55,13 @@ const Work: React.FC = () => {
     },
   ];
 
-  // Extract all unique tags from projects
   const [allTags, setAllTags] = useState<string[]>([]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
+  const [isOpen, setIsOpen] = useState(false);
+  const [showAllTags, setShowAllTags] = useState(false);
 
   useEffect(() => {
-    // Extract all unique tags
     const tags = new Set<string>();
     projects.forEach(project => {
       project.tags.forEach(tag => tags.add(tag));
@@ -66,7 +70,6 @@ const Work: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    // Filter projects based on selected tags
     if (selectedTags.length === 0) {
       setFilteredProjects(projects);
     } else {
@@ -89,6 +92,11 @@ const Work: React.FC = () => {
     setSelectedTags([]);
   };
 
+  const getDisplayedTags = () => {
+    if (showAllTags) return allTags;
+    return allTags.slice(0, 8);
+  };
+
   return (
     <section id="work" className="bg-[#e8f3ff] py-8 md:py-12">
       <div className="section-container">
@@ -107,12 +115,21 @@ const Work: React.FC = () => {
           </p>
         </div>
 
-        {/* Filter section */}
-        <div className="mb-8 reveal">
-          <div className="flex items-center justify-between mb-3">
-            <h3 className="text-lg font-medium flex items-center">
-              <Filter className="h-5 w-5 mr-2" /> Filter by skills & expertise
-            </h3>
+        <Collapsible
+          open={isOpen}
+          onOpenChange={setIsOpen}
+          className="mb-8 reveal space-y-2"
+        >
+          <div className="flex items-center justify-between">
+            <CollapsibleTrigger className="flex items-center hover:text-blue-600">
+              <Filter className="h-5 w-5 mr-2" />
+              <span className="text-lg font-medium">Filter by skills & expertise</span>
+              {isOpen ? (
+                <ChevronUp className="h-4 w-4 ml-2" />
+              ) : (
+                <ChevronDown className="h-4 w-4 ml-2" />
+              )}
+            </CollapsibleTrigger>
             {selectedTags.length > 0 && (
               <button 
                 onClick={clearFilters}
@@ -122,19 +139,30 @@ const Work: React.FC = () => {
               </button>
             )}
           </div>
-          <div className="flex flex-wrap gap-2">
-            {allTags.map((tag) => (
-              <Badge 
-                key={tag}
-                variant={selectedTags.includes(tag) ? "default" : "secondary"}
-                className="cursor-pointer hover:opacity-80 transition-opacity"
-                onClick={() => handleTagClick(tag)}
+
+          <CollapsibleContent className="space-y-2">
+            <div className="flex flex-wrap gap-2">
+              {getDisplayedTags().map((tag) => (
+                <Badge 
+                  key={tag}
+                  variant={selectedTags.includes(tag) ? "default" : "secondary"}
+                  className="cursor-pointer hover:opacity-80 transition-opacity"
+                  onClick={() => handleTagClick(tag)}
+                >
+                  {tag}
+                </Badge>
+              ))}
+            </div>
+            {allTags.length > 8 && (
+              <button
+                onClick={() => setShowAllTags(!showAllTags)}
+                className="text-sm text-blue-600 hover:text-blue-800"
               >
-                {tag}
-              </Badge>
-            ))}
-          </div>
-        </div>
+                {showAllTags ? 'Show less' : `Show ${allTags.length - 8} more tags`}
+              </button>
+            )}
+          </CollapsibleContent>
+        </Collapsible>
 
         <div className="grid md:grid-cols-2 gap-8 reveal">
           {filteredProjects.length > 0 ? (
