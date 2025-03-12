@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -47,7 +48,7 @@ const Work: React.FC = () => {
     link: '#',
     isGif: false
   }, {
-    title: 'Digital Transformation for Enterprise Learning',
+    title: 'Building a Leading Summit for Mental Health Innovation',
     description: 'Led digital transformation initiative for an enterprise learning & development organization, transitioning from in-person workshops to blended digital experiences. Developed go-to-market strategy, digital content approach, and measurement framework. Established an agile marketing process that increased program enrollment by 65% while reducing acquisition costs.',
     tags: ['Digital Transformation', 'Enterprise Marketing', 'Learning & Development', 'Go-to-Market Strategy', 'Content Strategy', 'Agile Marketing'],
     imageUrl: '/lovable-uploads/Formula-Gif2.gif',
