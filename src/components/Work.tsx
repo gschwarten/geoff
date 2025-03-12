@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -29,7 +28,7 @@ const Work: React.FC = () => {
       link: 'https://www.ideou.com/',
     },
     {
-      title: 'Health & Fitness App',
+      title: 'Customer Acquisition for In-Person + Mobile Personal Training',
       description: 'Mobile application for tracking workouts, nutrition, and health metrics with personalized recommendations.',
       tags: ['React Native', 'Firebase', 'Machine Learning'],
       imageUrl: '/lovable-uploads/gain-trainer.jpg',
@@ -129,4 +128,3 @@ const Work: React.FC = () => {
 };
 
 export default Work;
-
