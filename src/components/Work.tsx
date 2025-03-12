@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -116,56 +115,54 @@ const Work: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex justify-center mb-8">
-          <Collapsible
-            open={isOpen}
-            onOpenChange={setIsOpen}
-            className="reveal space-y-2 max-w-lg w-full"
-          >
-            <div className="flex items-center justify-between">
-              <CollapsibleTrigger className="flex items-center hover:text-blue-600">
-                <Filter className="h-3 w-3 mr-1" />
-                <span className="text-sm font-medium">Filter by skills & expertise</span>
-                {isOpen ? (
-                  <ChevronUp className="h-3 w-3 ml-1" />
-                ) : (
-                  <ChevronDown className="h-3 w-3 ml-1" />
-                )}
-              </CollapsibleTrigger>
-              {selectedTags.length > 0 && (
-                <button 
-                  onClick={clearFilters}
-                  className="text-xs text-blue-600 hover:text-blue-800 flex items-center"
-                >
-                  <X className="h-3 w-3 mr-1" /> Clear
-                </button>
+        <Collapsible
+          open={isOpen}
+          onOpenChange={setIsOpen}
+          className="mb-8 reveal space-y-2"
+        >
+          <div className="flex items-center justify-between">
+            <CollapsibleTrigger className="flex items-center hover:text-blue-600">
+              <Filter className="h-5 w-5 mr-2" />
+              <span className="text-lg font-medium">Filter by skills & expertise</span>
+              {isOpen ? (
+                <ChevronUp className="h-4 w-4 ml-2" />
+              ) : (
+                <ChevronDown className="h-4 w-4 ml-2" />
               )}
-            </div>
+            </CollapsibleTrigger>
+            {selectedTags.length > 0 && (
+              <button 
+                onClick={clearFilters}
+                className="text-sm text-blue-600 hover:text-blue-800 flex items-center"
+              >
+                <X className="h-4 w-4 mr-1" /> Clear filters
+              </button>
+            )}
+          </div>
 
-            <CollapsibleContent className="space-y-2">
-              <div className="flex flex-wrap gap-2">
-                {getDisplayedTags().map((tag) => (
-                  <Badge 
-                    key={tag}
-                    variant={selectedTags.includes(tag) ? "default" : "secondary"}
-                    className="cursor-pointer hover:opacity-80 transition-opacity text-xs"
-                    onClick={() => handleTagClick(tag)}
-                  >
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
-              {allTags.length > 8 && (
-                <button
-                  onClick={() => setShowAllTags(!showAllTags)}
-                  className="text-xs text-blue-600 hover:text-blue-800"
+          <CollapsibleContent className="space-y-2">
+            <div className="flex flex-wrap gap-2">
+              {getDisplayedTags().map((tag) => (
+                <Badge 
+                  key={tag}
+                  variant={selectedTags.includes(tag) ? "default" : "secondary"}
+                  className="cursor-pointer hover:opacity-80 transition-opacity"
+                  onClick={() => handleTagClick(tag)}
                 >
-                  {showAllTags ? 'Show less' : `Show ${allTags.length - 8} more tags`}
-                </button>
-              )}
-            </CollapsibleContent>
-          </Collapsible>
-        </div>
+                  {tag}
+                </Badge>
+              ))}
+            </div>
+            {allTags.length > 8 && (
+              <button
+                onClick={() => setShowAllTags(!showAllTags)}
+                className="text-sm text-blue-600 hover:text-blue-800"
+              >
+                {showAllTags ? 'Show less' : `Show ${allTags.length - 8} more tags`}
+              </button>
+            )}
+          </CollapsibleContent>
+        </Collapsible>
 
         <div className="grid md:grid-cols-2 gap-8 reveal">
           {filteredProjects.length > 0 ? (
