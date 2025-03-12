@@ -22,8 +22,8 @@ interface Project {
 const Work: React.FC = () => {
   const projects: Project[] = [
     {
-      title: 'Scaling an Online Learning Platform',
-      description: 'A full-stack e-commerce solution with integrated payment processing and inventory management.',
+      title: 'Scaling a Learning Business from Scratch',
+      description: 'As the first marketing hire, I helped IDEO U grow from an idea into a thriving learning business with over 100K+ customers. I built and optimized growth channels—paid search, SEO, lifecycle marketing, and CRO—while leading a team to scale efforts. Experimentation and data-driven insights were key to identifying and unlocking the repeatable growth formula.',
       tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       link: '#',
     },
