@@ -65,7 +65,7 @@ const Work: React.FC = () => {
           </div>
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Work Examples</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">
-            This part is under construction 🚧. Check back here in a couple days for some of the projects I've worked on.
+            This part is under construction 🚧. Check back here in a couple days for more of the projects I've worked on.
           </p>
         </div>
 
