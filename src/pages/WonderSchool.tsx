@@ -39,7 +39,7 @@ const WonderSchool = () => {
       <Navbar />
       <div className="pt-24 pb-8"> {/* Added padding to top to accommodate navbar */}
         <ScrollReveal>
-          <About />
+          <About showWonderSchoolLogo={true} />
         </ScrollReveal>
       </div>
       <ScrollReveal>

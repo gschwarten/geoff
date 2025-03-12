@@ -2,7 +2,11 @@ import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import CroppedGif from './CroppedGif';
 
-const About: React.FC = () => {
+interface AboutProps {
+  showWonderSchoolLogo?: boolean;
+}
+
+const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false }) => {
   return (
     <section id="about" className="section-container">
       <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -15,6 +19,15 @@ const About: React.FC = () => {
         </div>
         
         <div className="reveal">
+          {showWonderSchoolLogo && (
+            <div className="mb-8">
+              <img 
+                src="/lovable-uploads/wonderschool.png" 
+                alt="WonderSchool Logo" 
+                className="max-w-[200px]"
+              />
+            </div>
+          )}
           <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
           <p className="text-lg text-gray-600 mb-6">
             I help impact-oriented businesses "find the formula."
