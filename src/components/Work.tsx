@@ -29,7 +29,7 @@ const Work: React.FC = () => {
     {
       title: 'Scaling a Learning Business from Scratch',
       description: 'As the first marketing hire, I helped IDEO U grow from an idea into a thriving learning business with over 100K+ customers. I built and optimized growth channels—paid search, SEO, lifecycle marketing, and CRO—while leading a team to scale efforts. Experimentation and data-driven insights were key to identifying and unlocking the repeatable growth formula.',
-      tags: ['Growth Strategy', 'Performance Marketing', 'SEO', 'CRO', 'Lifecycle Marketing', 'Demand Generation'],
+      tags: ['Growth Strategy', 'Performance Marketing', 'SEO', 'CRO', 'Lifecycle Marketing', 'Demand Generation', 'Ecommerce Product Management'],
       imageUrl: '/lovable-uploads/IDEO_U.jpg',
       link: 'https://www.ideou.com/',
     },
@@ -43,7 +43,7 @@ const Work: React.FC = () => {
     {
       title: 'Ecommerce: Reinventing a Social Enterprise',
       description: 'First marketing hire for fast growing for-profit social enterprise built a team and led marketing initiatives including a corporate re-branding, e-commerce web site launch, email lifecycle marketing, paid search, SEO, social media, content marketing, partnerships and PR. Grew business unit customer base 10x to over 200k customers in two years, attracting Series A investment.',
-      tags: ['Marketing Strategy', 'Branding', 'Paid Search', 'Lifecycle Marketing', 'SEO', 'PR', 'Event Marketing', 'Partnerships'],
+      tags: ['Marketing Strategy', 'Branding', 'Paid Search', 'Lifecycle Marketing', 'SEO', 'PR', 'Event Marketing', 'Partnerships', 'Ecommerce Product Management'],
       imageUrl: '/lovable-uploads/better-world-books-screeshot2.jpg',
       link: 'http://www.betterworldbooks.com',
     },
