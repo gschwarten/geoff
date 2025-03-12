@@ -1,8 +1,8 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, X, Filter } from 'lucide-react';
 import { 
   Tooltip,
   TooltipContent,
@@ -51,6 +51,44 @@ const Work: React.FC = () => {
     },
   ];
 
+  // Extract all unique tags from projects
+  const [allTags, setAllTags] = useState<string[]>([]);
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
+
+  useEffect(() => {
+    // Extract all unique tags
+    const tags = new Set<string>();
+    projects.forEach(project => {
+      project.tags.forEach(tag => tags.add(tag));
+    });
+    setAllTags(Array.from(tags).sort());
+  }, []);
+
+  useEffect(() => {
+    // Filter projects based on selected tags
+    if (selectedTags.length === 0) {
+      setFilteredProjects(projects);
+    } else {
+      const filtered = projects.filter(project => 
+        selectedTags.some(tag => project.tags.includes(tag))
+      );
+      setFilteredProjects(filtered);
+    }
+  }, [selectedTags]);
+
+  const handleTagClick = (tag: string) => {
+    if (selectedTags.includes(tag)) {
+      setSelectedTags(selectedTags.filter(t => t !== tag));
+    } else {
+      setSelectedTags([...selectedTags, tag]);
+    }
+  };
+
+  const clearFilters = () => {
+    setSelectedTags([]);
+  };
+
   return (
     <section id="work" className="bg-[#e8f3ff] py-8 md:py-12">
       <div className="section-container">
@@ -69,59 +107,107 @@ const Work: React.FC = () => {
           </p>
         </div>
 
+        {/* Filter section */}
+        <div className="mb-8 reveal">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-lg font-medium flex items-center">
+              <Filter className="h-5 w-5 mr-2" /> Filter by skills & expertise
+            </h3>
+            {selectedTags.length > 0 && (
+              <button 
+                onClick={clearFilters}
+                className="text-sm text-blue-600 hover:text-blue-800 flex items-center"
+              >
+                <X className="h-4 w-4 mr-1" /> Clear filters
+              </button>
+            )}
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {allTags.map((tag) => (
+              <Badge 
+                key={tag}
+                variant={selectedTags.includes(tag) ? "default" : "secondary"}
+                className="cursor-pointer hover:opacity-80 transition-opacity"
+                onClick={() => handleTagClick(tag)}
+              >
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-8 reveal">
-          {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden transition-all hover:shadow-lg">
-              <div className="aspect-video bg-gray-100 relative">
-                {project.imageUrl ? (
-                  <div className="w-full h-full">
-                    {project.isGif ? (
-                      <img 
-                        src={project.imageUrl} 
-                        alt={project.title} 
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <img 
-                        src={project.imageUrl} 
-                        alt={project.title} 
-                        className="w-full h-full object-cover"
-                      />
-                    )}
-                  </div>
-                ) : (
-                  <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                    <span className="text-gray-400 text-lg">Project Image</span>
-                  </div>
-                )}
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <a 
-                        href={project.link} 
-                        className="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-colors"
-                        aria-label={`View ${project.title}`}
-                      >
-                        <ExternalLink className="h-5 w-5" />
-                      </a>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>Visit project</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, tagIndex) => (
-                    <Badge key={tagIndex} variant="secondary">{tag}</Badge>
-                  ))}
+          {filteredProjects.length > 0 ? (
+            filteredProjects.map((project, index) => (
+              <Card key={index} className="overflow-hidden transition-all hover:shadow-lg">
+                <div className="aspect-video bg-gray-100 relative">
+                  {project.imageUrl ? (
+                    <div className="w-full h-full">
+                      {project.isGif ? (
+                        <img 
+                          src={project.imageUrl} 
+                          alt={project.title} 
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <img 
+                          src={project.imageUrl} 
+                          alt={project.title} 
+                          className="w-full h-full object-cover"
+                        />
+                      )}
+                    </div>
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                      <span className="text-gray-400 text-lg">Project Image</span>
+                    </div>
+                  )}
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <a 
+                          href={project.link} 
+                          className="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-colors"
+                          aria-label={`View ${project.title}`}
+                        >
+                          <ExternalLink className="h-5 w-5" />
+                        </a>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Visit project</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
                 </div>
-              </CardContent>
-            </Card>
-          ))}
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag, tagIndex) => (
+                      <Badge 
+                        key={tagIndex} 
+                        variant={selectedTags.includes(tag) ? "default" : "secondary"}
+                        className={selectedTags.includes(tag) ? "cursor-pointer" : "cursor-pointer"}
+                        onClick={() => handleTagClick(tag)}
+                      >
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))
+          ) : (
+            <div className="col-span-2 text-center py-12">
+              <p className="text-gray-500">No projects match your selected filters.</p>
+              <button 
+                onClick={clearFilters}
+                className="mt-2 text-blue-600 hover:text-blue-800"
+              >
+                Clear filters
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </section>
