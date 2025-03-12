@@ -134,8 +134,12 @@ const Work: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-8 reveal">
           {filteredProjects.length > 0 ? filteredProjects.map((project, index) => <Card key={index} className="overflow-hidden transition-all hover:shadow-lg">
                 <div className="aspect-video bg-gray-100 relative">
-                  {project.imageUrl ? <div className="w-full h-full">
-                      {project.isGif ? <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover" /> : <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover" />}
+                  {project.imageUrl ? <div className={`w-full h-full ${project.title.includes('Healthrageous') ? 'bg-[#f3f3f3] border border-gray-300 p-4' : ''}`}>
+                      {project.isGif ? <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover" /> : <img 
+                        src={project.imageUrl} 
+                        alt={project.title} 
+                        className={`w-full h-full object-contain ${project.title.includes('Healthrageous') ? 'max-h-[80%] mx-auto' : 'object-cover'}`} 
+                      />}
                     </div> : <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                       <span className="text-gray-400 text-lg">Project Image</span>
                     </div>}
