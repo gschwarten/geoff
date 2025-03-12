@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { ExternalLink, X, Filter, ChevronDown, ChevronUp } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+
 interface Project {
   title: string;
   description: string;
@@ -12,6 +13,7 @@ interface Project {
   link: string;
   isGif?: boolean;
 }
+
 const Work: React.FC = () => {
   const projects: Project[] = [{
     title: 'Scaling a Learning Business from Scratch',
@@ -37,12 +39,28 @@ const Work: React.FC = () => {
     tags: ['Content Strategy', 'Podcast Marketing', 'Webinars', 'Growth Marketing', 'Audience Expansion'],
     imageUrl: '/lovable-uploads/Creative-Confidence-Podcast.jpg',
     link: 'https://www.ideou.com/pages/creative-confidence-podcast'
+  }, {
+    title: 'Product-Led Growth for SaaS Analytics Platform',
+    description: 'Implemented a product-led growth strategy for a B2B SaaS analytics platform, shifting from a traditional sales model to a freemium approach. Created onboarding flows that demonstrated value quickly, increasing conversion rates by 45%. Established data-driven experimentation processes that optimized user activation, reducing time-to-value from 14 days to 3 days.',
+    tags: ['Product-Led Growth', 'SaaS', 'B2B Marketing', 'Growth Marketing', 'User Onboarding', 'Freemium Strategy', 'Analytics'],
+    imageUrl: '/lovable-uploads/Formula-Gif3.gif',
+    link: '#',
+    isGif: true
+  }, {
+    title: 'Digital Transformation for Enterprise Learning',
+    description: 'Led digital transformation initiative for an enterprise learning & development organization, transitioning from in-person workshops to blended digital experiences. Developed go-to-market strategy, digital content approach, and measurement framework. Established an agile marketing process that increased program enrollment by 65% while reducing acquisition costs.',
+    tags: ['Digital Transformation', 'Enterprise Marketing', 'Learning & Development', 'Go-to-Market Strategy', 'Content Strategy', 'Agile Marketing'],
+    imageUrl: '/lovable-uploads/Formula-Gif2.gif',
+    link: '#',
+    isGif: true
   }];
+
   const [allTags, setAllTags] = useState<string[]>([]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
   const [isOpen, setIsOpen] = useState(false);
   const [showAllTags, setShowAllTags] = useState(false);
+
   useEffect(() => {
     const tags = new Set<string>();
     projects.forEach(project => {
@@ -50,6 +68,7 @@ const Work: React.FC = () => {
     });
     setAllTags(Array.from(tags).sort());
   }, []);
+
   useEffect(() => {
     if (selectedTags.length === 0) {
       setFilteredProjects(projects);
@@ -58,6 +77,7 @@ const Work: React.FC = () => {
       setFilteredProjects(filtered);
     }
   }, [selectedTags]);
+
   const handleTagClick = (tag: string) => {
     if (selectedTags.includes(tag)) {
       setSelectedTags(selectedTags.filter(t => t !== tag));
@@ -65,13 +85,16 @@ const Work: React.FC = () => {
       setSelectedTags([...selectedTags, tag]);
     }
   };
+
   const clearFilters = () => {
     setSelectedTags([]);
   };
+
   const getDisplayedTags = () => {
     if (showAllTags) return allTags;
     return allTags.slice(0, 8);
   };
+
   return <section id="work" className="bg-[#e8f3ff] py-8 md:py-12">
       <div className="section-container">
         <div className="text-center mb-6 reveal">
@@ -148,4 +171,5 @@ const Work: React.FC = () => {
       </div>
     </section>;
 };
+
 export default Work;
