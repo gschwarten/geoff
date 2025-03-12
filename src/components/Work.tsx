@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -27,10 +28,10 @@ const Work: React.FC = () => {
       link: '#',
     },
     {
-      title: 'Finance Dashboard',
+      title: 'Ecommerce: Reinvented a Social Enterprise',
       description: 'Interactive dashboard for visualizing financial data with real-time analytics and reporting.',
       tags: ['TypeScript', 'D3.js', 'Express', 'PostgreSQL'],
-      link: '#',
+      link: 'https://www.betterworldbooks.com',
     },
     {
       title: 'Social Network',
