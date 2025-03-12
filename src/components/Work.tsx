@@ -140,7 +140,7 @@ const Work: React.FC = () => {
                 <div className="aspect-video bg-gray-100 relative">
                   {project.imageUrl ? (
                     <div className={`w-full h-full ${project.title.includes('Healthrageous') ? 
-                      'bg-gradient-to-b from-[#f3f3f3] to-[#e8e8e8] border border-gray-300 p-4 flex items-center justify-center' : 
+                      'flex items-center justify-center bg-gradient-to-b from-gray-100 to-gray-200' : 
                       ''}`}>
                       {project.isGif ? (
                         <img 
@@ -149,13 +149,21 @@ const Work: React.FC = () => {
                           className="w-full h-full object-cover" 
                         />
                       ) : (
-                        <img 
-                          src={project.imageUrl} 
-                          alt={project.title} 
-                          className={`${project.title.includes('Healthrageous') ? 
-                            'max-w-[80%] max-h-[80%] object-contain shadow-sm' : 
-                            'w-full h-full object-cover'}`} 
-                        />
+                        project.title.includes('Healthrageous') ? (
+                          <div className="bg-white rounded-lg border-2 border-gray-300 shadow-md p-6 w-4/5 h-4/5 flex items-center justify-center">
+                            <img 
+                              src={project.imageUrl} 
+                              alt={project.title} 
+                              className="max-w-full max-h-full object-contain" 
+                            />
+                          </div>
+                        ) : (
+                          <img 
+                            src={project.imageUrl} 
+                            alt={project.title} 
+                            className="w-full h-full object-cover" 
+                          />
+                        )
                       )}
                     </div>
                   ) : (
