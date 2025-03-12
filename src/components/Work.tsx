@@ -50,7 +50,7 @@ const Work: React.FC = () => {
   }, {
     title: 'Building a Leading Summit for Mental Health Innovation',
     description: 'Led digital transformation initiative for an enterprise learning & development organization, transitioning from in-person workshops to blended digital experiences. Developed go-to-market strategy, digital content approach, and measurement framework. Established an agile marketing process that increased program enrollment by 65% while reducing acquisition costs.',
-    tags: ['Event Marketing', 'Content Marketing', 'Social Media'],
+    tags: ['Event Marketing', 'Content Marketing', 'Social Media', 'Partnerships'],
     imageUrl: '/lovable-uploads/Formula-Gif2.gif',
     link: '#',
     isGif: true
