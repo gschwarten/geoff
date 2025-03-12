@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -44,14 +45,14 @@ const Work: React.FC = () => {
     description: 'I worked with Healthrageous to identify and eliminate conversion friction in the sign-up process for healthy meal programs targeting seniors. By analyzing drop-off points in the user journey, I uncovered key insights that led to improved messaging, streamlined onboarding, and a smoother experience for older adults, ultimately increasing engagement and access.',
     tags: ['Conversion Rate Optimization', 'UX', 'Analytics', 'Growth Strategy', 'Data Analysis', 'Health', 'Health Tech', 'Healthplan Member Marketing', 'Direct Mail'],
     imageUrl: '/lovable-uploads/healthrageous.png',
-    link: '#',
+    link: 'https://madeeasymeals.com/',
     isGif: false
   }, {
     title: 'Building a Leading Summit for Mental Health Innovation',
     description: 'Led digital transformation initiative for an enterprise learning & development organization, transitioning from in-person workshops to blended digital experiences. Developed go-to-market strategy, digital content approach, and measurement framework. Established an agile marketing process that increased program enrollment by 65% while reducing acquisition costs.',
     tags: ['Event Marketing', 'Content Marketing', 'Social Media', 'Partnerships'],
     imageUrl: '/lovable-uploads/RAMHT.png',
-    link: '#',
+    link: 'https://www.rapidmentalhealth.com/',
     isGif: false
   }];
 
