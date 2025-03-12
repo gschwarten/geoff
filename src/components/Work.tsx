@@ -1,7 +1,14 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink } from 'lucide-react';
+import { 
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 interface Project {
   title: string;
@@ -30,6 +37,7 @@ const Work: React.FC = () => {
       title: 'Ecommerce: Reinvented a Social Enterprise',
       description: 'First marketing hire for fast growing for-profit social enterprise built a team and led marketing initiatives including a corporate re-branding, e-commerce web site launch, email lifecycle marketing, paid search, SEO, social media, content marketing, partnerships and PR. Grew business unit customer base 10x to over 200k customers in two years, attracting Series A investment.',
       tags: ['TypeScript', 'D3.js', 'Express', 'PostgreSQL'],
+      imageUrl: '/lovable-uploads/better-world-books-screeshot2',
       link: 'https://www.betterworldbooks.com',
     },
     {
@@ -83,13 +91,22 @@ const Work: React.FC = () => {
                     <span className="text-gray-400 text-lg">Project Image</span>
                   </div>
                 )}
-                <a 
-                  href={project.link} 
-                  className="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-colors"
-                  aria-label={`View ${project.title}`}
-                >
-                  <ExternalLink className="h-5 w-5" />
-                </a>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <a 
+                        href={project.link} 
+                        className="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-colors"
+                        aria-label={`View ${project.title}`}
+                      >
+                        <ExternalLink className="h-5 w-5" />
+                      </a>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Visit project</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
