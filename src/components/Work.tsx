@@ -112,7 +112,7 @@ const Work: React.FC = () => {
           <div className="flex items-center justify-between">
             <CollapsibleTrigger className="flex items-center hover:text-blue-600">
               <Filter className="h-5 w-5 mr-2" />
-              <span className="text-lg font-medium">Filter by skills & expertise</span>
+              <span className="text-lg font-medium text-gray-500">Filter by skills & expertise</span>
               {isOpen ? <ChevronUp className="h-4 w-4 ml-2" /> : <ChevronDown className="h-4 w-4 ml-2" />}
             </CollapsibleTrigger>
             {selectedTags.length > 0 && <button onClick={clearFilters} className="text-sm text-blue-600 hover:text-blue-800 flex items-center">
