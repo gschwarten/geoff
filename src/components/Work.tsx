@@ -30,19 +30,19 @@ const Work: React.FC = () => {
     link: '#'
   }, {
     title: 'Ecommerce: Reinventing a Social Enterprise',
-    description: 'First marketing hire for fast growing for-profit social enterprise built a team and led marketing initiatives including a corporate re-branding, e-commerce web site launch, email lifecycle marketing, paid search, SEO, social media, content marketing, partnerships and PR. Grew business unit customer base 10x to over 200k customers in two years, attracting Series A investment.',
+    description: 'As the first marketing hire for a fast-growing for-profit social enterprise, I built a team and led marketing initiatives, including a corporate rebranding, e-commerce website launch, email lifecycle marketing, paid search, SEO, social media, content marketing, partnerships, and PR. Grew business unit customer base 10x to over 200k customers in two years, attracting Series A investment.',
     tags: ['Marketing Strategy', 'Branding', 'Paid Search', 'Lifecycle Marketing', 'SEO', 'PR', 'Event Marketing', 'Partnerships', 'Ecommerce Product Management', 'Product Growth'],
     imageUrl: '/lovable-uploads/better-world-books-screeshot2.jpg',
     link: 'http://www.betterworldbooks.com'
   }, {
     title: 'Building a Brand, Content, and Lead Gen Engine',
-    description: 'Launched and scaled a content marketing and lead generation engine, driving a peak of 75K qualified leads and 1M podcast downloads annually. The webcast and podcast program "leads with learning" helping grow an appetite for personal growth and learning. In addition to lead generation, the program drives seven figure revenue and acts as a engine for SEO, lifecycle, and social media content.',
+    description: 'Launched and scaled a content marketing and lead generation engine, driving a peak of 75K qualified leads and 1M podcast downloads annually. The webcast and podcast program "leads with learning" helping cultivate an appetite for personal growth and learning. In addition to lead generation, the program drives seven figure revenue and acts as a engine for SEO, lifecycle, and social media content.',
     tags: ['Content Strategy', 'Podcast Marketing', 'Webinars', 'Growth Marketing', 'Audience Expansion'],
     imageUrl: '/lovable-uploads/Creative-Confidence-Podcast.jpg',
     link: 'https://www.ideou.com/pages/creative-confidence-podcast'
   }, {
     title: 'Launching a New Offer Aligned with Market Demand',
-    description: 'Leveraging high-intent search queries and emerging trends in online learning, I designed and launched an experimental certificate program that combined multiple courses. The experiment—powered by an Unbound landing page, lifecycle marketing, paid search, and social media—delivered outsized results, doubling AOV and retention overnight. I led iterations of the experiment to develop an ongoing product offering with a scalable marketing playbook and drove growth efforts until it reached 40% of business unit revenue.',
+    description: 'Leveraging high-intent search queries and emerging trends in online learning, I designed and launched an experimental certificate program that combined multiple courses. The experiment—powered by an Unbound landing page, lifecycle marketing, paid search, and social media—delivered outsized results, doubling AOV and retention overnight. I iterated on the experiment to develop a scalable product offering and marketing playbook, driving growth until it reached 40% of business unit revenue.',
     tags: ['Product Growth', 'Lifecycle Marketing', 'Analytics', 'Experimentation', 'Growth Strategy'],
     imageUrl: '/lovable-uploads/cert3.png',
     link: 'https://www.rapidmentalhealth.com/',
