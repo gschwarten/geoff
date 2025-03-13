@@ -44,7 +44,7 @@ const Work: React.FC = () => {
     title: 'Launching a New Offer Meeting the Needs of the Market',
     description: 'Played a key role in planning and growing the Rapid Acting Mental Health Treatment Summit (SF), an event dedicated to cutting-edge mental health treatments. I helped scale its impact by securing a venue, refining sponsorships, driving outreach, enhancing its digital presence, and connecting health entrepreneurs with investors.',
     tags: ['Event Marketing', 'Content Marketing', 'Social Media', 'Partnerships', 'Health Tech', 'Mental Health', 'Product Growth'],
-    imageUrl: '/cert.png',
+    imageUrl: '/lovable-uploads/cert2.jpeg',
     link: 'https://www.rapidmentalhealth.com/',
     isGif: false
   }, {
