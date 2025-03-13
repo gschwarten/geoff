@@ -19,19 +19,19 @@ const Work: React.FC = () => {
   const projects: Project[] = [{
     title: 'Scaling a Learning Business from Scratch',
     description: 'As the first marketing hire, I helped IDEO U grow from an idea into a thriving learning business with over 100K+ customers. I built and optimized growth channels—paid search, SEO, lifecycle marketing, and CRO—while leading a team to scale efforts. Experimentation and data-driven insights were key to identifying and unlocking the repeatable growth formula.',
-    tags: ['Growth Strategy', 'Performance Marketing', 'SEO', 'CRO', 'Lifecycle Marketing', 'Demand Generation', 'Ecommerce Product Management'],
+    tags: ['Growth Strategy', 'Performance Marketing', 'SEO', 'CRO', 'Lifecycle Marketing', 'Demand Generation', 'Ecommerce Product Management', 'Product Growth'],
     imageUrl: '/lovable-uploads/IDEO_U.jpg',
     link: 'https://www.ideou.com/'
   }, {
     title: 'Customer Acquisition for In-Person + Mobile Personal Training',
     description: 'Led customer acquisition and growth efforts for a two-sided marketplace that made personal training more affordable and accessible by combining in-person sessions with app-assigned workouts. Helped 5x the customer base through new channel expansion, paid search, event marketing, and strategic partnerships.',
-    tags: ['Customer Acquisition', 'Growth Marketing', 'Two-Sided Marketplace', 'Paid Search', 'Event Marketing', 'Partnerships', 'Health', 'Fitness Tech'],
+    tags: ['Customer Acquisition', 'Growth Marketing', 'Two-Sided Marketplace', 'Paid Search', 'Event Marketing', 'Partnerships', 'Health', 'Fitness Tech', 'Product Growth'],
     imageUrl: '/lovable-uploads/gain-trainer.jpg',
     link: '#'
   }, {
     title: 'Ecommerce: Reinventing a Social Enterprise',
     description: 'First marketing hire for fast growing for-profit social enterprise built a team and led marketing initiatives including a corporate re-branding, e-commerce web site launch, email lifecycle marketing, paid search, SEO, social media, content marketing, partnerships and PR. Grew business unit customer base 10x to over 200k customers in two years, attracting Series A investment.',
-    tags: ['Marketing Strategy', 'Branding', 'Paid Search', 'Lifecycle Marketing', 'SEO', 'PR', 'Event Marketing', 'Partnerships', 'Ecommerce Product Management'],
+    tags: ['Marketing Strategy', 'Branding', 'Paid Search', 'Lifecycle Marketing', 'SEO', 'PR', 'Event Marketing', 'Partnerships', 'Ecommerce Product Management', 'Product Growth'],
     imageUrl: '/lovable-uploads/better-world-books-screeshot2.jpg',
     link: 'http://www.betterworldbooks.com'
   }, {
@@ -43,7 +43,7 @@ const Work: React.FC = () => {
   }, {
     title: 'Removing Barriers to Healthy Meal Access for Seniors',
     description: 'I worked with Healthrageous to identify and eliminate conversion friction in the sign-up process for healthy meal programs targeting seniors. By analyzing drop-off points in the user journey, I uncovered key insights that led to improved messaging, streamlined onboarding, and a smoother experience for older adults, ultimately increasing engagement and access.',
-    tags: ['Conversion Rate Optimization', 'UX', 'Analytics', 'Growth Strategy', 'Data Analysis', 'Health', 'Health Tech', 'Healthplan Member Marketing', 'Direct Mail'],
+    tags: ['Conversion Rate Optimization', 'UX', 'Analytics', 'Growth Strategy', 'Data Analysis', 'Health', 'Health Tech', 'Healthplan Member Marketing', 'Direct Mail', 'Product Growth'],
     imageUrl: '/lovable-uploads/healthrageous.png',
     link: 'https://madeeasymeals.com/',
     isGif: false
