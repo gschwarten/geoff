@@ -43,7 +43,7 @@ const Work: React.FC = () => {
   }, {
     title: 'Launching a New Offer Aligned with Market Demand',
     description: 'Leveraging high-intent search queries and emerging trends in online learning, I designed and launched an experimental certificate program that combined multiple courses. The experiment—powered by an Unbound landing page, lifecycle marketing, paid search, and social media—delivered outsized results, doubling AOV and retention overnight. I led iterations of the experiment to develop an ongoing product offering with a scalable marketing playbook and drove growth efforts until it reached 40% of business unit revenue.',
-    tags: ['Product Growth', 'Lifecycle Marketing', 'Analytics', 'Experimentation', 'GTM Strategy'],
+    tags: ['Product Growth', 'Lifecycle Marketing', 'Analytics', 'Experimentation', 'Growth Strategy'],
     imageUrl: '/lovable-uploads/cert3.png',
     link: 'https://www.rapidmentalhealth.com/',
     isGif: false
