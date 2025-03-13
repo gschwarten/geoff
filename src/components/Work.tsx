@@ -41,18 +41,18 @@ const Work: React.FC = () => {
     imageUrl: '/lovable-uploads/Creative-Confidence-Podcast.jpg',
     link: 'https://www.ideou.com/pages/creative-confidence-podcast'
   }, {
-    title: 'Removing Barriers to Healthy Meal Access for Seniors',
-    description: 'I worked with Healthrageous to identify and eliminate conversion friction in the sign-up process for healthy meal programs targeting seniors. By analyzing drop-off points in the user journey, I uncovered key insights that led to improved messaging, streamlined onboarding, and a smoother experience for older adults, ultimately increasing engagement and access.',
-    tags: ['Conversion Rate Optimization', 'UX', 'Analytics', 'Growth Strategy', 'Data Analysis', 'Health', 'Health Tech', 'Healthplan Member Marketing', 'Direct Mail', 'Product Growth'],
-    imageUrl: '/lovable-uploads/healthrageous.png',
-    link: 'https://madeeasymeals.com/',
-    isGif: false
-  }, {
     title: 'Building a Leading Summit for Mental Health Innovation',
     description: 'Played a key role in planning and growing the Rapid Acting Mental Health Treatment Summit (SF), an event dedicated to cutting-edge mental health treatments. I helped scale its impact by securing a venue, refining sponsorships, driving outreach, enhancing its digital presence, and connecting health entrepreneurs with investors.',
     tags: ['Event Marketing', 'Content Marketing', 'Social Media', 'Partnerships', 'Health Tech', 'Mental Health'],
     imageUrl: '/lovable-uploads/RAMHT.png',
     link: 'https://www.rapidmentalhealth.com/',
+    isGif: false
+  }, {
+    title: 'Removing Barriers to Healthy Meal Access for Seniors',
+    description: 'I worked with Healthrageous to identify and eliminate conversion friction in the sign-up process for healthy meal programs targeting seniors. By analyzing drop-off points in the user journey, I uncovered key insights that led to improved messaging, streamlined onboarding, and a smoother experience for older adults, ultimately increasing engagement and access.',
+    tags: ['Conversion Rate Optimization', 'UX', 'Analytics', 'Growth Strategy', 'Data Analysis', 'Health', 'Health Tech', 'Healthplan Member Marketing', 'Direct Mail', 'Product Growth'],
+    imageUrl: '/lovable-uploads/healthrageous.png',
+    link: 'https://madeeasymeals.com/',
     isGif: false
   }];
 
