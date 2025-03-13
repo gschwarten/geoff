@@ -35,18 +35,18 @@ const Work: React.FC = () => {
     imageUrl: '/lovable-uploads/better-world-books-screeshot2.jpg',
     link: 'http://www.betterworldbooks.com'
   }, {
+    title: 'Launching a New Offer Aligned with Market Demand',
+    description: 'Leveraging high-intent search queries and emerging trends in online learning, I designed and launched an experimental certificate program that combined multiple courses. The experiment—powered by an Unbound landing page, lifecycle marketing, paid search, and social media—delivered outsized results, doubling AOV and retention overnight. I iterated on the experiment to develop a scalable product offering and marketing playbook, driving growth until it reached 40% of business unit revenue.',
+    tags: ['Product Growth', 'Lifecycle Marketing', 'Analytics', 'Experimentation', 'Growth Strategy', 'Paid Search'],
+    imageUrl: '/lovable-uploads/cert3.png',
+    link: 'https://www.rapidmentalhealth.com/',
+    isGif: false
+  }, {
     title: 'Building a Brand, Content, and Lead Gen Engine',
     description: 'Launched and scaled a content marketing and lead generation engine, driving a peak of 75K qualified leads and 1M podcast downloads annually. The webcast and podcast program "leads with learning" helping cultivate an appetite for personal growth and learning. In addition to lead generation, the program drives seven figure revenue and acts as a engine for SEO, lifecycle, and social media content.',
     tags: ['Content Strategy', 'Podcast Marketing', 'Webinars', 'Growth Marketing', 'Audience Expansion'],
     imageUrl: '/lovable-uploads/Creative-Confidence-Podcast.jpg',
     link: 'https://www.ideou.com/pages/creative-confidence-podcast'
-  }, {
-    title: 'Launching a New Offer Aligned with Market Demand',
-    description: 'Leveraging high-intent search queries and emerging trends in online learning, I designed and launched an experimental certificate program that combined multiple courses. The experiment—powered by an Unbound landing page, lifecycle marketing, paid search, and social media—delivered outsized results, doubling AOV and retention overnight. I iterated on the experiment to develop a scalable product offering and marketing playbook, driving growth until it reached 40% of business unit revenue.',
-    tags: ['Product Growth', 'Lifecycle Marketing', 'Analytics', 'Experimentation', 'Growth Strategy'],
-    imageUrl: '/lovable-uploads/cert3.png',
-    link: 'https://www.rapidmentalhealth.com/',
-    isGif: false
   }, {
     title: 'Removing Barriers to Healthy Meal Access for Seniors',
     description: 'I worked with Healthrageous to identify and eliminate conversion friction in the sign-up process for healthy meal programs targeting seniors. By analyzing drop-off points in the user journey, I uncovered key insights that led to improved messaging, streamlined onboarding, and a smoother experience for older adults, ultimately increasing engagement and access.',
