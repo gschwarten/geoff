@@ -21,7 +21,7 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false }) => {
         I would love the opportunity to speak with you about how I could identify, prioritize and execute new growth opportunities. Whether it be it channels, features or offerings, that serve to grow childcare providers or customers I am confident that I could find the formula for growth.
       </p>
       <p className="text-lg text-gray-600 mb-6">
-        Please enjoy this site and reach out to book a call.
+        Please enjoy this site and reach out to <a href="https://calendly.com/geoff-schwarten/30min" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">book a call</a>.
       </p>
     </>
   );
