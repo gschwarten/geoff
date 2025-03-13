@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -13,6 +12,11 @@ interface Project {
   imageUrl?: string;
   link: string;
   isGif?: boolean;
+}
+
+interface TagWithCount {
+  name: string;
+  count: number;
 }
 
 const Work: React.FC = () => {
@@ -56,18 +60,28 @@ const Work: React.FC = () => {
     isGif: false
   }];
 
-  const [allTags, setAllTags] = useState<string[]>([]);
+  const [allTags, setAllTags] = useState<TagWithCount[]>([]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
   const [isOpen, setIsOpen] = useState(false);
   const [showAllTags, setShowAllTags] = useState(false);
 
   useEffect(() => {
-    const tags = new Set<string>();
+    const tagCounts: Record<string, number> = {};
     projects.forEach(project => {
-      project.tags.forEach(tag => tags.add(tag));
+      project.tags.forEach(tag => {
+        tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+      });
     });
-    setAllTags(Array.from(tags).sort());
+    
+    const tagsWithCount = Object.entries(tagCounts).map(([name, count]) => ({
+      name,
+      count
+    }));
+    
+    tagsWithCount.sort((a, b) => b.count - a.count);
+    
+    setAllTags(tagsWithCount);
   }, []);
 
   useEffect(() => {
@@ -122,9 +136,16 @@ const Work: React.FC = () => {
 
           <CollapsibleContent className="space-y-2">
             <div className="flex flex-wrap gap-2">
-              {getDisplayedTags().map(tag => <Badge key={tag} variant={selectedTags.includes(tag) ? "default" : "secondary"} className="cursor-pointer hover:opacity-80 transition-opacity" onClick={() => handleTagClick(tag)}>
-                  {tag}
-                </Badge>)}
+              {getDisplayedTags().map(tag => (
+                <Badge 
+                  key={tag.name} 
+                  variant={selectedTags.includes(tag.name) ? "default" : "secondary"} 
+                  className="cursor-pointer hover:opacity-80 transition-opacity flex items-center" 
+                  onClick={() => handleTagClick(tag.name)}
+                >
+                  {tag.name} <span className="ml-1 text-xs px-1.5 py-0.5 rounded-full bg-white/20">{tag.count}</span>
+                </Badge>
+              ))}
             </div>
             {allTags.length > 8 && <button onClick={() => setShowAllTags(!showAllTags)} className="text-sm text-blue-600 hover:text-blue-800">
                 {showAllTags ? 'Show less' : `Show ${allTags.length - 8} more tags`}
