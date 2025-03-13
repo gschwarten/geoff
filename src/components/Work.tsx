@@ -41,10 +41,10 @@ const Work: React.FC = () => {
     imageUrl: '/lovable-uploads/Creative-Confidence-Podcast.jpg',
     link: 'https://www.ideou.com/pages/creative-confidence-podcast'
   }, {
-    title: 'Building a Leading Summit for Mental Health Innovation',
+    title: 'Launching a New Offer Meeting the Needs of the Market',
     description: 'Played a key role in planning and growing the Rapid Acting Mental Health Treatment Summit (SF), an event dedicated to cutting-edge mental health treatments. I helped scale its impact by securing a venue, refining sponsorships, driving outreach, enhancing its digital presence, and connecting health entrepreneurs with investors.',
-    tags: ['Event Marketing', 'Content Marketing', 'Social Media', 'Partnerships', 'Health Tech', 'Mental Health'],
-    imageUrl: '/lovable-uploads/RAMHT.png',
+    tags: ['Event Marketing', 'Content Marketing', 'Social Media', 'Partnerships', 'Health Tech', 'Mental Health', 'Product Growth'],
+    imageUrl: '/cert.png',
     link: 'https://www.rapidmentalhealth.com/',
     isGif: false
   }, {
