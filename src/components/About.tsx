@@ -8,6 +8,48 @@ interface AboutProps {
 }
 
 const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false }) => {
+  const wonderSchoolContent = (
+    <>
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
+      <p className="text-lg text-gray-600 mb-6">
+        A former colleague was immortalized in company lore for the saying, "never come to a meeting without a prototype."
+      </p>
+      <p className="text-lg text-gray-600 mb-6">
+        It's in that spirit that I stood up this quick Lovable landing page to show, don't tell, how I might be able to support Wonderschool.
+      </p>
+      <p className="text-lg text-gray-600 mb-6">
+        I would love the opportunity to speak with you about how I could identify, prioritize and execute new growth opportunities. Whether it be it channels, features or offerings, that serve to grow childcare providers or customers I am confident that I could find the formula for growth.
+      </p>
+      <p className="text-lg text-gray-600 mb-6">
+        Please enjoy this site and reach out to book a call.
+      </p>
+    </>
+  );
+
+  const defaultContent = (
+    <>
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
+      <p className="text-lg text-gray-600 mb-6">
+        I help impact-oriented businesses "find the formula."
+      </p>
+      <p className="text-lg text-gray-600 mb-6">
+        What does it mean to find the formula? It means to find a repeatable, scalable approach to growth.
+      </p>
+      <p className="text-lg text-gray-600 mb-6">
+        I bring a methodical, creative approach to experimenting and identifying channels, then scale them up and build teams around the ones that work. My expertise spans performance marketing, lifecycle marketing, SEO, content strategy, branding, and conversion optimization.
+      </p>
+      <p className="text-lg text-gray-600 mb-6">
+        While I'm a generalist, I have deep experience in key channels, along with the leadership skills to know which tool is right for the job. I have a data-driven approach, blending creativity with insights to not just grow businesses, but to build sustainable, long-term success.
+      </p>
+      <p className="text-lg text-gray-600 mb-6">
+        You're either a brand or a commodity. I help build brands to learn and master the medium and the message, ensuring they resonate, inspire, convert, and drive key metrics like LTV, CPA, and ROAS.
+      </p>
+      <p className="text-lg text-gray-600 mb-6">
+        When I'm not on this joyful quest, I'm guiding and modeling the right behaviors for my two energetic young boys, and embracing a love for the ocean as an aspiring waterman.
+      </p>
+    </>
+  );
+
   return (
     <section id="about" className="section-container">
       <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -29,25 +71,8 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false }) => {
               />
             </div>
           )}
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
-          <p className="text-lg text-gray-600 mb-6">
-            I help impact-oriented businesses "find the formula."
-          </p>
-          <p className="text-lg text-gray-600 mb-6">
-            What does it mean to find the formula? It means to find a repeatable, scalable approach to growth.
-          </p>
-          <p className="text-lg text-gray-600 mb-6">
-            I bring a methodical, creative approach to experimenting and identifying channels, then scale them up and build teams around the ones that work. My expertise spans performance marketing, lifecycle marketing, SEO, content strategy, branding, and conversion optimization.
-          </p>
-          <p className="text-lg text-gray-600 mb-6">
-            While I'm a generalist, I have deep experience in key channels, along with the leadership skills to know which tool is right for the job. I have a data-driven approach, blending creativity with insights to not just grow businesses, but to build sustainable, long-term success.
-          </p>
-          <p className="text-lg text-gray-600 mb-6">
-            You're either a brand or a commodity. I help build brands to learn and master the medium and the message, ensuring they resonate, inspire, convert, and drive key metrics like LTV, CPA, and ROAS.
-          </p>
-          <p className="text-lg text-gray-600 mb-6">
-            When I'm not on this joyful quest, I'm guiding and modeling the right behaviors for my two energetic young boys, and embracing a love for the ocean as an aspiring waterman.
-          </p>
+          
+          {showWonderSchoolLogo ? wonderSchoolContent : defaultContent}
           
           <Separator className="my-8" />
           
