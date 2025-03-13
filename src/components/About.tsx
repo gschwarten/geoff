@@ -18,7 +18,7 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false }) => {
         It's in that spirit that I stood up this quick Lovable landing page to show, don't tell, how I might be able to support Wonderschool.
       </p>
       <p className="text-lg text-gray-600 mb-6">
-        I would love the opportunity to speak with you about how I could identify, prioritize and execute new growth opportunities. Whether it be it channels, features or offerings, that serve to grow childcare providers or customers I am confident that I could find the formula for growth.
+        I would love the opportunity to discuss how I can identify, prioritize, and execute new growth opportunities—whether through channels, features, or offerings—to grow childcare providers or customers. I'm confident I can find the formula for growth.
       </p>
       <p className="text-lg text-gray-600 mb-6">
         Please enjoy this site and reach out to <a href="https://calendly.com/geoff-schwarten/30min" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">book a call</a>.
