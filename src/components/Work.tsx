@@ -42,9 +42,9 @@ const Work: React.FC = () => {
     link: 'https://www.ideou.com/pages/creative-confidence-podcast'
   }, {
     title: 'Launching a New Offer Meeting the Needs of the Market',
-    description: 'Played a key role in planning and growing the Rapid Acting Mental Health Treatment Summit (SF), an event dedicated to cutting-edge mental health treatments. I helped scale its impact by securing a venue, refining sponsorships, driving outreach, enhancing its digital presence, and connecting health entrepreneurs with investors.',
-    tags: ['Event Marketing', 'Content Marketing', 'Social Media', 'Partnerships', 'Health Tech', 'Mental Health', 'Product Growth'],
-    imageUrl: '/lovable-uploads/cert2.jpeg',
+    description: 'Based off high intent search queries and emerging trends in online learning, I designed and launched an experiment online learning certificate that combined multiple courses. The experiment included an Unbound landing page combined with lifecycle marketing, paid search, and social media. The experiment experienced 1+1=3 results, doubling AOV and retention overnight. I led iterations of the experiment to develop an ongoing product offering with a GTM playbook and led growth efforts for the offer to reach 40% of business unit revenues.',
+    tags: ['Product Growth', 'Lifecycle Marketing', 'Analytics', 'Human-Centered Insight', 'New Offers'],
+    imageUrl: '/lovable-uploads/cert3.png',
     link: 'https://www.rapidmentalhealth.com/',
     isGif: false
   }, {
