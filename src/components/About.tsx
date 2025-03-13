@@ -27,6 +27,9 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false }) => {
                 alt="WonderSchool Logo" 
                 className="max-w-[200px]"
               />
+              <p className="text-lg text-gray-600 mt-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.
+              </p>
             </div>
           )}
           <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
