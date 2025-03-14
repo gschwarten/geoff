@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink, X, Filter, ChevronDown, ChevronUp } from 'lucide-react';
+import { ExternalLink, X, Filter, ChevronDown, ChevronUp, HeartPulse } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
@@ -53,6 +53,13 @@ const Work: React.FC = () => {
     tags: ['Conversion Rate Optimization', 'UX', 'Analytics', 'Growth Strategy', 'Data Analysis', 'Health', 'Health Tech', 'Healthplan Member Marketing', 'Direct Mail', 'Product Growth'],
     imageUrl: '/lovable-uploads/healthrageous.png',
     link: 'https://madeeasymeals.com/',
+    isGif: false
+  }, {
+    title: 'Virtual Mental Health Event for Educators',
+    description: 'Created and executed a virtual event strategy for mental health professionals serving educators during the pandemic. The event combined livestreamed presentations, interactive workshops, and networking opportunities. My work included platform selection, speaker coordination, content planning, and promotional strategy that drove 3,500+ registrations and established a new annual event series.',
+    tags: ['Event Marketing', 'Virtual Events', 'Mental Health', 'Education', 'Content Strategy', 'Community Building', 'Digital Marketing'],
+    imageUrl: '/lovable-uploads/RAMHT.png',
+    link: 'https://www.rapidmentalhealth.com/',
     isGif: false
   }];
 
