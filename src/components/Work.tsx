@@ -55,9 +55,9 @@ const Work: React.FC = () => {
     link: 'https://madeeasymeals.com/',
     isGif: false
   }, {
-    title: 'Virtual Mental Health Event for Educators',
-    description: 'Created and executed a virtual event strategy for mental health professionals serving educators during the pandemic. The event combined livestreamed presentations, interactive workshops, and networking opportunities. My work included platform selection, speaker coordination, content planning, and promotional strategy that drove 3,500+ registrations and established a new annual event series.',
-    tags: ['Event Marketing', 'Virtual Events', 'Mental Health', 'Education', 'Content Strategy', 'Community Building', 'Digital Marketing'],
+    title: 'Building a Leading Summit for Mental Health Innovation',
+    description: 'Played a key role in planning and growing the Rapid Acting Mental Health Treatment Summit (SF), an event dedicated to cutting-edge mental health treatments. I helped scale its impact by securing a venue, refining sponsorships, driving outreach, enhancing its digital presence, and connecting health entrepreneurs with investors.',
+    tags: ['Event Marketing', 'Content Marketing', 'Social Media', 'Partnerships', 'Health Tech', 'Mental Health'],
     imageUrl: '/lovable-uploads/RAMHT.png',
     link: 'https://www.rapidmentalhealth.com/',
     isGif: false
