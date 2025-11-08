@@ -6,9 +6,10 @@ import CroppedGif from './CroppedGif';
 interface AboutProps {
   showWonderSchoolLogo?: boolean;
   showThredUpLogo?: boolean;
+  showGileadLogo?: boolean;
 }
 
-const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUpLogo = false }) => {
+const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUpLogo = false, showGileadLogo = false }) => {
   const wonderSchoolContent = (
     <>
       <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
@@ -41,6 +42,15 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
       </p>
       <p className="text-lg text-gray-600 mb-6">
         Please enjoy this site and reach out to <a href="https://calendly.com/geoff-schwarten/30min" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">book a call</a>.
+      </p>
+    </>
+  );
+
+  const gileadContent = (
+    <>
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
+      <p className="text-lg text-gray-600 mb-6">
+        Content coming soon.
       </p>
     </>
   );
@@ -101,8 +111,19 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
             </div>
           )}
           
+          {showGileadLogo && (
+            <div className="mb-12">
+              <img 
+                src="/lovable-uploads/gilead_logo.png" 
+                alt="Gilead Logo" 
+                className="max-w-[200px]"
+              />
+            </div>
+          )}
+          
           {showWonderSchoolLogo ? wonderSchoolContent : 
            showThredUpLogo ? thredUpContent :
+           showGileadLogo ? gileadContent :
            defaultContent}
           
           <Separator className="my-8" />
