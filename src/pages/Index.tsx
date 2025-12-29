@@ -5,6 +5,7 @@ import About from '@/components/About';
 import Work from '@/components/Work';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
+import KnifeScroll from '@/components/KnifeScroll';
 
 const Index = () => {
   useEffect(() => {
@@ -42,6 +43,7 @@ const Index = () => {
           <About />
         </ScrollReveal>
       </div>
+      <KnifeScroll />
       <ScrollReveal>
         <Work />
       </ScrollReveal>
