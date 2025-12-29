@@ -25,7 +25,7 @@ const KnifeScroll: React.FC = () => {
   return (
     <div 
       ref={containerRef}
-      className="flex justify-center items-center py-16"
+      className="flex justify-center items-center py-6"
     >
       <img
         src={isOpen ? "/lovable-uploads/0d5a25a5-621d-4195-af4b-7fa09af2f7a8.png" : "/lovable-uploads/closed-knife.png"}
