@@ -43,10 +43,10 @@ const Index = () => {
           <About />
         </ScrollReveal>
       </div>
-      <KnifeScroll />
       <ScrollReveal>
         <Work />
       </ScrollReveal>
+      <KnifeScroll />
       <Footer />
     </div>
   );
