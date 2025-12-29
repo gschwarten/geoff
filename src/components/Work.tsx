@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { ExternalLink, X, Filter, ChevronDown, ChevronUp, HeartPulse } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import KnifeScroll from '@/components/KnifeScroll';
 
 interface Project {
   title: string;
@@ -104,12 +105,8 @@ const Work: React.FC = () => {
 
   return <section id="work" className="bg-[#e8f3ff] py-8 md:py-12">
       <div className="section-container">
+        <KnifeScroll />
         <div className="text-center mb-6 reveal">
-          <div className="flex justify-center mb-3">
-            <img src="/lovable-uploads/0d5a25a5-621d-4195-af4b-7fa09af2f7a8.png" alt="Swiss Army Knife" className="w-24 h-24" style={{
-            filter: 'invert(6%) sepia(81%) saturate(6356%) hue-rotate(238deg) brightness(92%) contrast(144%)'
-          }} />
-          </div>
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Work Examples</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">A selection of projects that showcase unique challenges and highlight different aspects of my skill set.</p>
         </div>
