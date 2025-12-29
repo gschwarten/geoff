@@ -41,7 +41,7 @@ const KnifeScroll: React.FC = () => {
       <img
         src={isOpen ? "/lovable-uploads/0d5a25a5-621d-4195-af4b-7fa09af2f7a8.png" : "/lovable-uploads/closed-knife.png"}
         alt="Swiss Army Knife"
-        className={`w-36 h-auto transition-all duration-300 ${shouldAnimate ? 'animate-[scalePop_0.4s_ease-out]' : ''}`}
+        className={`w-36 h-auto transition-all duration-300 ${shouldAnimate ? 'animate-[bounce_0.5s_ease-out]' : ''}`}
         style={{
           filter: 'brightness(0) saturate(100%) invert(6%) sepia(81%) saturate(6356%) hue-rotate(238deg) brightness(92%) contrast(144%)'
         }}
