@@ -158,7 +158,7 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
           {showLovableLogo && (
             <div className="mb-12">
               <img 
-                src="/og-image.png" 
+                src="/lovable-uploads/lovable-logo.png" 
                 alt="Lovable Logo" 
                 className="max-w-[200px]"
               />
