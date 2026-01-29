@@ -90,9 +90,9 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
         href="https://calendly.com/geoff-schwarten/30min" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="inline-block bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors"
+        className="text-gray-600 hover:text-gray-900 font-medium transition-colors inline-flex items-center gap-1"
       >
-        Book a Call
+        Book a call <span aria-hidden="true">→</span>
       </a>
     </>
   );
