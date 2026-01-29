@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import WonderSchool from "./pages/WonderSchool";
 import Gilead from "./pages/Gilead";
+import Lovable from "./pages/Lovable";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/wonderschool" element={<WonderSchool />} />
           <Route path="/gilead" element={<Gilead />} />
+          <Route path="/lovable" element={<Lovable />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
