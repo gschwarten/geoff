@@ -7,9 +7,10 @@ interface AboutProps {
   showWonderSchoolLogo?: boolean;
   showThredUpLogo?: boolean;
   showGileadLogo?: boolean;
+  showLovableLogo?: boolean;
 }
 
-const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUpLogo = false, showGileadLogo = false }) => {
+const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUpLogo = false, showGileadLogo = false, showLovableLogo = false }) => {
   const wonderSchoolContent = (
     <>
       <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
@@ -66,6 +67,24 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
       </p>
       <p className="text-lg text-gray-600 mb-6">
         When I'm not on this joyful quest, I'm guiding and modeling the right behaviors for my two energetic young boys, and embracing a love for the ocean as an aspiring waterman.
+      </p>
+    </>
+  );
+
+  const lovableContent = (
+    <>
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
+      <p className="text-lg text-gray-600 mb-6">
+        A former colleague was immortalized in company lore for the saying, "never come to a meeting without a prototype."
+      </p>
+      <p className="text-lg text-gray-600 mb-6">
+        It's in that spirit that I stood up this quick Lovable landing page to show, don't tell, how I might be able to support Lovable.
+      </p>
+      <p className="text-lg text-gray-600 mb-6">
+        I would love the opportunity to discuss how I can identify, prioritize, and execute new growth opportunities—whether through channels, features, or offerings—to grow the Lovable platform. I'm confident I can find the formula for growth.
+      </p>
+      <p className="text-lg text-gray-600 mb-6">
+        Please enjoy this site and reach out to <a href="https://calendly.com/geoff-schwarten/30min" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">book a call</a>.
       </p>
     </>
   );
@@ -136,9 +155,20 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
             </div>
           )}
           
+          {showLovableLogo && (
+            <div className="mb-12">
+              <img 
+                src="/og-image.png" 
+                alt="Lovable Logo" 
+                className="max-w-[200px]"
+              />
+            </div>
+          )}
+          
           {showWonderSchoolLogo ? wonderSchoolContent : 
            showThredUpLogo ? thredUpContent :
            showGileadLogo ? gileadContent :
+           showLovableLogo ? lovableContent :
            defaultContent}
           
           <Separator className="my-8" />
