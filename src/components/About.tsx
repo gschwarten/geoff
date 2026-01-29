@@ -75,17 +75,25 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
     <>
       <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
       <p className="text-lg text-gray-600 mb-6">
-        A former colleague was immortalized in company lore for the saying, "never come to a meeting without a prototype."
+        A former colleague at IDEO was immortalized in company lore for the saying, "Never come to a meeting without a prototype."
       </p>
       <p className="text-lg text-gray-600 mb-6">
-        It's in that spirit that I stood up this quick Lovable landing page to show, don't tell, how I might be able to support Lovable.
+        I built this Lovable landing page in that same spirit—not to explain how I think, but to show it.
       </p>
       <p className="text-lg text-gray-600 mb-6">
-        I would love the opportunity to discuss how I can identify, prioritize, and execute new growth opportunities—whether through channels, features, or offerings—to grow the Lovable platform. I'm confident I can find the formula for growth.
+        My strength as a marketer is helping companies find the formula: experimenting into repeatable, scalable growth. I focus on identifying the highest-leverage opportunities, testing quickly, and scaling what works—across channels, product features, and customer programs.
       </p>
       <p className="text-lg text-gray-600 mb-6">
-        Please enjoy this site and reach out to <a href="https://calendly.com/geoff-schwarten/30min" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">book a call</a>.
+        I'd love the opportunity to discuss how I could apply that approach to help Lovable grow even faster.
       </p>
+      <a 
+        href="https://calendly.com/geoff-schwarten/30min" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="inline-block bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors"
+      >
+        Book a Call
+      </a>
     </>
   );
 
