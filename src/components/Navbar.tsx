@@ -25,9 +25,7 @@ const Navbar: React.FC = () => {
       )}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <a href="/" className="flex items-center gap-2">
-          <img src="/lovable-uploads/Substance-logo.png" alt="Substance" className="h-7" />
-        </a>
+        <a href="#" className="text-xl font-bold">Geoff Schwarten</a>
         
         {/* Mobile menu button */}
         <button
