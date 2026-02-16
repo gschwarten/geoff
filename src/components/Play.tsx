@@ -21,9 +21,6 @@ const bookCovers = [
   { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1631501298l/1898._SY75_.jpg", alt: "Into Thin Air" },
   { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327997342l/318431._SY75_.jpg", alt: "Long Walk to Freedom" },
   { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328837457l/4952._SX50_.jpg", alt: "What Is the What" },
-  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1634587789l/1845._SY75_.jpg", alt: "Into the Wild" },
-  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1535419394l/4069._SY75_.jpg", alt: "Man's Search for Meaning" },
-  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348904011l/4778436._SX50_.jpg", alt: "Hunting Eichmann" },
 ];
 
 interface SideProject {
@@ -143,7 +140,7 @@ const Play: React.FC = () => {
                         key={i}
                         src={book.src}
                         alt={book.alt}
-                        className="w-full h-[35px] object-cover rounded-[1px]"
+                        className="w-full h-[46px] object-cover rounded-[1px]"
                       />
                     ))}
                   </div>
