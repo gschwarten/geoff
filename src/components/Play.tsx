@@ -101,7 +101,7 @@ const Play: React.FC = () => {
     {
       title: 'Colleague Jackpot — Team Connection Game',
       description: 'Strong collaboration starts with human connection. This slot-machine-style pairing tool matches teammates with activities and prompts to encourage meaningful conversations beyond day-to-day work.',
-      imageUrl: '/lovable-uploads/sf-office-colleagues/cole.png',
+      imageUrl: '/lovable-uploads/colleague-jackpot-screenshot.png',
       link: 'https://wonderschool-connections.lovable.app/',
       tags: ['Lovable', 'Slack Integration', 'Team Culture'],
     },
