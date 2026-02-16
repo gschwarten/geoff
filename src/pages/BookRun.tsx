@@ -11,7 +11,7 @@ const BOOKRUN_STYLES = `
     padding: 16px;
     padding-bottom: 100px;
   }
-  .bookrun h1 { font-size: 22px; text-align: center; margin-bottom: 4px; color: #040949; }
+  .bookrun h1 { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 700; text-align: center; margin-bottom: 4px; color: #040949; }
   .bookrun .subtitle { text-align: center; color: #040949; opacity: 0.6; font-size: 14px; margin-bottom: 12px; }
   .bookrun .branch-selector {
     display: flex; align-items: center; justify-content: center;
