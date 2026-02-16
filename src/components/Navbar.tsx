@@ -42,8 +42,8 @@ const Navbar: React.FC = () => {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-8 items-center">
-          <a href="#about" className="hover:text-gray-600 transition-colors">About</a>
           <a href="#work" className="hover:text-gray-600 transition-colors">Work</a>
+          <a href="#play" className="hover:text-gray-600 transition-colors">Play</a>
           <a href="https://www.linkedin.com/in/geoffschwarten" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 transition-colors flex items-center">
             <Linkedin size={20} />
           </a>
@@ -53,8 +53,8 @@ const Navbar: React.FC = () => {
       {/* Mobile Navigation */}
       <div className={`md:hidden absolute top-full left-0 w-full bg-white shadow-md transition-all duration-300 overflow-hidden ${mobileMenuOpen ? 'max-h-60' : 'max-h-0'}`}>
         <div className="container mx-auto px-6 py-4 flex flex-col gap-4">
-          <a href="#about" className="py-2 hover:text-gray-600 transition-colors" onClick={() => setMobileMenuOpen(false)}>About</a>
           <a href="#work" className="py-2 hover:text-gray-600 transition-colors" onClick={() => setMobileMenuOpen(false)}>Work</a>
+          <a href="#play" className="py-2 hover:text-gray-600 transition-colors" onClick={() => setMobileMenuOpen(false)}>Play</a>
           <a href="https://www.linkedin.com/in/geoffschwarten" target="_blank" rel="noopener noreferrer" className="py-2 hover:text-gray-600 transition-colors flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
             <Linkedin size={20} /> LinkedIn
           </a>
