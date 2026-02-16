@@ -32,7 +32,7 @@ const Play: React.FC = () => {
               src="/lovable-uploads/play-icon.png"
               alt="Play section icon"
               className="w-full h-full object-contain"
-              style={{ filter: 'brightness(0) saturate(100%) invert(4%) sepia(50%) saturate(7000%) hue-rotate(230deg) brightness(30%) contrast(120%)' }}
+              style={{ filter: 'brightness(0) saturate(100%) invert(7%) sepia(80%) saturate(4500%) hue-rotate(225deg) brightness(70%) contrast(115%)' }}
             />
           </div>
         </div>
