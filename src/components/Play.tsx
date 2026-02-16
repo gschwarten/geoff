@@ -6,7 +6,6 @@ import { ExternalLink } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const bookCovers = [
-  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1406995661l/10836._SY75_.jpg", alt: "Che Guevara" },
   { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1386921706l/16897._SY75_.jpg", alt: "The Portable Thoreau" },
   { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1223648623l/47849._SX50_.jpg", alt: "The Middle Passage" },
   { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1387712937l/75406._SY75_.jpg", alt: "The Breaks of the Game" },
@@ -19,7 +18,6 @@ const bookCovers = [
   { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1391329559l/139069._SY75_.jpg", alt: "Endurance" },
   { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1436131915l/16130._SY75_.jpg", alt: "Alexander Hamilton" },
   { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1424663847l/133518._SY75_.jpg", alt: "The Things They Carried" },
-  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1331223772l/767171._SY75_.jpg", alt: "Rise and Fall of the Third Reich" },
   { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1631501298l/1898._SY75_.jpg", alt: "Into Thin Air" },
   { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327997342l/318431._SY75_.jpg", alt: "Long Walk to Freedom" },
   { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328837457l/4952._SX50_.jpg", alt: "What Is the What" },
