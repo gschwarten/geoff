@@ -1,5 +1,6 @@
 
 import React from 'react';
+import '@fontsource/press-start-2p';
 import { Card, CardContent } from '@/components/ui/card';
 import { ExternalLink } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -40,8 +41,8 @@ const Play: React.FC = () => {
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight" style={{ color: '#accae5' }}>
             Play
           </h2>
-          <p className="text-lg max-w-3xl mx-auto mt-4" style={{ color: '#accae5cc' }}>
-            Things I've built for fun, curiosity, or because I needed them to exist.
+          <p className="text-sm md:text-base max-w-3xl mx-auto mt-4" style={{ color: '#accae5cc', fontFamily: "'Press Start 2P', cursive" }}>
+            Shall we play a game?
           </p>
         </div>
 
