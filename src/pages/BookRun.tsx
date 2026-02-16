@@ -1,5 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const BOOKRUN_STYLES = `
   .bookrun * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -627,6 +628,19 @@ const BookRun: React.FC = () => {
 
   return (
     <>
+      <Helmet>
+        <title>BookRun | Geoff Schwarten</title>
+        <meta name="description" content="An app I made because I kept showing up to the library with 50 books on my Goodreads list and zero clue which ones were actually on the shelf. Now I know before I go." />
+        <meta property="og:title" content="BookRun | Geoff Schwarten" />
+        <meta property="og:description" content="An app I made because I kept showing up to the library with 50 books on my Goodreads list and zero clue which ones were actually on the shelf. Now I know before I go." />
+        <meta property="og:image" content="https://geoff.lovable.app/lovable-uploads/bookrun-og.png" />
+        <meta property="og:url" content="https://geoff.lovable.app/bookrun" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="BookRun | Geoff Schwarten" />
+        <meta name="twitter:description" content="An app I made because I kept showing up to the library with 50 books on my Goodreads list and zero clue which ones were actually on the shelf. Now I know before I go." />
+        <meta name="twitter:image" content="https://geoff.lovable.app/lovable-uploads/bookrun-og.png" />
+      </Helmet>
       <style dangerouslySetInnerHTML={{ __html: BOOKRUN_STYLES }} />
       <div className="bookrun" ref={containerRef} dangerouslySetInnerHTML={{ __html: BOOKRUN_HTML }} />
     </>
