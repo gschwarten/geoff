@@ -104,9 +104,6 @@ const Play: React.FC = () => {
           </div>
         </div>
         <div className="text-center mb-12 reveal">
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight" style={{ color: '#accae5' }}>
-            Play
-          </h2>
           <p className="text-sm md:text-base max-w-3xl mx-auto mt-4" style={{ color: '#accae5cc', fontFamily: "'Press Start 2P', cursive" }}>
             <TerminalText text="Shall we play a game?" />
           </p>
