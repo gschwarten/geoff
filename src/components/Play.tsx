@@ -26,6 +26,15 @@ const Play: React.FC = () => {
   return (
     <section id="play" className="bg-[#accae5] py-8 md:py-12">
       <div className="section-container">
+        <div className="flex justify-center mb-6 reveal">
+          <div className="aspect-video w-full md:w-1/2 flex items-center justify-center">
+            <img
+              src="/lovable-uploads/play-icon.png"
+              alt="Play section icon"
+              className="max-h-full max-w-full object-contain"
+            />
+          </div>
+        </div>
         <div className="text-center mb-6 reveal">
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight" style={{ color: '#040949' }}>
             Play
