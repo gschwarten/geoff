@@ -185,15 +185,30 @@ const BookRun: React.FC = () => {
 
   useEffect(() => {
     document.title = 'BookRun | Geoff Schwarten';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', 'An app I made because I kept showing up to the library with 50 books on my Goodreads list and zero clue which ones were actually on the shelf. Now I know before I go.');
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = 'An app I made because I kept showing up to the library with 50 books on my Goodreads list and zero clue which ones were actually on the shelf. Now I know before I go.';
-      document.head.appendChild(meta);
-    }
+    const description = 'An app I made because I kept showing up to the library with 50 books on my Goodreads list and zero clue which ones were actually on the shelf. Now I know before I go.';
+    
+    const setMeta = (attr: string, key: string, content: string) => {
+      let el = document.querySelector(`meta[${attr}="${key}"]`);
+      if (el) {
+        el.setAttribute('content', content);
+      } else {
+        el = document.createElement('meta');
+        el.setAttribute(attr, key);
+        el.setAttribute('content', content);
+        document.head.appendChild(el);
+      }
+    };
+
+    setMeta('name', 'description', description);
+    setMeta('property', 'og:title', 'BookRun | Geoff Schwarten');
+    setMeta('property', 'og:description', description);
+    setMeta('property', 'og:type', 'website');
+    setMeta('property', 'og:url', 'https://geoff.lovable.app/bookrun');
+    setMeta('property', 'og:image', 'https://geoff.lovable.app/lovable-uploads/RAMHT.png');
+    setMeta('name', 'twitter:card', 'summary_large_image');
+    setMeta('name', 'twitter:title', 'BookRun | Geoff Schwarten');
+    setMeta('name', 'twitter:description', description);
+    setMeta('name', 'twitter:image', 'https://geoff.lovable.app/lovable-uploads/RAMHT.png');
 
     const API = 'https://bookrun.onrender.com';
     let brBooks: any[] = [];
