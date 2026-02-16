@@ -96,14 +96,14 @@ const Play: React.FC = () => {
       title: 'BookRun — Library Book Finder',
       description: 'I really like Goodreads for what to read inspiration, but my to-read list was getting long. The app uses AI to prioritize recommendations from my to-read list and identifies if they are available at my local library branch to save time.',
       link: '/bookrun',
-      tags: ['Claude Code', 'Python', 'Lovable', 'API Integrations'],
+      tags: ['Claude Code', 'Python', 'API Integrations'],
     },
     {
       title: 'Colleague Jackpot — Team Connection Game',
-      description: 'A slot machine-style icebreaker I built for Wonderschool\'s SF office. Pull the lever to get randomly paired with a colleague, an adventure, and a conversation topic — sparking real connections beyond Slack.',
-      imageUrl: '/lovable-uploads/wonderschool.png',
+      description: 'Strong collaboration starts with human connection. This slot-machine-style pairing tool matches teammates with activities and prompts to encourage meaningful conversations beyond day-to-day work.',
+      imageUrl: '/lovable-uploads/sf-office-colleagues/cole.png',
       link: 'https://wonderschool-connections.lovable.app/',
-      tags: ['React', 'Lovable', 'Team Culture'],
+      tags: ['Lovable', 'Slack Integration', 'Team Culture'],
     },
   ];
 
