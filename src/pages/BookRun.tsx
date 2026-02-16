@@ -184,7 +184,16 @@ const BookRun: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    document.title = 'BookRun — SFPL';
+    document.title = 'BookRun | Geoff Schwarten';
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', 'An app I made because I kept showing up to the library with 50 books on my Goodreads list and zero clue which ones were actually on the shelf. Now I know before I go.');
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = 'An app I made because I kept showing up to the library with 50 books on my Goodreads list and zero clue which ones were actually on the shelf. Now I know before I go.';
+      document.head.appendChild(meta);
+    }
 
     const API = 'https://bookrun.onrender.com';
     let brBooks: any[] = [];
