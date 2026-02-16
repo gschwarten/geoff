@@ -45,7 +45,7 @@ const Play: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex flex-col gap-8 reveal">
+        <div className="flex flex-col gap-8 reveal mt-4">
           {sideProjects.map((project, index) => (
             <div key={index} className="flex flex-col md:flex-row overflow-hidden rounded-lg border border-[#accae5]/20 bg-[#0a1a3a] transition-all hover:border-[#accae5]/40">
               <div className="md:w-[240px] shrink-0 bg-[#0d1f42]">
