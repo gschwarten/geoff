@@ -4,7 +4,29 @@ import '@fontsource/press-start-2p';
 import { Card, CardContent } from '@/components/ui/card';
 import { ExternalLink } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import bookrunBooks from "@/assets/bookrun-books.jpg";
+
+const bookCovers = [
+  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1406995661l/10836._SY75_.jpg", alt: "Che Guevara" },
+  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1386921706l/16897._SY75_.jpg", alt: "The Portable Thoreau" },
+  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1223648623l/47849._SX50_.jpg", alt: "The Middle Passage" },
+  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1387712937l/75406._SY75_.jpg", alt: "The Breaks of the Game" },
+  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1426442661l/25148930._SX50_.jpg", alt: "12 Years a Slave" },
+  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1440816389l/214091._SY75_.jpg", alt: "The Last Season" },
+  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327942522l/102030._SX50_.jpg", alt: "Musashi" },
+  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388176510l/1301._SY75_.jpg", alt: "Moneyball" },
+  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1403194611l/1111._SY75_.jpg", alt: "The Power Broker" },
+  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320502760l/785434._SY75_.jpg", alt: "Son of the Revolution" },
+  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1391329559l/139069._SY75_.jpg", alt: "Endurance" },
+  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1436131915l/16130._SY75_.jpg", alt: "Alexander Hamilton" },
+  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1424663847l/133518._SY75_.jpg", alt: "The Things They Carried" },
+  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1331223772l/767171._SY75_.jpg", alt: "Rise and Fall of the Third Reich" },
+  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1631501298l/1898._SY75_.jpg", alt: "Into Thin Air" },
+  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327997342l/318431._SY75_.jpg", alt: "Long Walk to Freedom" },
+  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328837457l/4952._SX50_.jpg", alt: "What Is the What" },
+  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1634587789l/1845._SY75_.jpg", alt: "Into the Wild" },
+  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1535419394l/4069._SY75_.jpg", alt: "Man's Search for Meaning" },
+  { src: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348904011l/4778436._SX50_.jpg", alt: "Hunting Eichmann" },
+];
 
 interface SideProject {
   title: string;
@@ -78,7 +100,6 @@ const Play: React.FC = () => {
     {
       title: 'BookRun — Library Book Finder',
       description: 'I made a small app to help me at the library to use AI to prioritize my reading list and check against what\'s available at the library.',
-      imageUrl: bookrunBooks,
       link: '/bookrun',
       tags: ['Claude Code', 'Python', 'Lovable', 'API Integrations'],
     },
@@ -116,8 +137,19 @@ const Play: React.FC = () => {
         <div className="flex flex-col gap-8 reveal mt-4">
           {sideProjects.map((project, index) => (
             <div key={index} className="flex flex-col md:flex-row overflow-hidden rounded-lg border border-[#accae5]/20 bg-[#0a1a3a] transition-all hover:border-[#accae5]/40">
-              <div className="md:w-[240px] shrink-0 bg-[#0d1f42]">
-                {project.imageUrl ? (
+              <div className="md:w-[240px] shrink-0 bg-[#0d1f42] p-2">
+                {index === 0 ? (
+                  <div className="grid grid-cols-5 gap-0.5 w-full h-full min-h-[140px]">
+                    {bookCovers.map((book, i) => (
+                      <img
+                        key={i}
+                        src={book.src}
+                        alt={book.alt}
+                        className="w-full h-[35px] object-cover rounded-[1px]"
+                      />
+                    ))}
+                  </div>
+                ) : project.imageUrl ? (
                   <img
                     src={project.imageUrl}
                     alt={project.title}
