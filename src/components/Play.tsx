@@ -148,7 +148,7 @@ const Play: React.FC = () => {
                   <img
                     src={project.imageUrl}
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 ) : (
                   <div className="w-full h-full min-h-[160px] flex items-center justify-center">
