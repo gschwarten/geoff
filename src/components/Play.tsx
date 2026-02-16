@@ -27,11 +27,11 @@ const Play: React.FC = () => {
     <section id="play" className="bg-[#accae5] py-8 md:py-12">
       <div className="section-container">
         <div className="flex justify-center mb-6 reveal">
-          <div className="aspect-video w-full md:w-1/2 flex items-center justify-center">
+          <div className="aspect-video w-full md:w-1/2">
             <img
               src="/lovable-uploads/play-icon.png"
               alt="Play section icon"
-              className="max-h-full max-w-full object-contain"
+              className="w-full h-full object-contain"
             />
           </div>
         </div>
