@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import WonderSchool from "./pages/WonderSchool";
 import Gilead from "./pages/Gilead";
 import Lovable from "./pages/Lovable";
+import BookRun from "./pages/BookRun";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/wonderschool" element={<WonderSchool />} />
           <Route path="/gilead" element={<Gilead />} />
           <Route path="/lovable" element={<Lovable />} />
+          <Route path="/bookrun" element={<BookRun />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
