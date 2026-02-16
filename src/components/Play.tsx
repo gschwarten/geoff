@@ -46,7 +46,16 @@ const TerminalText: React.FC<{ text: string }> = ({ text }) => {
     }
   }, [charIndex, started, text, blinkCount]);
 
-  const showCursor = started && (charIndex < text.length || !done);
+  const [cursorBlinks, setCursorBlinks] = useState(0);
+
+  useEffect(() => {
+    if (done && cursorBlinks < 10) {
+      const timer = setTimeout(() => setCursorBlinks(c => c + 1), 600);
+      return () => clearTimeout(timer);
+    }
+  }, [done, cursorBlinks]);
+
+  const showCursor = started && (charIndex < text.length || (!done || cursorBlinks < 10));
 
   return (
     <span ref={ref} className="inline">
@@ -94,7 +103,7 @@ const Play: React.FC = () => {
             />
           </div>
         </div>
-        <div className="text-center mb-6 reveal">
+        <div className="text-center mb-12 reveal">
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight" style={{ color: '#accae5' }}>
             Play
           </h2>
