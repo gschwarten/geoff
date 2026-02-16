@@ -9,6 +9,9 @@ interface RouteOGConfig {
   description: string;
   image?: string;
   url?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
 }
 
 function ogPages(routes: RouteOGConfig[]): Plugin {
@@ -81,11 +84,16 @@ function injectOGTags(html: string, route: RouteOGConfig): string {
   }
 
   // Replace twitter tags
-  if (html.includes('twitter:title')) {
-    html = html.replace(/<meta name="twitter:title"[^>]*\/?>/, `<meta name="twitter:title" content="${route.title}" />`);
+  if (route.twitterCard && html.includes('twitter:card')) {
+    html = html.replace(/<meta name="twitter:card"[^>]*\/?>/, `<meta name="twitter:card" content="${route.twitterCard}" />`);
   }
+  const twTitle = route.twitterTitle || route.title;
+  if (html.includes('twitter:title')) {
+    html = html.replace(/<meta name="twitter:title"[^>]*\/?>/, `<meta name="twitter:title" content="${twTitle}" />`);
+  }
+  const twDesc = route.twitterDescription || route.description;
   if (html.includes('twitter:description')) {
-    html = html.replace(/<meta name="twitter:description"[^>]*\/?>/, `<meta name="twitter:description" content="${route.description}" />`);
+    html = html.replace(/<meta name="twitter:description"[^>]*\/?>/, `<meta name="twitter:description" content="${twDesc}" />`);
   }
   if (route.image && html.includes('twitter:image')) {
     html = html.replace(/<meta name="twitter:image"[^>]*\/?>/, `<meta name="twitter:image" content="${route.image}" />`);
@@ -114,10 +122,13 @@ export default defineConfig(({ mode }) => ({
       },
       {
         path: "/bookrun",
-        title: "BookRun | Geoff Schwarten",
+        title: "BookRun Library Book Finder | Geoff Schwarten",
         description: "An app I made because I kept showing up to the library with 50 books on my Goodreads list and zero clue which ones were actually on the shelf. Now I know before I go.",
         image: "https://geoff.lovable.app/lovable-uploads/bookrun-og.png",
         url: "https://geoff.lovable.app/bookrun",
+        twitterCard: "summary",
+        twitterTitle: "BookRun — Library Book Finder",
+        twitterDescription: "AI-powered book recommendations from your Goodreads list, with real-time library availability.",
       },
       {
         path: "/wonderschool",
