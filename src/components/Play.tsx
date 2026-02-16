@@ -4,6 +4,7 @@ import '@fontsource/press-start-2p';
 import { Card, CardContent } from '@/components/ui/card';
 import { ExternalLink } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import bookrunBooks from "@/assets/bookrun-books.jpg";
 
 interface SideProject {
   title: string;
@@ -76,10 +77,10 @@ const Play: React.FC = () => {
   const sideProjects: SideProject[] = [
     {
       title: 'BookRun — Library Book Finder',
-      description: 'I kept showing up to the library with 50 books on my Goodreads list and zero clue which ones were actually on the shelf. So I built BookRun — paste your Goodreads list, pick your library, and instantly see what\'s available before you go.',
-      imageUrl: '/lovable-uploads/bookrun-og.png',
+      description: 'I made a small app to help me at the library to use AI to prioritize my reading list and check against what\'s available at the library.',
+      imageUrl: bookrunBooks,
       link: '/bookrun',
-      tags: ['React', 'API Integration', 'Side Project'],
+      tags: ['Claude Code', 'Python', 'Lovable', 'API Integrations'],
     },
     {
       title: 'Colleague Jackpot — Team Connection Game',
