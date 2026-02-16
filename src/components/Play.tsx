@@ -72,6 +72,13 @@ const Play: React.FC = () => {
       link: '/bookrun',
       tags: ['React', 'API Integration', 'Side Project'],
     },
+    {
+      title: 'Colleague Jackpot — Team Connection Game',
+      description: 'A slot machine-style icebreaker I built for Wonderschool\'s SF office. Pull the lever to get randomly paired with a colleague, an adventure, and a conversation topic — sparking real connections beyond Slack.',
+      imageUrl: '/lovable-uploads/wonderschool.png',
+      link: 'https://wonderschool-connections.lovable.app/',
+      tags: ['React', 'Lovable', 'Team Culture'],
+    },
   ];
 
   return (
