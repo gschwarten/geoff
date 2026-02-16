@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '@fontsource/press-start-2p';
 import { Card, CardContent } from '@/components/ui/card';
 import { ExternalLink } from 'lucide-react';
@@ -12,6 +12,43 @@ interface SideProject {
   link: string;
   tags: string[];
 }
+
+const TypewriterText: React.FC<{ text: string }> = ({ text }) => {
+  const [displayed, setDisplayed] = useState('');
+  const [blinkCount, setBlinkCount] = useState(0);
+  const [visible, setVisible] = useState(true);
+  const [started, setStarted] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting && !started) setStarted(true); },
+      { threshold: 0.5 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [started]);
+
+  useEffect(() => {
+    if (!started) return;
+    if (displayed.length < text.length) {
+      const timer = setTimeout(() => setDisplayed(text.slice(0, displayed.length + 1)), 50);
+      return () => clearTimeout(timer);
+    } else if (blinkCount < 6) {
+      const timer = setTimeout(() => {
+        setVisible(v => !v);
+        setBlinkCount(c => c + 1);
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+  }, [displayed, started, text, blinkCount]);
+
+  return (
+    <span ref={ref} style={{ opacity: displayed.length === text.length && !visible ? 0 : 1 }}>
+      {displayed}
+    </span>
+  );
+};
 
 const Play: React.FC = () => {
   const sideProjects: SideProject[] = [
@@ -42,7 +79,7 @@ const Play: React.FC = () => {
             Play
           </h2>
           <p className="text-sm md:text-base max-w-3xl mx-auto mt-4" style={{ color: '#accae5cc', fontFamily: "'Press Start 2P', cursive" }}>
-            Shall we play a game?
+            <TypewriterText text="Shall we play a game?" />
           </p>
         </div>
 
