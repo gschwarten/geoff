@@ -41,9 +41,21 @@ const BOOKRUN_STYLES = `
     margin-bottom: 10px; display: flex; align-items: center; gap: 10px;
     box-shadow: 0 1px 3px rgba(4,9,73,0.1); transition: transform 0.2s ease;
   }
-  .bookrun .book-item.removed { opacity: 0.35; }
   .bookrun .book-item.kept { border-left: 4px solid #2e7d32; }
-  .bookrun .rank { font-size: 13px; font-weight: 700; color: #040949; opacity: 0.4; min-width: 18px; text-align: center; }
+  .bookrun .rank {
+    font-size: 13px; font-weight: 700; color: #040949; opacity: 0.4; min-width: 18px; text-align: center;
+    cursor: pointer; padding: 2px 4px; border-radius: 4px; -webkit-tap-highlight-color: transparent;
+  }
+  .bookrun .rank:hover { background: rgba(4,9,73,0.08); }
+  .bookrun .rank-input {
+    width: 36px; font-size: 13px; font-weight: 700; color: #040949;
+    text-align: center; border: 2px solid #040949; border-radius: 4px;
+    padding: 2px; background: white; outline: none;
+  }
+  .bookrun .book-item.removing {
+    transition: opacity 0.3s ease, max-height 0.3s ease, margin 0.3s ease, padding 0.3s ease;
+    opacity: 0; max-height: 0; margin-bottom: 0; padding-top: 0; padding-bottom: 0; overflow: hidden;
+  }
   .bookrun .book-cover { width: 60px; height: 90px; border-radius: 4px; object-fit: cover; background: #d8e4ee; flex-shrink: 0; }
   .bookrun .book-info { flex: 1; min-width: 0; }
   .bookrun .book-title {
@@ -316,13 +328,13 @@ const BookRun: React.FC = () => {
       const toShow = brBooks.slice(0, brVisibleCount);
       toShow.forEach((book, i) => {
         const li = document.createElement('li');
-        li.className = 'book-item' + (book._removed ? ' removed' : '') + (book._kept ? ' kept' : '');
+        li.className = 'book-item' + (book._kept ? ' kept' : '');
         li.dataset.index = String(i);
         li.innerHTML =
           '<div class="drag-handle">' +
             '<svg viewBox="0 0 24 24"><circle cx="9" cy="6" r="1.5"/><circle cx="15" cy="6" r="1.5"/><circle cx="9" cy="12" r="1.5"/><circle cx="15" cy="12" r="1.5"/><circle cx="9" cy="18" r="1.5"/><circle cx="15" cy="18" r="1.5"/></svg>' +
           '</div>' +
-          '<span class="rank">' + (i + 1) + '</span>' +
+          '<span class="rank" onclick="brEditRank(' + i + ', this)">' + (i + 1) + '</span>' +
           (book.image
             ? '<img class="book-cover" src="' + book.image + '" alt="">'
             : '<div class="book-cover"></div>') +
@@ -350,7 +362,7 @@ const BookRun: React.FC = () => {
         if (action === 'keep') { brBooks[idx]._kept = !brBooks[idx]._kept; renderBooks(); saveList(); }
         else if (action === 'up' && idx > 0) { [brBooks[idx - 1], brBooks[idx]] = [brBooks[idx], brBooks[idx - 1]]; renderBooks(); saveList(); }
         else if (action === 'down' && idx < brBooks.length - 1) { [brBooks[idx], brBooks[idx + 1]] = [brBooks[idx + 1], brBooks[idx]]; renderBooks(); saveList(); }
-        else if (action === 'remove') { brBooks[idx]._removed = !brBooks[idx]._removed; renderBooks(); saveList(); }
+        else if (action === 'remove') { brToggleRemove(idx); }
       };
 
       const hint = el('br-scroll-hint');
@@ -364,6 +376,57 @@ const BookRun: React.FC = () => {
       }
 
       initDragAndDrop();
+    }
+
+    // Edit rank inline
+    (window as any).brEditRank = function(i: number, el: HTMLElement) {
+      const current = i + 1;
+      const input = document.createElement('input');
+      input.type = 'number';
+      input.className = 'rank-input';
+      input.value = String(current);
+      input.min = '1';
+      input.max = String(brBooks.length);
+      el.replaceWith(input);
+      input.focus();
+      input.select();
+
+      function commit() {
+        let newPos = parseInt(input.value);
+        if (isNaN(newPos) || newPos === current) { renderBooks(); return; }
+        newPos = Math.max(1, Math.min(brBooks.length, newPos)) - 1;
+        const moved = brBooks.splice(i, 1)[0];
+        brBooks.splice(newPos, 0, moved);
+        renderBooks();
+        saveList();
+      }
+
+      input.addEventListener('blur', commit);
+      input.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') input.blur();
+        if (e.key === 'Escape') renderBooks();
+      });
+    };
+
+    // Animated remove
+    function brToggleRemove(i: number) {
+      const items = document.querySelectorAll('.bookrun .book-item');
+      const item = items[i] as HTMLElement;
+      if (item) {
+        item.style.maxHeight = item.offsetHeight + 'px';
+        requestAnimationFrame(function() {
+          item.classList.add('removing');
+          setTimeout(function() {
+            brBooks.splice(i, 1);
+            renderBooks();
+            saveList();
+          }, 300);
+        });
+      } else {
+        brBooks.splice(i, 1);
+        renderBooks();
+        saveList();
+      }
     }
 
     // Save
@@ -384,7 +447,7 @@ const BookRun: React.FC = () => {
 
     // Check library
     async function checkLibrary() {
-      const active = brBooks.filter(b => !b._removed).slice(0, 10);
+      const active = brBooks.slice(0, 10);
       if (active.length === 0) { brShowError('Add at least one book to check.'); return; }
 
       brHide('br-recs-section', 'br-error');
@@ -530,7 +593,20 @@ const BookRun: React.FC = () => {
       item.style.left = rect.left + 'px';
       item.style.position = 'fixed';
 
-      drag = { item, items, fromIndex, currentIndex: fromIndex, startY, offsetY: startY - rect.top, itemH: itemH + gap, ulTop: ulRect.top, rects };
+      drag = { item, items, fromIndex, currentIndex: fromIndex, startY, offsetY: startY - rect.top, itemH: itemH + gap, ulTop: ulRect.top, rects, lastY: startY, scrollInterval: null as any };
+
+      // Auto-scroll during drag
+      drag.scrollInterval = setInterval(() => {
+        if (!drag) return;
+        const y = drag.lastY;
+        const threshold = 60;
+        if (y < threshold) {
+          window.scrollBy(0, -8);
+        } else if (y > window.innerHeight - threshold) {
+          window.scrollBy(0, 8);
+        }
+      }, 16);
+
       document.addEventListener('mousemove', onMove);
       document.addEventListener('mouseup', onEnd);
       document.addEventListener('touchmove', onMoveTouch, { passive: false });
@@ -542,6 +618,7 @@ const BookRun: React.FC = () => {
     function onMove(e: { clientY: number }) {
       if (!drag) return;
       const y = e.clientY;
+      drag.lastY = y;
       drag.item.style.top = (y - drag.offsetY) + 'px';
       const relY = y - drag.offsetY - drag.ulTop + (drag.itemH / 2);
       let newIndex = Math.round(relY / drag.itemH);
@@ -562,6 +639,7 @@ const BookRun: React.FC = () => {
 
     function onEnd() {
       if (!drag) return;
+      if (drag.scrollInterval) clearInterval(drag.scrollInterval);
       document.removeEventListener('mousemove', onMove);
       document.removeEventListener('mouseup', onEnd);
       document.removeEventListener('touchmove', onMoveTouch);
