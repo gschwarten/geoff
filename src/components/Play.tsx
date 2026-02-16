@@ -107,6 +107,9 @@ const Play: React.FC = () => {
           <p className="text-sm md:text-base max-w-3xl mx-auto mt-4" style={{ color: '#accae5cc', fontFamily: "'Press Start 2P', cursive" }}>
             <TerminalText text="Shall we play a game?" />
           </p>
+          <p className="text-sm max-w-2xl mx-auto mt-4" style={{ color: '#accae5aa' }}>
+            Some small projects that I made for the purpose of fun and to learn vibe-coding.
+          </p>
         </div>
 
         <div className="flex flex-col gap-8 reveal mt-4">
