@@ -27,11 +27,12 @@ const Play: React.FC = () => {
     <section id="play" className="bg-[#accae5] py-8 md:py-12">
       <div className="section-container">
         <div className="flex justify-center mb-6 reveal">
-          <div className="aspect-video w-full md:w-1/2">
+          <div className="w-[30%] md:w-[20%]">
             <img
               src="/lovable-uploads/play-icon.png"
               alt="Play section icon"
               className="w-full h-full object-contain"
+              style={{ filter: 'brightness(0) saturate(100%) invert(4%) sepia(50%) saturate(7000%) hue-rotate(230deg) brightness(30%) contrast(120%)' }}
             />
           </div>
         </div>
