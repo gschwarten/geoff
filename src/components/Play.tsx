@@ -145,11 +145,13 @@ const Play: React.FC = () => {
                     ))}
                   </div>
                 ) : project.imageUrl ? (
-                  <img
-                    src={project.imageUrl}
-                    alt={project.title}
-                    className="w-full h-full object-contain"
-                  />
+                  <div className="w-full overflow-hidden" style={{ maxHeight: '130px' }}>
+                    <img
+                      src={project.imageUrl}
+                      alt={project.title}
+                      className="w-full object-cover object-top"
+                    />
+                  </div>
                 ) : (
                   <div className="w-full h-full min-h-[160px] flex items-center justify-center">
                     <span className="text-[#accae5]/40 text-lg">Project Image</span>
