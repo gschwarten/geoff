@@ -373,21 +373,26 @@ const BookRun: React.FC = () => {
 
       brHide('br-recs-section', 'br-error');
       brShow('br-loading-library');
-      const prog = el('br-library-progress');
-      if (prog) prog.textContent = 'Checking ' + active.length + ' books...';
 
-      try {
-        const resp = await fetch(API + '/api/check-library', {
-          method: 'POST', headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ books: active.map(b => ({ title: b.title, author: b.author })) }),
-        });
-        const data = await resp.json();
-        if (data.error) { brShowError(data.error); return; }
+      const results: any[] = [];
+      for (let i = 0; i < active.length; i++) {
+        const prog = el('br-library-progress');
+        if (prog) prog.textContent = 'Checking ' + (i + 1) + ' of ' + active.length + ': ' + active[i].title.substring(0, 30) + '...';
+        try {
+          const resp = await fetch(API + '/api/check-book', {
+            method: 'POST', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ title: active[i].title, author: active[i].author }),
+          });
+          const data = await resp.json();
+          results.push(data);
+        } catch (e) {
+          results.push({ title: active[i].title, author: active[i].author, status: 'unknown', detail: 'Could not check', branches_available: [] });
+        }
+      }
 
-        renderResults(data.results);
-        brHide('br-loading-library');
-        brShow('br-results-section');
-      } catch (e: any) { brShowError('Failed to check library. ' + e.message); }
+      renderResults(results);
+      brHide('br-loading-library');
+      brShow('br-results-section');
     }
 
     function renderResults(results: any[]) {
