@@ -204,11 +204,11 @@ const BookRun: React.FC = () => {
     setMeta('property', 'og:description', description);
     setMeta('property', 'og:type', 'website');
     setMeta('property', 'og:url', 'https://geoff.lovable.app/bookrun');
-    setMeta('property', 'og:image', 'https://geoff.lovable.app/lovable-uploads/RAMHT.png');
+    setMeta('property', 'og:image', 'https://geoff.lovable.app/lovable-uploads/bookrun-og.png');
     setMeta('name', 'twitter:card', 'summary_large_image');
     setMeta('name', 'twitter:title', 'BookRun | Geoff Schwarten');
     setMeta('name', 'twitter:description', description);
-    setMeta('name', 'twitter:image', 'https://geoff.lovable.app/lovable-uploads/RAMHT.png');
+    setMeta('name', 'twitter:image', 'https://geoff.lovable.app/lovable-uploads/bookrun-og.png');
 
     const API = 'https://bookrun.onrender.com';
     let brBooks: any[] = [];
