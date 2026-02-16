@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import About from '@/components/About';
 import Work from '@/components/Work';
+import Play from '@/components/Play';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
 
@@ -44,6 +45,9 @@ const Index = () => {
       </div>
       <ScrollReveal>
         <Work />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Play />
       </ScrollReveal>
       <Footer />
     </div>
