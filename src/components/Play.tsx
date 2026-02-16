@@ -13,11 +13,12 @@ interface SideProject {
   tags: string[];
 }
 
-const TypewriterText: React.FC<{ text: string }> = ({ text }) => {
-  const [displayed, setDisplayed] = useState('');
+const TerminalText: React.FC<{ text: string }> = ({ text }) => {
+  const [charIndex, setCharIndex] = useState(0);
   const [blinkCount, setBlinkCount] = useState(0);
-  const [visible, setVisible] = useState(true);
+  const [textVisible, setTextVisible] = useState(true);
   const [started, setStarted] = useState(false);
+  const [done, setDone] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
@@ -31,21 +32,33 @@ const TypewriterText: React.FC<{ text: string }> = ({ text }) => {
 
   useEffect(() => {
     if (!started) return;
-    if (displayed.length < text.length) {
-      const timer = setTimeout(() => setDisplayed(text.slice(0, displayed.length + 1)), 50);
+    if (charIndex < text.length) {
+      const timer = setTimeout(() => setCharIndex(i => i + 1), 45);
       return () => clearTimeout(timer);
     } else if (blinkCount < 6) {
       const timer = setTimeout(() => {
-        setVisible(v => !v);
+        setTextVisible(v => !v);
         setBlinkCount(c => c + 1);
       }, 300);
       return () => clearTimeout(timer);
+    } else {
+      setDone(true);
     }
-  }, [displayed, started, text, blinkCount]);
+  }, [charIndex, started, text, blinkCount]);
+
+  const showCursor = started && (charIndex < text.length || !done);
 
   return (
-    <span ref={ref} style={{ opacity: displayed.length === text.length && !visible ? 0 : 1 }}>
-      {displayed}
+    <span ref={ref} className="inline">
+      <span style={{ opacity: textVisible ? 1 : 0 }}>{text.slice(0, charIndex)}</span>
+      <span
+        className="inline-block w-[0.6em] h-[1em] align-middle ml-[1px]"
+        style={{
+          backgroundColor: '#accae5',
+          opacity: showCursor ? 1 : 0,
+          animation: charIndex >= text.length && !done ? 'none' : 'cursor-blink 0.6s step-end infinite',
+        }}
+      />
     </span>
   );
 };
@@ -79,7 +92,7 @@ const Play: React.FC = () => {
             Play
           </h2>
           <p className="text-sm md:text-base max-w-3xl mx-auto mt-4" style={{ color: '#accae5cc', fontFamily: "'Press Start 2P', cursive" }}>
-            <TypewriterText text="Shall we play a game?" />
+            <TerminalText text="Shall we play a game?" />
           </p>
         </div>
 
