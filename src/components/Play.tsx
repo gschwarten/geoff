@@ -94,7 +94,7 @@ const Play: React.FC = () => {
   const sideProjects: SideProject[] = [
     {
       title: 'BookRun — Library Book Finder',
-      description: 'I made a small app to help me at the library to use AI to prioritize my reading list and check against what\'s available at the library.',
+      description: 'I really like Goodreads for what to read inspiration, but my to-read list was getting long. The app uses AI to prioritize recommendations from my to-read list and identifies if they are available at my local library branch to save time.',
       link: '/bookrun',
       tags: ['Claude Code', 'Python', 'Lovable', 'API Integrations'],
     },
