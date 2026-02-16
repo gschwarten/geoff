@@ -24,7 +24,7 @@ const Play: React.FC = () => {
   ];
 
   return (
-    <section id="play" className="bg-[#accae5] py-8 md:py-12">
+    <section id="play" className="bg-[#040949] py-8 md:py-12">
       <div className="section-container">
         <div className="flex justify-center mb-6 reveal">
           <div className="w-[30%] md:w-[20%]">
@@ -32,15 +32,15 @@ const Play: React.FC = () => {
               src="/lovable-uploads/play-icon.png"
               alt="Play section icon"
               className="w-full h-full object-contain"
-              style={{ filter: 'brightness(0) saturate(100%) invert(7%) sepia(80%) saturate(4500%) hue-rotate(225deg) brightness(70%) contrast(115%) drop-shadow(1px 0 0 #040949) drop-shadow(-1px 0 0 #040949) drop-shadow(0 1px 0 #040949) drop-shadow(0 -1px 0 #040949)' }}
+              style={{ filter: 'brightness(0) saturate(100%) invert(75%) sepia(30%) saturate(500%) hue-rotate(175deg) brightness(105%) contrast(90%) drop-shadow(1px 0 0 #accae5) drop-shadow(-1px 0 0 #accae5) drop-shadow(0 1px 0 #accae5) drop-shadow(0 -1px 0 #accae5)' }}
             />
           </div>
         </div>
         <div className="text-center mb-6 reveal">
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight" style={{ color: '#040949' }}>
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight" style={{ color: '#accae5' }}>
             Play
           </h2>
-          <p className="text-lg max-w-3xl mx-auto mt-4" style={{ color: '#040949cc' }}>
+          <p className="text-lg max-w-3xl mx-auto mt-4" style={{ color: '#accae5cc' }}>
             Things I've built for fun, curiosity, or because I needed them to exist.
           </p>
         </div>
