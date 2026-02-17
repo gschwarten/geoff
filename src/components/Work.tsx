@@ -66,7 +66,7 @@ const Work: React.FC = () => {
   }, {
     title: 'Launching a MOUD Help Line',
     description: 'Launched a performance marketing engine for a behavioral health provider in regulated markets. Reduced cost per call while increasing volume through Google Ads restructuring, landing page iteration, and attribution improvements.',
-    tags: ['Healthcare', 'Performance Marketing', 'Compliance', 'Google Ads', 'Conversion Optimization'],
+    tags: ['Healthcare', 'Performance Marketing', 'Compliance', 'Google Ads', 'Conversion Optimization', 'Conversion Rate Optimization', 'UX', 'Analytics', 'Growth Strategy', 'Funnel Analysis', 'Product Growth'],
     imageUrl: akidoRecovery,
     link: '#',
     isGif: false
@@ -148,7 +148,7 @@ const Work: React.FC = () => {
           {filteredProjects.length > 0 ? filteredProjects.map((project, index) => <Card key={index} className={`overflow-hidden transition-all hover:shadow-lg ${project.fullWidth ? 'md:col-span-2' : ''}`}>
                 <div className={`${project.fullWidth ? 'flex flex-col md:flex-row' : ''}`}>
                   <div className={`${project.fullWidth ? 'md:w-1/2' : ''} aspect-video relative overflow-hidden`}>
-                    {project.imageUrl ? <div className="w-full h-full">
+                    {project.imageUrl ? <div className="absolute inset-0">
                         <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover" />
                       </div> : <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                         <span className="text-gray-400 text-lg">Project Image</span>
