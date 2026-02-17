@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import About from '@/components/About';
 import Work from '@/components/Work';
 import Footer from '@/components/Footer';
+import Play from '@/components/Play';
 import ScrollReveal from '@/components/ScrollReveal';
 
 const Lovable = () => {
@@ -44,6 +45,9 @@ const Lovable = () => {
       </div>
       <ScrollReveal>
         <Work />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Play />
       </ScrollReveal>
       <Footer />
     </div>
