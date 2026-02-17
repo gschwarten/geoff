@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import akidoDashboard from '@/assets/akido-dashboard.jpg';
+import akidoRecovery from '@/assets/akido-recovery.png';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, X, Filter, ChevronDown, ChevronUp, HeartPulse } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -67,7 +67,7 @@ const Work: React.FC = () => {
     title: 'Building a Compliant Digital Acquisition Engine',
     description: 'Designed and scaled a performance marketing engine for a behavioral health provider operating in regulated markets. Reduced cost per call while increasing volume through Google Ads restructuring, landing page iteration, and attribution improvements.\n\nIntegrated call tracking, intake workflows, and analytics dashboards to connect spend to enrolled patients — creating a scalable, compliance-aware growth model.',
     tags: ['Healthcare', 'Performance Marketing', 'Compliance', 'Google Ads', 'Conversion Optimization', 'Analytics Infrastructure'],
-    imageUrl: akidoDashboard,
+    imageUrl: akidoRecovery,
     link: '#',
     isGif: false,
     fullWidth: true
