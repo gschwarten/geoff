@@ -68,7 +68,7 @@ const Work: React.FC = () => {
     description: 'Launched a performance marketing engine for a behavioral health provider in regulated markets. Reduced cost per call while increasing volume through Google Ads restructuring, landing page iteration, and attribution improvements.',
     tags: ['Healthcare', 'Performance Marketing', 'Compliance', 'Google Ads', 'Conversion Optimization', 'Conversion Rate Optimization', 'UX', 'Analytics', 'Growth Strategy', 'Funnel Analysis', 'Product Growth', 'Vibe Coding'],
     imageUrl: akidoRecovery,
-    link: '#',
+    link: 'https://akidorecovery.com',
     isGif: false
   }];
 
