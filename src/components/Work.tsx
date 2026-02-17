@@ -65,12 +65,11 @@ const Work: React.FC = () => {
     isGif: false
   }, {
     title: 'Building a Compliant Digital Acquisition Engine',
-    description: 'Designed and scaled a performance marketing engine for a behavioral health provider operating in regulated markets. Reduced cost per call while increasing volume through Google Ads restructuring, landing page iteration, and attribution improvements.\n\nIntegrated call tracking, intake workflows, and analytics dashboards to connect spend to enrolled patients — creating a scalable, compliance-aware growth model.',
-    tags: ['Healthcare', 'Performance Marketing', 'Compliance', 'Google Ads', 'Conversion Optimization', 'Analytics Infrastructure'],
+    description: 'Designed and scaled a performance marketing engine for a behavioral health provider in regulated markets. Reduced cost per call while increasing volume through Google Ads restructuring, landing page iteration, and attribution improvements.',
+    tags: ['Healthcare', 'Performance Marketing', 'Compliance', 'Google Ads', 'Conversion Optimization'],
     imageUrl: akidoRecovery,
     link: '#',
-    isGif: false,
-    fullWidth: true
+    isGif: false
   }];
 
   const [allTags, setAllTags] = useState<string[]>([]);
