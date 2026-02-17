@@ -65,7 +65,7 @@ const Work: React.FC = () => {
     isGif: false
   }, {
     title: 'Launching a MOUD Help Line',
-    description: 'Launched a performance marketing engine for a behavioral health provider in regulated markets. Reduced cost per call while increasing volume through Google Ads restructuring, landing page iteration, and attribution improvements.',
+    description: 'Built the digital patient acquisition engine from scratch for a fentanyl-focused treatment line within a regulated healthcare environment.\n\nVibe-coded the site, launched Google and Meta campaigns, and used intake and call data to track the full funnel, pinpoint drop-off, and prioritize fixes.\n\nContinually reduced cost per call while increasing volume, proving the model could sustainably acquire patients.',
     tags: ['Healthcare', 'Performance Marketing', 'Compliance', 'Google Ads', 'Conversion Optimization', 'Conversion Rate Optimization', 'UX', 'Analytics', 'Growth Strategy', 'Funnel Analysis', 'Product Growth', 'Vibe Coding'],
     imageUrl: akidoRecovery,
     link: 'https://akidorecovery.com',
