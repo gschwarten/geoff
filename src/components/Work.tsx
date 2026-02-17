@@ -19,6 +19,13 @@ interface Project {
 
 const Work: React.FC = () => {
   const projects: Project[] = [{
+    title: 'Launching a MOUD Help Line',
+    description: 'Built the digital patient acquisition engine from scratch for a fentanyl-focused treatment line within a regulated healthcare environment.\n\nVibe-coded the site, launched Google and Meta campaigns, and used intake and call data to track the full funnel, pinpoint drop-off, and prioritize fixes.\n\nContinually reduced cost per call while increasing volume, proving the model could sustainably acquire patients.',
+    tags: ['Healthcare', 'Performance Marketing', 'Compliance', 'Google Ads', 'Conversion Optimization', 'Conversion Rate Optimization', 'UX', 'Analytics', 'Growth Strategy', 'Funnel Analysis', 'Product Growth', 'Vibe Coding'],
+    imageUrl: akidoRecovery,
+    link: 'https://akidorecovery.com',
+    isGif: false
+  }, {
     title: 'Scaling a Learning Business from Scratch',
     description: 'As the first marketing hire, I helped IDEO U grow from an idea into a thriving learning business with over 100K+ customers. I built and optimized growth channels—paid search, paid social, SEO, lifecycle marketing, and CRO—while leading a team to scale efforts. Experimentation and data-driven insights were key to identifying and unlocking the repeatable growth formula.',
     tags: ['Growth Strategy', 'Performance Marketing', 'SEO', 'CRO', 'Lifecycle Marketing', 'Demand Generation', 'Ecommerce Product Management', 'Product Growth'],
@@ -62,13 +69,6 @@ const Work: React.FC = () => {
     tags: ['Event Marketing', 'Content Marketing', 'Social Media', 'Partnerships', 'Health Tech', 'Mental Health'],
     imageUrl: '/lovable-uploads/RAMHT.png',
     link: 'https://www.rapidmentalhealth.com/',
-    isGif: false
-  }, {
-    title: 'Launching a MOUD Help Line',
-    description: 'Built the digital patient acquisition engine from scratch for a fentanyl-focused treatment line within a regulated healthcare environment.\n\nVibe-coded the site, launched Google and Meta campaigns, and used intake and call data to track the full funnel, pinpoint drop-off, and prioritize fixes.\n\nContinually reduced cost per call while increasing volume, proving the model could sustainably acquire patients.',
-    tags: ['Healthcare', 'Performance Marketing', 'Compliance', 'Google Ads', 'Conversion Optimization', 'Conversion Rate Optimization', 'UX', 'Analytics', 'Growth Strategy', 'Funnel Analysis', 'Product Growth', 'Vibe Coding'],
-    imageUrl: akidoRecovery,
-    link: 'https://akidorecovery.com',
     isGif: false
   }];
 
