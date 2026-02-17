@@ -64,8 +64,8 @@ const Work: React.FC = () => {
     link: 'https://www.rapidmentalhealth.com/',
     isGif: false
   }, {
-    title: 'Building a Compliant Digital Acquisition Engine',
-    description: 'Designed and scaled a performance marketing engine for a behavioral health provider in regulated markets. Reduced cost per call while increasing volume through Google Ads restructuring, landing page iteration, and attribution improvements.',
+    title: 'Launching a MOUD Help Line',
+    description: 'Launched a performance marketing engine for a behavioral health provider in regulated markets. Reduced cost per call while increasing volume through Google Ads restructuring, landing page iteration, and attribution improvements.',
     tags: ['Healthcare', 'Performance Marketing', 'Compliance', 'Google Ads', 'Conversion Optimization'],
     imageUrl: akidoRecovery,
     link: '#',
@@ -147,7 +147,7 @@ const Work: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-8 reveal">
           {filteredProjects.length > 0 ? filteredProjects.map((project, index) => <Card key={index} className={`overflow-hidden transition-all hover:shadow-lg ${project.fullWidth ? 'md:col-span-2' : ''}`}>
                 <div className={`${project.fullWidth ? 'flex flex-col md:flex-row' : ''}`}>
-                  <div className={`${project.fullWidth ? 'md:w-1/2' : ''} aspect-video bg-gray-100 relative`}>
+                  <div className={`${project.fullWidth ? 'md:w-1/2' : ''} aspect-video relative overflow-hidden`}>
                     {project.imageUrl ? <div className="w-full h-full">
                         <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover" />
                       </div> : <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
