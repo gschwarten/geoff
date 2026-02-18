@@ -70,6 +70,13 @@ const Work: React.FC = () => {
     imageUrl: '/lovable-uploads/RAMHT.png',
     link: 'https://www.rapidmentalhealth.com/',
     isGif: false
+  }, {
+    title: 'Improving Engagement in a Childcare Marketplace',
+    description: 'Led cross-functional growth across product, marketing, and engineering to increase parent engagement and tour conversion.\n\nBuilt and operationalized an experimentation system connecting paid acquisition, SEO, CRM, and marketplace flows.\n\nIncreased tour acceptance over 10x through email and SMS lifecycle optimization, signup friction reduction, and high-intent landing pages.',
+    tags: ['Product Growth', 'Growth Strategy', 'Conversion Rate Optimization', 'Lifecycle Marketing', 'SEO', 'Experimentation', 'Marketplace', 'CRM'],
+    imageUrl: '/lovable-uploads/wonderschool.png',
+    link: 'https://www.wonderschool.com/',
+    isGif: false
   }];
 
   const [allTags, setAllTags] = useState<string[]>([]);
