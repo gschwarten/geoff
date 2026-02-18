@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import akidoRecovery from '@/assets/akido-suboxone.png';
+import wonderschoolDashboard from '@/assets/wonderschool-dashboard.png';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, X, Filter, ChevronDown, ChevronUp, HeartPulse } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -74,7 +75,7 @@ const Work: React.FC = () => {
     title: 'Improving Engagement in a Childcare Marketplace',
     description: 'Led cross-functional growth across product, marketing, and engineering to increase parent engagement and tour conversion.\n\nBuilt and operationalized an experimentation system connecting paid acquisition, SEO, CRM, and marketplace flows.\n\nIncreased tour acceptance over 10x through email and SMS lifecycle optimization, signup friction reduction, and high-intent landing pages.',
     tags: ['Product Growth', 'Growth Strategy', 'Conversion Rate Optimization', 'Lifecycle Marketing', 'SEO', 'Experimentation', 'Marketplace', 'CRM'],
-    imageUrl: '/lovable-uploads/wonderschool.png',
+    imageUrl: wonderschoolDashboard,
     link: 'https://www.wonderschool.com/',
     isGif: false
   }];
