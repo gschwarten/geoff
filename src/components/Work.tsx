@@ -33,17 +33,18 @@ const Work: React.FC = () => {
     imageUrl: '/lovable-uploads/IDEO_U.jpg',
     link: 'https://www.ideou.com/'
   }, {
-    title: 'Customer Acquisition for In-Person + Mobile Personal Training',
-    description: 'Led customer acquisition and growth efforts for a two-sided marketplace that made personal training more affordable and accessible by combining in-person sessions with app-assigned workouts. Helped 5x the customer base through new channel expansion, paid search, event marketing, and strategic partnerships.',
-    tags: ['Customer Acquisition', 'Growth Marketing', 'Two-Sided Marketplace', 'Paid Search', 'Event Marketing', 'Partnerships', 'Health', 'Fitness Tech', 'Product Growth'],
-    imageUrl: '/lovable-uploads/gain-trainer.jpg',
-    link: '#'
-  }, {
     title: 'Ecommerce: Reinventing a Social Enterprise',
     description: 'As the first marketing hire for a fast-growing for-profit social enterprise, I built a team and led marketing initiatives, including a corporate rebranding, e-commerce website launch, email lifecycle marketing, paid search, SEO, social media, content marketing, partnerships, and PR. Grew business unit customer base 10x to over 200k customers in two years, attracting Series A investment.',
     tags: ['Marketing Strategy', 'Branding', 'Paid Search', 'Lifecycle Marketing', 'SEO', 'PR', 'Event Marketing', 'Partnerships', 'Ecommerce Product Management', 'Product Growth'],
     imageUrl: '/lovable-uploads/better-world-books-screeshot2.jpg',
     link: 'http://www.betterworldbooks.com'
+  }, {
+    title: 'Improving Engagement in a Childcare Marketplace',
+    description: 'Led cross-functional growth across product, marketing, and engineering to increase parent engagement and tour conversion.\n\nBuilt and operationalized an experimentation system connecting paid acquisition, SEO, CRM, and marketplace flows.\n\nIncreased tour acceptance over 10x through email and SMS lifecycle optimization, signup friction reduction, and high-intent landing pages.',
+    tags: ['Product Growth', 'Growth Strategy', 'Conversion Rate Optimization', 'Lifecycle Marketing', 'SEO', 'Experimentation', 'Marketplace', 'CRM'],
+    imageUrl: wonderschoolDashboard,
+    link: 'https://www.wonderschool.com/',
+    isGif: false
   }, {
     title: 'Launching a New Offer Aligned with Market Demand',
     description: 'Leveraging high-intent search queries and emerging trends in online learning, I designed and launched an experimental certificate program that combined multiple courses. The experiment—powered by an Unbounce landing page, lifecycle marketing, paid search, and social media—delivered outsized results, doubling AOV and retention overnight. I iterated on the experiment to develop a scalable product offering and marketing playbook, driving growth until it reached 40% of business unit revenue.',
@@ -51,6 +52,12 @@ const Work: React.FC = () => {
     imageUrl: '/lovable-uploads/cert3.png',
     link: 'https://www.rapidmentalhealth.com/',
     isGif: false
+  }, {
+    title: 'Customer Acquisition for In-Person + Mobile Personal Training',
+    description: 'Led customer acquisition and growth efforts for a two-sided marketplace that made personal training more affordable and accessible by combining in-person sessions with app-assigned workouts. Helped 5x the customer base through new channel expansion, paid search, event marketing, and strategic partnerships.',
+    tags: ['Customer Acquisition', 'Growth Marketing', 'Two-Sided Marketplace', 'Paid Search', 'Event Marketing', 'Partnerships', 'Health', 'Fitness Tech', 'Product Growth'],
+    imageUrl: '/lovable-uploads/gain-trainer.jpg',
+    link: '#'
   }, {
     title: 'Building a Brand, Content, and Lead Gen Engine',
     description: 'Launched and scaled a content marketing and lead generation engine, driving a peak of 75K qualified leads and 1M podcast downloads annually. The webcast and podcast program "leads with learning" helping cultivate an appetite for personal growth and learning. In addition to lead generation, the program drives seven figure revenue and acts as a engine for SEO, lifecycle, and social media content.',
@@ -70,13 +77,6 @@ const Work: React.FC = () => {
     tags: ['Event Marketing', 'Content Marketing', 'Social Media', 'Partnerships', 'Health Tech', 'Mental Health'],
     imageUrl: '/lovable-uploads/RAMHT.png',
     link: 'https://www.rapidmentalhealth.com/',
-    isGif: false
-  }, {
-    title: 'Improving Engagement in a Childcare Marketplace',
-    description: 'Led cross-functional growth across product, marketing, and engineering to increase parent engagement and tour conversion.\n\nBuilt and operationalized an experimentation system connecting paid acquisition, SEO, CRM, and marketplace flows.\n\nIncreased tour acceptance over 10x through email and SMS lifecycle optimization, signup friction reduction, and high-intent landing pages.',
-    tags: ['Product Growth', 'Growth Strategy', 'Conversion Rate Optimization', 'Lifecycle Marketing', 'SEO', 'Experimentation', 'Marketplace', 'CRM'],
-    imageUrl: wonderschoolDashboard,
-    link: 'https://www.wonderschool.com/',
     isGif: false
   }];
 
