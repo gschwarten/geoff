@@ -123,12 +123,12 @@ const Work: React.FC = () => {
   return <section id="work" className="bg-[#e8f3ff] py-8 md:py-12">
       <div className="section-container">
         <KnifeScroll />
-        <div className="text-center mb-6 reveal">
+        <div className="text-center mb-6">
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Work Examples</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">A selection of projects that showcase unique challenges and highlight different aspects of my skill set.</p>
         </div>
 
-        <Collapsible open={isOpen} onOpenChange={setIsOpen} className="mb-8 reveal space-y-2">
+        <Collapsible open={isOpen} onOpenChange={setIsOpen} className="mb-8 space-y-2">
           <div className="flex items-center justify-between">
             <CollapsibleTrigger className="flex items-center hover:text-blue-600">
               <Filter className="h-5 w-5 mr-2" />
@@ -152,7 +152,7 @@ const Work: React.FC = () => {
           </CollapsibleContent>
         </Collapsible>
 
-        <div className="grid md:grid-cols-2 gap-8 reveal">
+        <div className="grid md:grid-cols-2 gap-8">
           {filteredProjects.length > 0 ? filteredProjects.map((project, index) => <Card key={index} className={`overflow-hidden transition-all hover:shadow-lg ${project.fullWidth ? 'md:col-span-2' : ''}`}>
                 <div className={`${project.fullWidth ? 'flex flex-col md:flex-row' : ''}`}>
                   <div className={`${project.fullWidth ? 'md:w-1/2' : ''} aspect-video relative overflow-hidden`}>
