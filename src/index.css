@@ -108,14 +108,14 @@
 
 .reveal {
   opacity: 0;
+  -webkit-transform: translateY(20px);
   transform: translateY(20px);
+  -webkit-transition: opacity 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
   transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  will-change: opacity, transform;
 }
 
 .reveal.active {
   opacity: 1;
+  -webkit-transform: translateY(0);
   transform: translateY(0);
 }
