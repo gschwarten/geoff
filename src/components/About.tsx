@@ -197,11 +197,22 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
               />
             </div>
           )}
+
+          {showZiplineLogo && (
+            <div className="mb-12">
+              <img
+                src={ziplineLogo.url}
+                alt="Zipline Logo"
+                className="max-w-[200px]"
+              />
+            </div>
+          )}
           
           {showWonderSchoolLogo ? wonderSchoolContent : 
            showThredUpLogo ? thredUpContent :
            showGileadLogo ? gileadContent :
            showLovableLogo ? lovableContent :
+           showZiplineLogo ? ziplineContent :
            defaultContent}
           
           <Separator className="my-8" />
