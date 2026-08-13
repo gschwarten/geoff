@@ -43,7 +43,7 @@ const Zipline = () => {
         </ScrollReveal>
       </div>
       <ScrollReveal>
-        <Work />
+        <Work variant="zipline" />
       </ScrollReveal>
       <ScrollReveal>
         <Play />
