@@ -2,15 +2,17 @@
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import CroppedGif from './CroppedGif';
+import ziplineLogo from '@/assets/zipline-logo.svg.asset.json';
 
 interface AboutProps {
   showWonderSchoolLogo?: boolean;
   showThredUpLogo?: boolean;
   showGileadLogo?: boolean;
   showLovableLogo?: boolean;
+  showZiplineLogo?: boolean;
 }
 
-const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUpLogo = false, showGileadLogo = false, showLovableLogo = false }) => {
+const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUpLogo = false, showGileadLogo = false, showLovableLogo = false, showZiplineLogo = false }) => {
   const wonderSchoolContent = (
     <>
       <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
