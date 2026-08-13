@@ -109,7 +109,7 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
         In that spirit, I built this quick landing page to show—not tell—how I might help Zipline.
       </p>
       <p className="text-lg text-gray-600 mb-6">
-        My strength is helping mission-driven companies find the formula: experimenting into repeatable, scalable growth across channels, product, and customer programs. Zipline's work delivering critical supplies by drone is exactly the kind of impact I want to help scale.
+        My strength is helping mission-driven companies find the formula: experimenting into repeatable, scalable growth across channels, product, and customer programs. I'd love to help Zipline build that playbook for partner marketing, turning partner relationships into new drone delivery customers.
       </p>
       <a
         href="https://calendly.com/geoff-schwarten/30min"
