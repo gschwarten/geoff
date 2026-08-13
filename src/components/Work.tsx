@@ -60,14 +60,7 @@ const Work: React.FC<WorkProps> = ({ variant = 'default' }) => {
     tags: ['Marketing Strategy', 'Branding', 'Paid Search', 'Lifecycle Marketing', 'SEO', 'PR', 'Event Marketing', 'Partnerships', 'Ecommerce Product Management', 'Product Growth'],
     imageUrl: '/lovable-uploads/better-world-books-screeshot2.jpg',
     link: 'http://www.betterworldbooks.com'
-  }, {
-    title: 'Growing a Marketplace Through Government Partners',
-    description: 'Built web products and ran marketing campaigns on behalf of government partners, including the States of New Mexico and Florida, launching white-labeled sites on each partner\'s brand and owning their outcomes and KPIs.\n\nThe partner brought the audience and the brand trust. The work was converting that into enrollments, through programmatic SEO, high-intent landing pages, and email and SMS lifecycle across both partner-branded and Wonderschool-branded surfaces.\n\nIncreased tour acceptance over 10x through lifecycle optimization, signup friction reduction, and a structured experimentation program spanning product, engineering, and marketing.',
-    tags: ['Partner Marketing', 'Partnerships', 'Government Partners', 'Product Growth', 'Programmatic SEO', 'Lifecycle Marketing', 'Conversion Rate Optimization', 'Experimentation', 'Marketplace'],
-    imageUrl: wonderschoolDashboard,
-    link: 'https://www.wonderschool.com/',
-    isGif: false
-  }, {
+  }, wonderschoolProject, {
     title: 'Launching a New Offer Aligned with Market Demand',
     description: 'Leveraging high-intent search queries and emerging trends in online learning, I designed and launched an experimental certificate program that combined multiple courses. The experiment—powered by an Unbounce landing page, lifecycle marketing, paid search, and social media—delivered outsized results, doubling AOV and retention overnight. I iterated on the experiment to develop a scalable product offering and marketing playbook, driving growth until it reached 40% of business unit revenue.',
     tags: ['Product Growth', 'Lifecycle Marketing', 'Analytics', 'Experimentation', 'Growth Strategy', 'Paid Search'],
