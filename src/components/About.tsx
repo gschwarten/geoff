@@ -199,7 +199,7 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
           )}
 
           {showZiplineLogo && (
-            <div className="mb-12">
+            <div className="mb-6">
               <img
                 src={ziplineLogo.url}
                 alt="Zipline Logo"
