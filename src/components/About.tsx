@@ -99,12 +99,6 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
     </>
   );
 
-  const defaultContent = (
-    <>
-      <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
-    </>
-  );
-
   const ziplineContent = (
     <>
       <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
@@ -128,7 +122,7 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
     </>
   );
 
-  const unusedDefaultContent = (
+  const defaultContent = (
     <>
       <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
       <p className="text-lg text-gray-600 mb-6">
