@@ -102,6 +102,35 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
   const defaultContent = (
     <>
       <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
+    </>
+  );
+
+  const ziplineContent = (
+    <>
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
+      <p className="text-lg text-gray-600 mb-6">
+        A former colleague at IDEO was immortalized in company lore for the saying, "Never come to a meeting without a prototype."
+      </p>
+      <p className="text-lg text-gray-600 mb-6">
+        In that spirit, I built this quick landing page to show—not tell—how I might help Zipline.
+      </p>
+      <p className="text-lg text-gray-600 mb-6">
+        My strength is helping mission-driven companies find the formula: experimenting into repeatable, scalable growth across channels, product, and customer programs. Zipline's work delivering critical supplies by drone is exactly the kind of impact I want to help scale.
+      </p>
+      <a
+        href="https://calendly.com/geoff-schwarten/30min"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-600 hover:text-blue-800 hover:underline font-medium transition-colors inline-flex items-center gap-1"
+      >
+        Book a call with Geoff <span aria-hidden="true">→</span>
+      </a>
+    </>
+  );
+
+  const unusedDefaultContent = (
+    <>
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
       <p className="text-lg text-gray-600 mb-6">
         I help impact-oriented businesses "find the formula."
       </p>
