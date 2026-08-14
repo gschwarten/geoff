@@ -28,14 +28,14 @@ const Work: React.FC<WorkProps> = ({ variant = 'default' }) => {
   const wonderschoolProject: Project = isZipline ? {
     title: 'Growing a Marketplace Through Government Partners',
     description: 'Built web products and ran marketing campaigns on behalf of government partners, including the States of New Mexico and Florida, launching white-labeled sites on each partner\'s brand and owning their outcomes and KPIs.\n\nThe partner brought the audience and the brand trust. The work was converting that into enrollments, through programmatic SEO, high-intent landing pages, and email and SMS lifecycle across both partner-branded and Wonderschool-branded surfaces.\n\nIncreased tour acceptance over 10x through lifecycle optimization, signup friction reduction, and a structured experimentation program spanning product, engineering, and marketing.',
-    tags: ['Partner Marketing', 'Partnerships', 'Government Partners', 'Product Growth', 'Programmatic SEO', 'Lifecycle Marketing', 'Conversion Rate Optimization', 'Experimentation', 'Marketplace'],
+    tags: ['Partner Marketing', 'Partnerships', 'Government Partners', 'Product Growth', 'Programmatic SEO', 'Lifecycle Marketing', 'Conversion Rate Optimization', 'Experimentation', 'Marketplace', 'E-commerce Growth/Product Management'],
     imageUrl: wonderschoolDashboard,
     link: 'https://www.wonderschool.com/',
     isGif: false
   } : {
     title: 'Improving Engagement in a Childcare Marketplace',
     description: 'Led cross-functional growth across product, marketing, and engineering to increase parent engagement and tour conversion.\n\nBuilt and operationalized an experimentation system connecting paid acquisition, SEO, CRM, and marketplace flows.\n\nIncreased tour acceptance over 10x through email and SMS lifecycle optimization, signup friction reduction, and high-intent landing pages.',
-    tags: ['Product Growth', 'Growth Strategy', 'Conversion Rate Optimization', 'Lifecycle Marketing', 'SEO', 'Experimentation', 'Marketplace', 'CRM'],
+    tags: ['Product Growth', 'Growth Strategy', 'Conversion Rate Optimization', 'Lifecycle Marketing', 'SEO', 'Experimentation', 'Marketplace', 'CRM', 'E-commerce Growth/Product Management'],
     imageUrl: wonderschoolDashboard,
     link: 'https://www.wonderschool.com/',
     isGif: false
@@ -51,13 +51,13 @@ const Work: React.FC<WorkProps> = ({ variant = 'default' }) => {
   }, {
     title: 'Scaling a Learning Business from Scratch',
     description: 'As the first marketing hire, I helped IDEO U grow from an idea into a thriving learning business with over 100K+ customers. I built and optimized growth channels—paid search, paid social, SEO, lifecycle marketing, and CRO—while leading a team to scale efforts. Experimentation and data-driven insights were key to identifying and unlocking the repeatable growth formula.',
-    tags: ['Growth Strategy', 'Performance Marketing', 'SEO', 'CRO', 'Lifecycle Marketing', 'Demand Generation', 'Ecommerce Product Management', 'Product Growth'],
+    tags: ['Growth Strategy', 'Performance Marketing', 'SEO', 'CRO', 'Lifecycle Marketing', 'Demand Generation', 'E-commerce Growth/Product Management', 'Product Growth'],
     imageUrl: '/lovable-uploads/IDEO_U.jpg',
     link: 'https://www.ideou.com/'
   }, {
     title: 'Ecommerce: Reinventing a Social Enterprise',
     description: 'As the first marketing hire for a fast-growing for-profit social enterprise, I built a team and led marketing initiatives, including a corporate rebranding, e-commerce website launch, email lifecycle marketing, paid search, SEO, social media, content marketing, partnerships, and PR. Grew business unit customer base 10x to over 200k customers in two years, attracting Series A investment.',
-    tags: ['Marketing Strategy', 'Branding', 'Paid Search', 'Lifecycle Marketing', 'SEO', 'PR', 'Event Marketing', 'Partnerships', 'Ecommerce Product Management', 'Product Growth'],
+    tags: ['Marketing Strategy', 'Branding', 'Paid Search', 'Lifecycle Marketing', 'SEO', 'PR', 'Event Marketing', 'Partnerships', 'E-commerce Growth/Product Management', 'Product Growth'],
     imageUrl: '/lovable-uploads/better-world-books-screeshot2.jpg',
     link: 'http://www.betterworldbooks.com'
   }, wonderschoolProject, {
