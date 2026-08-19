@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <a href="#" className="text-xl font-bold">GEOFF SCHWARTEN</a>
+            <a href="#" className="text-xl font-bold">Geoff Schwarten</a>
           </div>
           
           <nav className="flex gap-8 mb-4 md:mb-0 items-center">
