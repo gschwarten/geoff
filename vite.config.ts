@@ -148,6 +148,12 @@ export default defineConfig(({ mode }) => ({
         description: "Helping impact-oriented businesses find repeatable, scalable growth formulas.",
         url: "https://geoff.lovable.app/lovable",
       },
+      {
+        path: "/yc",
+        title: "Geoff Schwarten | Marketing & Growth Leader",
+        description: "Helping impact-oriented businesses find repeatable, scalable growth formulas.",
+        url: "https://geoff.lovable.app/yc",
+      },
     ]),
   ].filter(Boolean),
   resolve: {
