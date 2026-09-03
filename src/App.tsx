@@ -11,6 +11,7 @@ import Gilead from "./pages/Gilead";
 import Lovable from "./pages/Lovable";
 import BookRun from "./pages/BookRun";
 import Zipline from "./pages/Zipline";
+import YC from "./pages/YC";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/lovable" element={<Lovable />} />
           <Route path="/bookrun" element={<BookRun />} />
           <Route path="/zipline" element={<Zipline />} />
+          <Route path="/yc" element={<YC />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -10,9 +10,10 @@ interface AboutProps {
   showGileadLogo?: boolean;
   showLovableLogo?: boolean;
   showZiplineLogo?: boolean;
+  showYCLogo?: boolean;
 }
 
-const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUpLogo = false, showGileadLogo = false, showLovableLogo = false, showZiplineLogo = false }) => {
+const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUpLogo = false, showGileadLogo = false, showLovableLogo = false, showZiplineLogo = false, showYCLogo = false }) => {
   const wonderSchoolContent = (
     <>
       <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
@@ -56,7 +57,7 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
         I help impact-oriented businesses "find the formula."
       </p>
       <p className="text-lg text-gray-600 mb-6">
-        What does it mean to find the formula? It means to find a repeatable, scalable approach to growth.
+        What does it mean to find the formula? It means to find a repeatable, scalable playbook for growth.
       </p>
       <p className="text-lg text-gray-600 mb-6">
         I bring a methodical, creative approach to experimenting and identifying channels, then scale them up and build teams around the ones that work. My expertise spans performance marketing, lifecycle marketing, AEO/SEO, content strategy, branding, and conversion optimization.
@@ -129,7 +130,7 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
         I help impact-oriented businesses "find the formula."
       </p>
       <p className="text-lg text-gray-600 mb-6">
-        What does it mean to find the formula? It means to find a repeatable, scalable approach to growth.
+        What does it mean to find the formula? It means to find a repeatable, scalable playbook for growth.
       </p>
       <p className="text-lg text-gray-600 mb-6">
         I bring a methodical, creative approach to experimenting and identifying channels, then scale them up and build teams around the ones that work. My expertise spans performance marketing, lifecycle marketing, AEO/SEO, content strategy, branding, and conversion optimization.
@@ -207,12 +208,22 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
               />
             </div>
           )}
+
+          {showYCLogo && (
+            <div className="mb-6">
+              <svg width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Y Combinator" xmlns="http://www.w3.org/2000/svg">
+                <rect width="64" height="64" rx="6" ry="6" fill="#F26625" />
+                <text x="32" y="32" textAnchor="middle" dominantBaseline="central" fontFamily="Helvetica, Arial, sans-serif" fontSize="40" fontWeight="700" fill="#ffffff">Y</text>
+              </svg>
+            </div>
+          )}
           
           {showWonderSchoolLogo ? wonderSchoolContent : 
            showThredUpLogo ? thredUpContent :
            showGileadLogo ? gileadContent :
            showLovableLogo ? lovableContent :
            showZiplineLogo ? ziplineContent :
+           showYCLogo ? defaultContent :
            defaultContent}
           
           <Separator className="my-8" />
