@@ -217,6 +217,11 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
               </svg>
             </div>
           )}
+          {showYCLogo && (
+            <p className="text-sm font-semibold uppercase tracking-widest mb-3" style={{ color: '#F26625' }}>
+              FOR YC FOUNDERS
+            </p>
+          )}
           
           {showWonderSchoolLogo ? wonderSchoolContent : 
            showThredUpLogo ? thredUpContent :
