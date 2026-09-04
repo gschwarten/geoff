@@ -2,6 +2,7 @@
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import CroppedGif from './CroppedGif';
+import StandFormula from './StandFormula';
 import ziplineLogo from '@/assets/zipline-logo.svg.asset.json';
 
 interface AboutProps {
@@ -11,9 +12,11 @@ interface AboutProps {
   showLovableLogo?: boolean;
   showZiplineLogo?: boolean;
   showYCLogo?: boolean;
+  showStandLogo?: boolean;
+  useStandFormula?: boolean;
 }
 
-const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUpLogo = false, showGileadLogo = false, showLovableLogo = false, showZiplineLogo = false, showYCLogo = false }) => {
+const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUpLogo = false, showGileadLogo = false, showLovableLogo = false, showZiplineLogo = false, showYCLogo = false, showStandLogo = false, useStandFormula = false }) => {
   const wonderSchoolContent = (
     <>
       <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
