@@ -1,4 +1,5 @@
 import React from 'react';
+import StandGrowthArrow from './StandGrowthArrow';
 
 const steps = [
   {
@@ -17,22 +18,31 @@ const steps = [
 
 const StandFirstThirtyDays: React.FC = () => {
   return (
-    <section id="first-30-days" className="section-container">
-      <h2 className="text-3xl md:text-4xl font-bold mb-3 tracking-tight">First 30 days</h2>
-      <p className="text-lg text-gray-700 mb-10">
-        How I would get to the brand, segmentation, and broker plan.
-      </p>
-
-      <div className="grid gap-6 md:grid-cols-3">
-        {steps.map((step, index) => (
-          <div key={step.title} className="bg-white rounded-lg shadow-sm p-6">
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#ACCAE5] text-sm font-bold text-[#040949] mb-4">
-              {index + 1}
-            </span>
-            <h3 className="text-xl font-bold mb-3 tracking-tight text-[#040949]">{step.title}</h3>
-            <p className="text-gray-600">{step.body}</p>
+    <section id="first-30-days" className="bg-[#E8F5EC]">
+      <div className="mx-auto max-w-6xl px-6 py-20">
+        <div className="mb-10 flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
+          <div className="order-2 md:order-1">
+            <h2 className="mb-3 text-3xl font-bold tracking-tight text-[#040949] md:text-4xl">First 30 days</h2>
+            <p className="text-lg text-gray-700">
+              How I would get to the brand, segmentation, and broker plan.
+            </p>
           </div>
-        ))}
+          <div className="order-1 md:order-2">
+            <StandGrowthArrow />
+          </div>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {steps.map((step, index) => (
+            <div key={step.title} className="rounded-lg bg-white p-6 shadow-sm">
+              <span className="mb-4 inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#ACCAE5] text-sm font-bold text-[#040949]">
+                {index + 1}
+              </span>
+              <h3 className="mb-3 text-xl font-bold tracking-tight text-[#040949]">{step.title}</h3>
+              <p className="text-gray-600">{step.body}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
