@@ -12,6 +12,7 @@ import Lovable from "./pages/Lovable";
 import BookRun from "./pages/BookRun";
 import Zipline from "./pages/Zipline";
 import YC from "./pages/YC";
+import Stand from "./pages/Stand";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/bookrun" element={<BookRun />} />
           <Route path="/zipline" element={<Zipline />} />
           <Route path="/yc" element={<YC />} />
+          <Route path="/stand" element={<Stand />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
