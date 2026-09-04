@@ -5,7 +5,6 @@ import Work from '@/components/Work';
 import Play from '@/components/Play';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
-import StandFirstThirtyDays from '@/components/StandFirstThirtyDays';
 
 const Stand = () => {
   useEffect(() => {
@@ -43,9 +42,6 @@ const Stand = () => {
           <About showStandLogo={true} />
         </ScrollReveal>
       </div>
-      <ScrollReveal>
-        <StandFirstThirtyDays />
-      </ScrollReveal>
       <ScrollReveal>
         <Work />
       </ScrollReveal>
