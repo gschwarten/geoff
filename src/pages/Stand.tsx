@@ -1,0 +1,60 @@
+import React, { useEffect } from 'react';
+import Navbar from '@/components/Navbar';
+import About from '@/components/About';
+import Work from '@/components/Work';
+import Play from '@/components/Play';
+import Footer from '@/components/Footer';
+import ScrollReveal from '@/components/ScrollReveal';
+import StandFirstThirtyDays from '@/components/StandFirstThirtyDays';
+
+const Stand = () => {
+  useEffect(() => {
+    document.title = 'GEOFF SCHWARTEN | Marketing and Growth Leader';
+
+    const style = document.createElement('style');
+    style.textContent = `
+      body {
+        background-color: #accae5;
+      }
+
+      .bg-grid-pattern {
+        background-image:
+          linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+
+      .bg-accae5 {
+        background-color: #accae5;
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
+  return (
+    <div className="min-h-screen">
+      <Navbar />
+      <div className="pt-24 pb-8">
+        <ScrollReveal>
+          <About showStandLogo={true} useStandFormula={true} />
+        </ScrollReveal>
+      </div>
+      <ScrollReveal>
+        <StandFirstThirtyDays />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Work />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Play />
+      </ScrollReveal>
+      <Footer />
+    </div>
+  );
+};
+
+export default Stand;
