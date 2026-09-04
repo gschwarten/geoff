@@ -40,7 +40,7 @@ const Stand = () => {
       <Navbar />
       <div className="pt-24 pb-8">
         <ScrollReveal>
-          <About showStandLogo={true} useStandFormula={true} />
+          <About showStandLogo={true} />
         </ScrollReveal>
       </div>
       <ScrollReveal>

@@ -2,7 +2,6 @@
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import CroppedGif from './CroppedGif';
-import StandFormula from './StandFormula';
 import ziplineLogo from '@/assets/zipline-logo.svg.asset.json';
 
 interface AboutProps {
@@ -13,10 +12,9 @@ interface AboutProps {
   showZiplineLogo?: boolean;
   showYCLogo?: boolean;
   showStandLogo?: boolean;
-  useStandFormula?: boolean;
 }
 
-const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUpLogo = false, showGileadLogo = false, showLovableLogo = false, showZiplineLogo = false, showYCLogo = false, showStandLogo = false, useStandFormula = false }) => {
+const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUpLogo = false, showGileadLogo = false, showLovableLogo = false, showZiplineLogo = false, showYCLogo = false, showStandLogo = false }) => {
   const wonderSchoolContent = (
     <>
       <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
@@ -156,7 +154,7 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
         <div className="reveal">
           <div className="relative">
             <div className="aspect-square bg-[#ACCAE5] rounded-lg overflow-hidden">
-              {useStandFormula ? <StandFormula /> : <CroppedGif />}
+              <CroppedGif />
             </div>
           </div>
         </div>
@@ -228,10 +226,12 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
 
           {showStandLogo && (
             <div className="mb-6">
-              <svg width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Stand" xmlns="http://www.w3.org/2000/svg">
-                <rect width="64" height="64" rx="6" ry="6" fill="#111111" />
-                <text x="32" y="32" textAnchor="middle" dominantBaseline="central" fontFamily="Helvetica, Arial, sans-serif" fontSize="40" fontWeight="700" fill="#ffffff">S</text>
-              </svg>
+              <span
+                className="text-[28px] font-extrabold uppercase text-[#111111]"
+                style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', letterSpacing: '-0.02em' }}
+              >
+                STAND
+              </span>
             </div>
           )}
           {showStandLogo && (
