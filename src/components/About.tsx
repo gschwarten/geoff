@@ -225,16 +225,6 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
           )}
 
           {showStandLogo && (
-            <div className="mb-6">
-              <span
-                className="text-[28px] font-extrabold uppercase text-[#111111]"
-                style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif', letterSpacing: '-0.02em' }}
-              >
-                STAND
-              </span>
-            </div>
-          )}
-          {showStandLogo && (
             <p className="text-sm font-semibold uppercase tracking-widest mb-3">
               STAND COFOUNDERS
             </p>
