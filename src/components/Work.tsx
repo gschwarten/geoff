@@ -65,7 +65,7 @@ const Work: React.FC<WorkProps> = ({ variant = 'default' }) => {
     description: 'Leveraging high-intent search queries and emerging trends in online learning, I designed and launched an experimental certificate program that combined multiple courses. The experiment—powered by an Unbounce landing page, lifecycle marketing, paid search, and social media—delivered outsized results, doubling AOV and retention overnight. I iterated on the experiment to develop a scalable product offering and marketing playbook, driving growth until it reached 40% of business unit revenue.',
     tags: ['Product Growth', 'Lifecycle Marketing', 'Analytics', 'Experimentation', 'Growth Strategy', 'Paid Search'],
     imageUrl: '/lovable-uploads/cert3.png',
-    link: 'https://www.rapidmentalhealth.com/',
+    link: 'https://www.ideou.com/',
     isGif: false
   }, {
     title: 'Customer Acquisition for In-Person + Mobile Personal Training',
@@ -87,8 +87,8 @@ const Work: React.FC<WorkProps> = ({ variant = 'default' }) => {
     link: 'https://madeeasymeals.com/',
     isGif: false
   }, {
-    title: 'Building a Leading Summit for Mental Health Innovation',
-    description: 'Played a key role in planning and growing the Rapid Acting Mental Health Treatment Summit (SF), an event dedicated to cutting-edge mental health treatments. I helped scale its impact by securing a venue, refining sponsorships, driving outreach, enhancing its digital presence, and connecting health entrepreneurs with investors.',
+    title: 'Growing a Mental Health Innovation Summit',
+    description: 'For the 2025 Rapid Acting Mental Health Treatment Summit in San Francisco, I took on the growth work: securing the venue, refining sponsorship packages, driving outreach, building the digital presence, and connecting health entrepreneurs with investors. I have stayed on as a hands-on volunteer for the summits since.',
     tags: ['Event Marketing', 'Content Marketing', 'Social Media', 'Partnerships', 'Health Tech', 'Mental Health'],
     imageUrl: '/lovable-uploads/RAMHT.png',
     link: 'https://www.rapidmentalhealth.com/',
