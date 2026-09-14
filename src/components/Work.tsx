@@ -96,6 +96,15 @@ const Work: React.FC<WorkProps> = ({ variant = 'default', pinProjects }) => {
     isGif: false
   }];
 
+  const orderedProjects: Project[] = (() => {
+    if (!pinProjects || pinProjects.length === 0) return projects;
+    const pinned = pinProjects
+      .map((t) => projects.find((p) => p.title === t))
+      .filter(Boolean) as Project[];
+    const rest = projects.filter((p) => !pinProjects.includes(p.title));
+    return [...pinned, ...rest];
+  })();
+
   const [allTags, setAllTags] = useState<string[]>([]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
