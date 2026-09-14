@@ -140,7 +140,7 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
       </p>
       <p className="text-lg text-gray-600 mb-6">
         {showSequencingLogo
-          ? 'I bring a methodical, creative approach to experimenting and identifying channels, then scale them up as a player-coach, in the work myself and making sure the people around me understand what is working and why.'
+          ? 'I bring a methodical, creative approach to experimenting and identifying channels, then I scale them up and help the team understand roadblocks and wins along the way.'
           : 'I bring a methodical, creative approach to experimenting and identifying channels, then scale them up and build teams around the ones that work.'}{' '}
         My expertise spans performance marketing, lifecycle marketing, AEO/SEO, content strategy, branding, and conversion optimization. These days I use AI to compress timelines from weeks to days, enhancing outcomes, not just volume of output.
       </p>
