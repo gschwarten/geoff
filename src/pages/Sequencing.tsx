@@ -5,7 +5,7 @@ import Work from '@/components/Work';
 import Play from '@/components/Play';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
-import FormulaText from '@/components/FormulaText';
+
 
 const Sequencing = () => {
   useEffect(() => {
@@ -49,13 +49,6 @@ const Sequencing = () => {
           <About
             showSequencingLogo={true}
             insertAfterOpener={sequencingParagraph}
-            formula={
-              <FormulaText
-                line1="Performance Marketing"
-                line2="Channel Diversification"
-                result="Profitable Growth"
-              />
-            }
           />
         </ScrollReveal>
       </div>

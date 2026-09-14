@@ -139,7 +139,10 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
         What does it mean to find the formula? It means to find a repeatable, scalable playbook for growth.
       </p>
       <p className="text-lg text-gray-600 mb-6">
-        I bring a methodical, creative approach to experimenting and identifying channels, then scale them up and build teams around the ones that work. My expertise spans performance marketing, lifecycle marketing, AEO/SEO, content strategy, branding, and conversion optimization. These days I use AI to compress timelines from weeks to days, enhancing outcomes, not just volume of output.
+        {showSequencingLogo
+          ? 'I bring a methodical, creative approach to experimenting and identifying channels, then scale them up as a player-coach, in the work myself and making sure the people around me understand what is working and why.'
+          : 'I bring a methodical, creative approach to experimenting and identifying channels, then scale them up and build teams around the ones that work.'}{' '}
+        My expertise spans performance marketing, lifecycle marketing, AEO/SEO, content strategy, branding, and conversion optimization. These days I use AI to compress timelines from weeks to days, enhancing outcomes, not just volume of output.
       </p>
       <p className="text-lg text-gray-600 mb-6">
         While I'm a generalist, I have deep experience in key channels, along with the leadership skills to know which tool is right for the job. I have a data-driven approach, blending creativity with insights to not just grow businesses, but to build sustainable, long-term success.
