@@ -35,12 +35,6 @@ const Sequencing = () => {
     };
   }, []);
 
-  const sequencingParagraph = (
-    <p className="text-lg text-gray-600 mb-6">
-      I read the Director of Growth role as a player-coach seat: scale the paid engine you already have while building the creator, affiliate, referral, and partner channels that come next. That is the job I have done three times as a first marketing hire, most recently for a recurring-revenue telehealth membership, and it is the job I want to do for the world's largest direct-to-consumer whole genome sequencing platform.
-    </p>
-  );
-
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -48,7 +42,6 @@ const Sequencing = () => {
         <ScrollReveal>
           <About
             showSequencingLogo={true}
-            insertAfterOpener={sequencingParagraph}
           />
         </ScrollReveal>
       </div>
