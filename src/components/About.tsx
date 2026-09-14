@@ -245,11 +245,6 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
               className="h-9 w-auto mb-4"
             />
           )}
-          {showSequencingLogo && (
-            <p className="text-sm font-semibold uppercase tracking-widest mb-3">
-              SEQUENCING GROWTH TEAM
-            </p>
-          )}
           
           {showWonderSchoolLogo ? wonderSchoolContent : 
            showThredUpLogo ? thredUpContent :
