@@ -242,7 +242,7 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
             <img
               src={sequencingLogo.url}
               alt="Sequencing logo"
-              className="h-9 w-auto mb-4"
+              className="h-9 w-auto mb-5"
             />
           )}
           
