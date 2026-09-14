@@ -139,9 +139,7 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
         What does it mean to find the formula? It means to find a repeatable, scalable playbook for growth.
       </p>
       <p className="text-lg text-gray-600 mb-6">
-        {showSequencingLogo
-          ? 'I bring a methodical, creative approach to experimenting and identifying channels, then I scale them up and help the team understand roadblocks and wins along the way.'
-          : 'I bring a methodical, creative approach to experimenting and identifying channels, then scale them up and build teams around the ones that work.'}{' '}
+        I bring a methodical, creative approach to experimenting and identifying channels, then scale them up while keeping the team clear on what is blocking us and what is working.{' '}
         My expertise spans performance marketing, lifecycle marketing, AEO/SEO, content strategy, branding, and conversion optimization. These days I use AI to compress timelines from weeks to days, enhancing outcomes, not just volume of output.
       </p>
       <p className="text-lg text-gray-600 mb-6">
