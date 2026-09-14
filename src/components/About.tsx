@@ -3,6 +3,7 @@ import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import CroppedGif from './CroppedGif';
 import ziplineLogo from '@/assets/zipline-logo.svg.asset.json';
+import sequencingLogo from '@/assets/sequencing-logo.svg.asset.json';
 
 interface AboutProps {
   showWonderSchoolLogo?: boolean;
@@ -234,6 +235,13 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
             </p>
           )}
 
+          {showSequencingLogo && (
+            <img
+              src={sequencingLogo.url}
+              alt="Sequencing logo"
+              className="h-9 w-auto mb-4"
+            />
+          )}
           {showSequencingLogo && (
             <p className="text-sm font-semibold uppercase tracking-widest mb-3">
               SEQUENCING GROWTH TEAM
