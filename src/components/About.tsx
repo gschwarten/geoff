@@ -12,9 +12,12 @@ interface AboutProps {
   showZiplineLogo?: boolean;
   showYCLogo?: boolean;
   showStandLogo?: boolean;
+  showSequencingLogo?: boolean;
+  formula?: React.ReactNode;
+  insertAfterOpener?: React.ReactNode;
 }
 
-const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUpLogo = false, showGileadLogo = false, showLovableLogo = false, showZiplineLogo = false, showYCLogo = false, showStandLogo = false }) => {
+const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUpLogo = false, showGileadLogo = false, showLovableLogo = false, showZiplineLogo = false, showYCLogo = false, showStandLogo = false, showSequencingLogo = false, formula, insertAfterOpener }) => {
   const wonderSchoolContent = (
     <>
       <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>

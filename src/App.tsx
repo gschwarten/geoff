@@ -32,6 +32,7 @@ const App = () => (
           <Route path="/zipline" element={<Zipline />} />
           <Route path="/yc" element={<YC />} />
           <Route path="/stand" element={<Stand />} />
+          <Route path="/sequencing" element={<Sequencing />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
