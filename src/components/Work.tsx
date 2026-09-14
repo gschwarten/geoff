@@ -113,7 +113,7 @@ const Work: React.FC<WorkProps> = ({ variant = 'default', pinProjects }) => {
 
   useEffect(() => {
     const tags = new Set<string>();
-    projects.forEach(project => {
+    orderedProjects.forEach(project => {
       project.tags.forEach(tag => tags.add(tag));
     });
     setAllTags(Array.from(tags).sort());
@@ -121,9 +121,9 @@ const Work: React.FC<WorkProps> = ({ variant = 'default', pinProjects }) => {
 
   useEffect(() => {
     if (selectedTags.length === 0) {
-      setFilteredProjects(projects);
+      setFilteredProjects(orderedProjects);
     } else {
-      const filtered = projects.filter(project => selectedTags.some(tag => project.tags.includes(tag)));
+      const filtered = orderedProjects.filter(project => selectedTags.some(tag => project.tags.includes(tag)));
       setFilteredProjects(filtered);
     }
   }, [selectedTags]);
