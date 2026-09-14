@@ -12,9 +12,12 @@ interface AboutProps {
   showZiplineLogo?: boolean;
   showYCLogo?: boolean;
   showStandLogo?: boolean;
+  showSequencingLogo?: boolean;
+  formula?: React.ReactNode;
+  insertAfterOpener?: React.ReactNode;
 }
 
-const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUpLogo = false, showGileadLogo = false, showLovableLogo = false, showZiplineLogo = false, showYCLogo = false, showStandLogo = false }) => {
+const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUpLogo = false, showGileadLogo = false, showLovableLogo = false, showZiplineLogo = false, showYCLogo = false, showStandLogo = false, showSequencingLogo = false, formula, insertAfterOpener }) => {
   const wonderSchoolContent = (
     <>
       <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
@@ -130,6 +133,7 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
       <p className="text-lg text-gray-600 mb-6">
         I help impact-oriented businesses "find the formula."
       </p>
+      {insertAfterOpener}
       <p className="text-lg text-gray-600 mb-6">
         What does it mean to find the formula? It means to find a repeatable, scalable playbook for growth.
       </p>
@@ -154,7 +158,7 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
         <div className="reveal">
           <div className="relative">
             <div className="aspect-square bg-[#ACCAE5] rounded-lg overflow-hidden">
-              <CroppedGif />
+              {formula ?? <CroppedGif />}
             </div>
           </div>
         </div>
@@ -229,6 +233,12 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
               STAND COFOUNDERS
             </p>
           )}
+
+          {showSequencingLogo && (
+            <p className="text-sm font-semibold uppercase tracking-widest mb-3">
+              SEQUENCING GROWTH TEAM
+            </p>
+          )}
           
           {showWonderSchoolLogo ? wonderSchoolContent : 
            showThredUpLogo ? thredUpContent :
@@ -236,6 +246,7 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
            showLovableLogo ? lovableContent :
            showZiplineLogo ? ziplineContent :
            showYCLogo ? defaultContent :
+           showSequencingLogo ? defaultContent :
            defaultContent}
           
           <Separator className="my-8" />

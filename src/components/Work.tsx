@@ -20,9 +20,10 @@ interface Project {
 
 interface WorkProps {
   variant?: 'default' | 'zipline';
+  pinProjects?: string[];
 }
 
-const Work: React.FC<WorkProps> = ({ variant = 'default' }) => {
+const Work: React.FC<WorkProps> = ({ variant = 'default', pinProjects }) => {
   const isZipline = variant === 'zipline';
 
   const wonderschoolProject: Project = isZipline ? {
@@ -95,6 +96,15 @@ const Work: React.FC<WorkProps> = ({ variant = 'default' }) => {
     isGif: false
   }];
 
+  const orderedProjects: Project[] = (() => {
+    if (!pinProjects || pinProjects.length === 0) return projects;
+    const pinned = pinProjects
+      .map((t) => projects.find((p) => p.title === t))
+      .filter(Boolean) as Project[];
+    const rest = projects.filter((p) => !pinProjects.includes(p.title));
+    return [...pinned, ...rest];
+  })();
+
   const [allTags, setAllTags] = useState<string[]>([]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
@@ -103,7 +113,7 @@ const Work: React.FC<WorkProps> = ({ variant = 'default' }) => {
 
   useEffect(() => {
     const tags = new Set<string>();
-    projects.forEach(project => {
+    orderedProjects.forEach(project => {
       project.tags.forEach(tag => tags.add(tag));
     });
     setAllTags(Array.from(tags).sort());
@@ -111,9 +121,9 @@ const Work: React.FC<WorkProps> = ({ variant = 'default' }) => {
 
   useEffect(() => {
     if (selectedTags.length === 0) {
-      setFilteredProjects(projects);
+      setFilteredProjects(orderedProjects);
     } else {
-      const filtered = projects.filter(project => selectedTags.some(tag => project.tags.includes(tag)));
+      const filtered = orderedProjects.filter(project => selectedTags.some(tag => project.tags.includes(tag)));
       setFilteredProjects(filtered);
     }
   }, [selectedTags]);
