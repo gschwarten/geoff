@@ -20,9 +20,10 @@ interface Project {
 
 interface WorkProps {
   variant?: 'default' | 'zipline';
+  pinProjects?: string[];
 }
 
-const Work: React.FC<WorkProps> = ({ variant = 'default' }) => {
+const Work: React.FC<WorkProps> = ({ variant = 'default', pinProjects }) => {
   const isZipline = variant === 'zipline';
 
   const wonderschoolProject: Project = isZipline ? {
