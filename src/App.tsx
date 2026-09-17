@@ -34,6 +34,7 @@ const App = () => (
           <Route path="/yc" element={<YC />} />
           <Route path="/stand" element={<Stand />} />
           <Route path="/sequencing" element={<Sequencing />} />
+          <Route path="/hipaa-helper" element={<HipaaHelper />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
