@@ -163,7 +163,7 @@ const Disclaimer: React.FC<{ compact?: boolean }> = ({ compact }) => (
   </div>
 );
 
-const Hipaa Helper: React.FC = () => {
+const HipaaHelper: React.FC = () => {
   const [active, setActive] = useState(0);
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
 
