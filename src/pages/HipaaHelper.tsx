@@ -12,7 +12,7 @@ type Principle = {
   line: string;
   evidence: string;
   practice: string;
-  Icon: React.ComponentType<{ size?: number; strokeWidth?: number; className?: string }>;
+  Icon: LucideIcon;
 };
 
 const PRINCIPLES: Principle[] = [
