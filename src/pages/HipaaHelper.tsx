@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import type { LucideIcon } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import {
