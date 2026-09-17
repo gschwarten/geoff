@@ -14,6 +14,7 @@ import Zipline from "./pages/Zipline";
 import YC from "./pages/YC";
 import Stand from "./pages/Stand";
 import Sequencing from "./pages/Sequencing";
+import HipaaHelper from "./pages/HipaaHelper";
 
 const queryClient = new QueryClient();
 

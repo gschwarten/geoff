@@ -333,4 +333,4 @@ const HipaaHelper: React.FC = () => {
   );
 };
 
-export default Hipaa Helper;
+export default HipaaHelper;
