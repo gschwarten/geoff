@@ -62,9 +62,9 @@ const Work: React.FC<WorkProps> = ({ variant = 'default', pinProjects }) => {
     imageUrl: '/lovable-uploads/better-world-books-screeshot2.jpg',
     link: 'http://www.betterworldbooks.com'
 }, wonderschoolProject, {
-    title: 'Growing Accelerator Applications for a Venture Capital Firm',
-    description: 'Foundation Capital recruits founders for its Cal Build and IIT Build accelerators largely through LinkedIn ads. They brought me in to build a repeatable way to grow quality applications.\n\nSet up application attribution with URL tagging and Typeform, audited the LinkedIn account, built a cost-per-applicant dashboard, and ran an ICE-prioritized experiment roadmap with a written brief and recap for every test.\n\nSending ad clicks straight to the application form, skipping the landing page, lifted application starts 70% and nearly doubled completed applications for one cohort versus its prior peak. Also found that text-only posts from a partner\'s personal profile drew roughly 3x the click-through of image ads at about 40% lower cost.',
-    tags: ['Experimentation', 'Conversion Rate Optimization', 'Funnel Analysis', 'Analytics', 'Performance Marketing', 'Growth Strategy', 'LinkedIn Ads', 'B2B'],
+    title: 'Fixing Attribution and Sign-Up Friction for a Venture Capital Accelerator',
+    description: 'Foundation Capital recruits founders for its Cal Build and IIT Build accelerators largely through LinkedIn ads. When I started, the team had little visibility into which ads produced applications, and more than 90% of paid clicks were lost between the landing page and the application form.\n\nUpgraded Typeform and added URL tagging so nearly every application could be traced to the campaign and ad behind it, then built a cost-per-applicant dashboard to judge spend by applications.\n\nWith tracking in place, removed a step from the sign-up flow by sending ad clicks straight to the application form. Application starts rose 70% and completed applications nearly doubled for one cohort versus its prior peak, bringing down the cost of each application. Ran the work as an ICE-prioritized experiment roadmap with a written brief and recap for every test.',
+    tags: ['Attribution', 'Analytics', 'Funnel Analysis', 'Conversion Rate Optimization', 'Experimentation', 'Performance Marketing', 'LinkedIn Ads', 'B2B'],
     imageUrl: '/lovable-uploads/accelerator-funnel.svg',
     link: 'https://foundationcapital.com/',
     isGif: false
