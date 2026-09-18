@@ -43,8 +43,8 @@
   <text x="1050" y="618" text-anchor="middle" font-size="30" font-weight="600" fill="#0f172a">Application</text>
 
   <!-- callout -->
-  <rect x="1230" y="540" width="300" height="150" rx="18" fill="#2563eb"/>
-  <text x="1380" y="610" text-anchor="middle" font-size="34" font-weight="700" fill="#ffffff">~2x completed</text>
-  <text x="1380" y="652" text-anchor="middle" font-size="34" font-weight="700" fill="#ffffff">applications</text>
-  <text x="1380" y="678" text-anchor="middle" font-size="18" fill="#dbeafe">vs. prior cohort peak</text>
+  <rect x="1210" y="520" width="330" height="190" rx="18" fill="#2563eb"/>
+  <text x="1375" y="592" text-anchor="middle" font-size="34" font-weight="700" fill="#ffffff">~2x completed</text>
+  <text x="1375" y="634" text-anchor="middle" font-size="34" font-weight="700" fill="#ffffff">applications</text>
+  <text x="1375" y="680" text-anchor="middle" font-size="24" fill="#dbeafe">vs. prior cohort peak</text>
 </svg>
