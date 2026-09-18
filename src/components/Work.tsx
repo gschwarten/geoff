@@ -61,7 +61,14 @@ const Work: React.FC<WorkProps> = ({ variant = 'default', pinProjects }) => {
     tags: ['Marketing Strategy', 'Branding', 'Paid Search', 'Lifecycle Marketing', 'SEO', 'PR', 'Event Marketing', 'Partnerships', 'E-commerce Growth/Product Management', 'Product Growth'],
     imageUrl: '/lovable-uploads/better-world-books-screeshot2.jpg',
     link: 'http://www.betterworldbooks.com'
-  }, wonderschoolProject, {
+}, wonderschoolProject, {
+    title: 'Growing Accelerator Applications for a Venture Capital Firm',
+    description: 'Foundation Capital recruits founders for its Cal Build and IIT Build accelerators largely through LinkedIn ads. They brought me in to build a repeatable way to grow quality applications.\n\nSet up application attribution with URL tagging and Typeform, audited the LinkedIn account, built a cost-per-applicant dashboard, and ran an ICE-prioritized experiment roadmap with a written brief and recap for every test.\n\nSending ad clicks straight to the application form, skipping the landing page, lifted application starts 70% and nearly doubled completed applications for one cohort versus its prior peak. Also found that text-only posts from a partner\'s personal profile drew roughly 3x the click-through of image ads at about 40% lower cost.',
+    tags: ['Experimentation', 'Conversion Rate Optimization', 'Funnel Analysis', 'Analytics', 'Performance Marketing', 'Growth Strategy', 'LinkedIn Ads', 'B2B'],
+    imageUrl: '/lovable-uploads/accelerator-funnel.svg',
+    link: 'https://foundationcapital.com/',
+    isGif: false
+  }, {
     title: 'Launching a New Offer Aligned with Market Demand',
     description: 'Leveraging high-intent search queries and emerging trends in online learning, I designed and launched an experimental certificate program that combined multiple courses. The experiment—powered by an Unbounce landing page, lifecycle marketing, paid search, and social media—delivered outsized results, doubling AOV and retention overnight. I iterated on the experiment to develop a scalable product offering and marketing playbook, driving growth until it reached 40% of business unit revenue.',
     tags: ['Product Growth', 'Lifecycle Marketing', 'Analytics', 'Experimentation', 'Growth Strategy', 'Paid Search'],
