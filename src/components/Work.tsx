@@ -62,13 +62,6 @@ const Work: React.FC<WorkProps> = ({ variant = 'default', pinProjects }) => {
     imageUrl: '/lovable-uploads/better-world-books-screeshot2.jpg',
     link: 'http://www.betterworldbooks.com'
 }, wonderschoolProject, {
-    title: 'Fixing Attribution and Sign-Up Friction for a Venture Capital Accelerator',
-    description: 'Foundation Capital recruits founders for its Cal Build and IIT Build accelerators largely through LinkedIn ads. When I started, the team had little visibility into which ads produced applications, and more than 90% of paid clicks were lost between the landing page and the application form.\n\nUpgraded Typeform and added URL tagging so nearly every application could be traced to the campaign and ad behind it, then built a cost-per-applicant dashboard to judge spend by applications.\n\nWith tracking in place, removed a step from the sign-up flow by sending ad clicks straight to the application form. Application starts rose 70% and completed applications nearly doubled for one cohort versus its prior peak, bringing down the cost of each application. Ran the work as an ICE-prioritized experiment roadmap with a written brief and recap for every test.',
-    tags: ['Attribution', 'Analytics', 'Funnel Analysis', 'Conversion Rate Optimization', 'Experimentation', 'Performance Marketing', 'LinkedIn Ads', 'B2B'],
-    imageUrl: '/lovable-uploads/accelerator-funnel.svg',
-    link: 'https://foundationcapital.com/',
-    isGif: false
-  }, {
     title: 'Launching a New Offer Aligned with Market Demand',
     description: 'Leveraging high-intent search queries and emerging trends in online learning, I designed and launched an experimental certificate program that combined multiple courses. The experiment—powered by an Unbounce landing page, lifecycle marketing, paid search, and social media—delivered outsized results, doubling AOV and retention overnight. I iterated on the experiment to develop a scalable product offering and marketing playbook, driving growth until it reached 40% of business unit revenue.',
     tags: ['Product Growth', 'Lifecycle Marketing', 'Analytics', 'Experimentation', 'Growth Strategy', 'Paid Search'],
