@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-6 flex justify-between items-center">
         <a href="#" className="flex items-center gap-3 leading-tight">
           <img
-            src="/lovable-uploads/flask-navy.png"
+            src="/lovable-uploads/flask-navy.svg"
             alt=""
             aria-hidden="true"
             className="h-10 w-auto"
