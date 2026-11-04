@@ -265,7 +265,7 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-2">Availability</h3>
-              <p className="text-gray-600">Open to opportunities</p>
+              <p className="text-gray-600">Inquire to find out.</p>
             </div>
           </div>
 
