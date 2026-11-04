@@ -25,7 +25,12 @@ const Navbar: React.FC = () => {
       )}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <a href="#" className="text-xl font-bold">Geoff Schwarten</a>
+        <a href="#" className="flex flex-col leading-tight">
+          <span className="text-xl font-bold">Geoff Schwarten</span>
+          <span className="mt-[3px] text-[11px] font-medium uppercase tracking-[0.14em] opacity-60">
+            Substance Growth Marketing
+          </span>
+        </a>
         
         {/* Mobile menu button */}
         <button
