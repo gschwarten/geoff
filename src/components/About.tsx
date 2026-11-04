@@ -268,6 +268,16 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
               <p className="text-gray-600">Open to opportunities</p>
             </div>
           </div>
+
+          <a
+            href="https://calendly.com/geoff-schwarten/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#040949] text-white rounded-full px-6 py-3 font-medium hover:opacity-90 inline-flex items-center gap-2 mt-8"
+          >
+            Book a call with Geoff <span aria-hidden="true">→</span>
+          </a>
+          <p className="text-sm text-gray-500 mt-2">30 minutes. No prep needed.</p>
         </div>
       </div>
     </section>
