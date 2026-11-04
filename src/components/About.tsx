@@ -130,9 +130,10 @@ const About: React.FC<AboutProps> = ({ showWonderSchoolLogo = false, showThredUp
 
   const defaultContent = (
     <>
-      <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Hello 👋 from Geoff.</h2>
+      <p className="text-base font-medium text-gray-600 mb-2">Hello 👋 from Geoff.</p>
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight">Find your growth formula.</h2>
       <p className="text-lg text-gray-600 mb-6">
-        I help mission-driven businesses "find the formula": a repeatable, scalable playbook for growth.
+        I help mission-driven businesses turn experiments into a repeatable, scalable playbook.
       </p>
       {insertAfterOpener}
       <p className="text-lg text-gray-600 mb-6">
