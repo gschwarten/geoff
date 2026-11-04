@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import { useNoIndex } from '@/hooks/use-noindex';
 import Navbar from '@/components/Navbar';
 import About from '@/components/About';
 import Work from '@/components/Work';
@@ -7,6 +8,7 @@ import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
 
 const Gilead = () => {
+  useNoIndex();
   useEffect(() => {
     document.title = 'GEOFF SCHWARTEN | Marketing and Growth Leader';
     

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useNoIndex } from '@/hooks/use-noindex';
 import Navbar from '@/components/Navbar';
 import About from '@/components/About';
 import Work from '@/components/Work';
@@ -8,6 +9,7 @@ import ScrollReveal from '@/components/ScrollReveal';
 
 
 const Sequencing = () => {
+  useNoIndex();
   useEffect(() => {
     document.title = 'Geoff Schwarten for Sequencing';
 
