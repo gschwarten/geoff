@@ -116,7 +116,7 @@ export default defineConfig(({ mode }) => ({
       {
         path: "/",
         title: "Geoff Schwarten | Marketing & Growth Leader",
-        description: "Helping impact-oriented businesses find repeatable, scalable growth formulas. Expertise in performance marketing, SEO, lifecycle marketing, and conversion optimization.",
+        description: "Geoff Schwarten helps mission-driven businesses find their growth formula through performance marketing, lifecycle, SEO, and conversion optimization.",
         image: "https://geoff.lovable.app/lovable-uploads/formula-og-image.png",
         url: "https://geoff.lovable.app",
       },

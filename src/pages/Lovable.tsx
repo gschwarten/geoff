@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import { useNoIndex } from '@/hooks/use-noindex';
 import Navbar from '@/components/Navbar';
 import About from '@/components/About';
 import Work from '@/components/Work';
@@ -8,6 +9,7 @@ import Play from '@/components/Play';
 import ScrollReveal from '@/components/ScrollReveal';
 
 const Lovable = () => {
+  useNoIndex();
   useEffect(() => {
     document.title = 'GEOFF SCHWARTEN | Marketing and Growth Leader';
     

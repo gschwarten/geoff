@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useNoIndex } from '@/hooks/use-noindex';
 import type { LucideIcon } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -165,6 +166,7 @@ const Disclaimer: React.FC<{ compact?: boolean }> = ({ compact }) => (
 );
 
 const HipaaHelper: React.FC = () => {
+  useNoIndex();
   const [active, setActive] = useState(0);
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
 
