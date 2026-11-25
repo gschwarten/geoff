@@ -15,6 +15,7 @@ import YC from "./pages/YC";
 import Stand from "./pages/Stand";
 import Sequencing from "./pages/Sequencing";
 import HipaaHelper from "./pages/HipaaHelper";
+import WeeklyReadout from "./pages/WeeklyReadout";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/stand" element={<Stand />} />
           <Route path="/sequencing" element={<Sequencing />} />
           <Route path="/hipaa-helper" element={<HipaaHelper />} />
+          <Route path="/weekly-readout" element={<WeeklyReadout />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
