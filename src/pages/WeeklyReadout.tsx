@@ -184,6 +184,9 @@ const WeeklyReadout = () => {
     <div className="min-h-screen bg-[#accae5] px-4 py-12 sm:py-16">
       {/* Header block */}
       <header className="mx-auto max-w-[760px]">
+        <Link to="/" className="mb-3 inline-block text-sm text-gray-600 underline-offset-2 hover:underline">
+          ← geoff.lovable.app
+        </Link>
         <p className="text-xs font-semibold uppercase tracking-widest text-[#040949]/60">Sample artifact</p>
         <h1 className="mt-2 font-['Montserrat'] text-3xl sm:text-4xl font-bold text-[#040949]">
           Weekly growth readout
@@ -192,9 +195,6 @@ const WeeklyReadout = () => {
           An anonymized, hypothetical weekly update of the kind I posted in Slack or Teams, based on real growth work
           for a telehealth addiction-treatment program. Figures are amended for confidentiality.
         </p>
-        <Link to="/" className="mt-3 inline-block text-sm text-gray-600 underline-offset-2 hover:underline">
-          ← geoff.lovable.app
-        </Link>
       </header>
 
       {/* Chat card */}
