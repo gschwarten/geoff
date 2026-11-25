@@ -189,9 +189,8 @@ const WeeklyReadout = () => {
           Weekly growth readout
         </h1>
         <p className="mt-3 text-base leading-relaxed text-[#040949]/80">
-          A real weekly thread from a telehealth addiction-treatment program I ran growth for, with the company
-          anonymized and figures amended for confidentiality. Posted every Monday; leadership asked questions in the
-          thread.
+          An anonymized, hypothetical weekly update of the kind I posted in Slack or Teams, based on real growth work
+          for a telehealth addiction-treatment program. Figures are amended for confidentiality.
         </p>
         <Link to="/" className="mt-3 inline-block text-sm text-gray-600 underline-offset-2 hover:underline">
           ← geoff.lovable.app
@@ -312,7 +311,8 @@ const WeeklyReadout = () => {
 
       {/* Footnote */}
       <p className="mx-auto mt-6 max-w-[760px] text-sm text-gray-600">
-        Company, names, and figures are anonymized or amended. The format, questions, and decisions are real.
+        Company, names, figures, and replies are illustrative. The experiments and the weekly format are based on real
+        work.
       </p>
     </div>
   );
