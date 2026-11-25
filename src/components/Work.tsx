@@ -52,7 +52,7 @@ const Work: React.FC<WorkProps> = ({ variant = 'default', pinProjects }) => {
   }, {
     title: 'Scaling a Learning Business from Scratch',
     description: 'As the first marketing hire, I helped IDEO U grow from an idea into a thriving learning business with over 100K+ customers. I built and optimized growth channels—paid search, paid social, SEO, lifecycle marketing, and CRO—while leading a team to scale efforts. Experimentation and data-driven insights were key to identifying and unlocking the repeatable growth formula.',
-    tags: ['Growth Strategy', 'Performance Marketing', 'SEO', 'CRO', 'Lifecycle Marketing', 'Demand Generation', 'E-commerce Growth/Product Management', 'Product Growth'],
+    tags: ['Growth Strategy', 'Performance Marketing', 'SEO', 'Conversion Rate Optimization', 'Lifecycle Marketing', 'Demand Generation', 'E-commerce Growth/Product Management', 'Product Growth'],
     imageUrl: '/lovable-uploads/IDEO_U.jpg',
     link: 'https://www.ideou.com/'
   }, {
